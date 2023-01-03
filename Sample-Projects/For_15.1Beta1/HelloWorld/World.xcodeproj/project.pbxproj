@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200227C2988392F00732240 /* Entity+Sunlight.swift */; };
+		C200227F29883B3900732240 /* GlobeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200227E29883B3900732240 /* GlobeSettings.swift */; };
+		C20197A429E3D9C900C6A20F /* SatelliteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20197A329E3D9C900C6A20F /* SatelliteEntity.swift */; };
+		C20197A629E4805900C6A20F /* SatelliteEntity+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20197A529E4805900C6A20F /* SatelliteEntity+Configuration.swift */; };
+		C205CF952919C70D0067444C /* Starfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205CF942919C70D0067444C /* Starfield.swift */; };
+		C205CF972919CD070067444C /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205CF962919CD070067444C /* Sun.swift */; };
+		C20A898F2A37D93C004E8608 /* Sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = C20A898E2A37D93C004E8608 /* Sunlight.skybox */; };
+		C22D1AF228EB403400CE0F8F /* WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D1AF128EB403400CE0F8F /* WorldApp.swift */; };
+		C22D1AF628EB403600CE0F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22D1AF528EB403600CE0F8F /* Assets.xcassets */; };
+		C22D1AF928EB403600CE0F8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22D1AF828EB403600CE0F8F /* Preview Assets.xcassets */; };
+		C253D5772947E44200B292CA /* OrbitSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253D5762947E44200B292CA /* OrbitSettings.swift */; };
+		C255636A291D8A0300398FCE /* Orbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2556369291D8A0300398FCE /* Orbit.swift */; };
+		C25617D829CCB6040064FD50 /* SolarSystemControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25617D729CCB6040064FD50 /* SolarSystemControls.swift */; };
+		C25774D629E219FE00A75567 /* DragRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774D529E219FE00A75567 /* DragRotationModifier.swift */; };
+		C25774D829E2361000A75567 /* TypeTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774D729E2361000A75567 /* TypeTextModifier.swift */; };
+		C25774DB29E23F8D00A75567 /* GlobeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DA29E23F8D00A75567 /* GlobeModule.swift */; };
+		C25774DE29E2401F00A75567 /* SolarSystemModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DD29E2401F00A75567 /* SolarSystemModule.swift */; };
+		C25774E129E240EC00A75567 /* OrbitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774E029E240EC00A75567 /* OrbitModule.swift */; };
+		C258918F2975EB7E0071BD5F /* SliderGridRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258918E2975EB7E0071BD5F /* SliderGridRow.swift */; };
+		C2589191297625C90071BD5F /* PlacementGesturesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */; };
+		C25AD07D29EC6C1E0012834D /* EarthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25AD07C29EC6C1E0012834D /* EarthEntity.swift */; };
+		C25E9E7828EBB5430033B333 /* Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E9E7728EBB5430033B333 /* Earth.swift */; };
+		C25EFB7029DE7D1500D3CBB6 /* Entity+Trace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EFB6F29DE7D1500D3CBB6 /* Entity+Trace.swift */; };
+		C2A0F2B029D115150009D46C /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0F2AF29D115150009D46C /* SettingsButton.swift */; };
+		C2A8235E2A858A1C006F6AFF /* SolarSystemToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8235D2A858A1C006F6AFF /* SolarSystemToggle.swift */; };
+		C2A823602A859109006F6AFF /* OrbitToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8235F2A859109006F6AFF /* OrbitToggle.swift */; };
+		C2A823622A8591FC006F6AFF /* GlobeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A823612A8591FC006F6AFF /* GlobeToggle.swift */; };
+		C2A8375F2A2527DB00AD11D6 /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; productRef = C2A8375E2A2527DB00AD11D6 /* WorldAssets */; };
+		C2B0AEED2994B35600021509 /* RotationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AEEC2994B35600021509 /* RotationSystem.swift */; };
+		C2B0AEEF2994B39300021509 /* TraceSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AEEE2994B39300021509 /* TraceSystem.swift */; };
+		C2C1C8DB29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */; };
+		C2CD36432A3A7682003811D3 /* ModuleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD36422A3A7682003811D3 /* ModuleCard.swift */; };
+		C2D21553294D210B00634A99 /* Globe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21552294D210B00634A99 /* Globe.swift */; };
+		C2DEDA242996FAAB00F5265B /* GlobeControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DEDA232996FAAB00F5265B /* GlobeControls.swift */; };
+		C2E652D42919E41A007934BC /* SolarSystemSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E652D32919E41A007934BC /* SolarSystemSettings.swift */; };
+		C2E652D62919EBAB007934BC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E652D52919EBAB007934BC /* ViewModel.swift */; };
+		C2E652D8291B09AC007934BC /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E652D7291B09AC007934BC /* SolarSystem.swift */; };
+		C2F2CA342A391D4200E1C2A2 /* EarthSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CA332A391D4200E1C2A2 /* EarthSettings.swift */; };
+		C2F2CA362A391D6B00E1C2A2 /* SatelliteSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CA352A391D6B00E1C2A2 /* SatelliteSettings.swift */; };
+		C2F31EF829CA8F4E009742AD /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EF729CA8F4E009742AD /* Modules.swift */; };
+		C2F31EFC29CC01BC009742AD /* TableOfContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EFB29CC01BC009742AD /* TableOfContents.swift */; };
+		C2F31EFE29CC02D7009742AD /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EFD29CC02D7009742AD /* Module.swift */; };
+		C2F31F0029CC0858009742AD /* ModuleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EFF29CC0858009742AD /* ModuleDetail.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		BA5D813EE652D2B6F9AA7B35 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		C200227C2988392F00732240 /* Entity+Sunlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Sunlight.swift"; sourceTree = "<group>"; };
+		C200227E29883B3900732240 /* GlobeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeSettings.swift; sourceTree = "<group>"; };
+		C20197A329E3D9C900C6A20F /* SatelliteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteEntity.swift; sourceTree = "<group>"; };
+		C20197A529E4805900C6A20F /* SatelliteEntity+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SatelliteEntity+Configuration.swift"; sourceTree = "<group>"; };
+		C205CF942919C70D0067444C /* Starfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starfield.swift; sourceTree = "<group>"; };
+		C205CF962919CD070067444C /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		C20A898E2A37D93C004E8608 /* Sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = Sunlight.skybox; sourceTree = "<group>"; };
+		C22D1AEE28EB403400CE0F8F /* World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = World.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C22D1AF128EB403400CE0F8F /* WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldApp.swift; sourceTree = "<group>"; };
+		C22D1AF528EB403600CE0F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C22D1AF828EB403600CE0F8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C22D1AFA28EB403600CE0F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C253D5762947E44200B292CA /* OrbitSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitSettings.swift; sourceTree = "<group>"; };
+		C2556369291D8A0300398FCE /* Orbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orbit.swift; sourceTree = "<group>"; };
+		C25617D729CCB6040064FD50 /* SolarSystemControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemControls.swift; sourceTree = "<group>"; };
+		C25774D529E219FE00A75567 /* DragRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragRotationModifier.swift; sourceTree = "<group>"; };
+		C25774D729E2361000A75567 /* TypeTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTextModifier.swift; sourceTree = "<group>"; };
+		C25774DA29E23F8D00A75567 /* GlobeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeModule.swift; sourceTree = "<group>"; };
+		C25774DD29E2401F00A75567 /* SolarSystemModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemModule.swift; sourceTree = "<group>"; };
+		C25774E029E240EC00A75567 /* OrbitModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitModule.swift; sourceTree = "<group>"; };
+		C258918E2975EB7E0071BD5F /* SliderGridRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGridRow.swift; sourceTree = "<group>"; };
+		C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementGesturesModifier.swift; sourceTree = "<group>"; };
+		C25A1C9C28EB495E00B0E173 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C25AD07C29EC6C1E0012834D /* EarthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthEntity.swift; sourceTree = "<group>"; };
+		C25E9E7728EBB5430033B333 /* Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earth.swift; sourceTree = "<group>"; };
+		C25EFB6F29DE7D1500D3CBB6 /* Entity+Trace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Trace.swift"; sourceTree = "<group>"; };
+		C2A0F2AF29D115150009D46C /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		C2A8235D2A858A1C006F6AFF /* SolarSystemToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemToggle.swift; sourceTree = "<group>"; };
+		C2A8235F2A859109006F6AFF /* OrbitToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitToggle.swift; sourceTree = "<group>"; };
+		C2A823612A8591FC006F6AFF /* GlobeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeToggle.swift; sourceTree = "<group>"; };
+		C2A837612A25286A00AD11D6 /* WorldAssets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WorldAssets; sourceTree = "<group>"; };
+		C2B0AEEC2994B35600021509 /* RotationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationSystem.swift; sourceTree = "<group>"; };
+		C2B0AEEE2994B39300021509 /* TraceSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceSystem.swift; sourceTree = "<group>"; };
+		C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthEntity+Configuration.swift"; sourceTree = "<group>"; };
+		C2CD36422A3A7682003811D3 /* ModuleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCard.swift; sourceTree = "<group>"; };
+		C2D21552294D210B00634A99 /* Globe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globe.swift; sourceTree = "<group>"; };
+		C2DEDA232996FAAB00F5265B /* GlobeControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeControls.swift; sourceTree = "<group>"; };
+		C2E652D32919E41A007934BC /* SolarSystemSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemSettings.swift; sourceTree = "<group>"; };
+		C2E652D52919EBAB007934BC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C2E652D7291B09AC007934BC /* SolarSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystem.swift; sourceTree = "<group>"; };
+		C2F2CA332A391D4200E1C2A2 /* EarthSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthSettings.swift; sourceTree = "<group>"; };
+		C2F2CA352A391D6B00E1C2A2 /* SatelliteSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteSettings.swift; sourceTree = "<group>"; };
+		C2F31EF729CA8F4E009742AD /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
+		C2F31EFB29CC01BC009742AD /* TableOfContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContents.swift; sourceTree = "<group>"; };
+		C2F31EFD29CC02D7009742AD /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		C2F31EFF29CC0858009742AD /* ModuleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetail.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C22D1AEB28EB403400CE0F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2A8375F2A2527DB00AD11D6 /* WorldAssets in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5054F77D55BBBCDEC076AB73 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				BA5D813EE652D2B6F9AA7B35 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		C22CF1A829721FB100CF2EB7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C25AD07C29EC6C1E0012834D /* EarthEntity.swift */,
+				C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */,
+				C20197A329E3D9C900C6A20F /* SatelliteEntity.swift */,
+				C20197A529E4805900C6A20F /* SatelliteEntity+Configuration.swift */,
+				C200227C2988392F00732240 /* Entity+Sunlight.swift */,
+				C25EFB6F29DE7D1500D3CBB6 /* Entity+Trace.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C22CF1AB2972200A00CF2EB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2E652D52919EBAB007934BC /* ViewModel.swift */,
+				C2F31EFD29CC02D7009742AD /* Module.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C22D1AE528EB403400CE0F8F = {
+			isa = PBXGroup;
+			children = (
+				C25A1C9C28EB495E00B0E173 /* README.md */,
+				C22D1AF028EB403400CE0F8F /* World */,
+				C2A837602A25286A00AD11D6 /* Packages */,
+				C22D1AEF28EB403400CE0F8F /* Products */,
+				E043781D4066DB10F3A83C6E /* Configuration */,
+				5054F77D55BBBCDEC076AB73 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		C22D1AEF28EB403400CE0F8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C22D1AEE28EB403400CE0F8F /* World.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C22D1AF028EB403400CE0F8F /* World */ = {
+			isa = PBXGroup;
+			children = (
+				C22D1AF128EB403400CE0F8F /* WorldApp.swift */,
+				C2DEDA222996F5ED00F5265B /* Modules */,
+				C25774D929E23F7400A75567 /* Globe */,
+				C25774DF29E2404500A75567 /* Orbit */,
+				C25774DC29E23FD000A75567 /* Solar System */,
+				C2A51FB229AB2E5800217068 /* RealityViews */,
+				C22CF1A829721FB100CF2EB7 /* Entities */,
+				C2A51FAB29AA902A00217068 /* Systems */,
+				C2589192297625D90071BD5F /* Modifiers */,
+				C22CF1AB2972200A00CF2EB7 /* Model */,
+				C2F2CA322A391CDC00E1C2A2 /* Settings */,
+				C2A51FAE29AB0AEB00217068 /* Resources */,
+				C22D1AFA28EB403600CE0F8F /* Info.plist */,
+				C22D1AF728EB403600CE0F8F /* Preview Content */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		C22D1AF728EB403600CE0F8F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C22D1AF828EB403600CE0F8F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C25774D929E23F7400A75567 /* Globe */ = {
+			isa = PBXGroup;
+			children = (
+				C2D21552294D210B00634A99 /* Globe.swift */,
+				C2DEDA232996FAAB00F5265B /* GlobeControls.swift */,
+				C25774DA29E23F8D00A75567 /* GlobeModule.swift */,
+				C2A823612A8591FC006F6AFF /* GlobeToggle.swift */,
+			);
+			path = Globe;
+			sourceTree = "<group>";
+		};
+		C25774DC29E23FD000A75567 /* Solar System */ = {
+			isa = PBXGroup;
+			children = (
+				C2E652D7291B09AC007934BC /* SolarSystem.swift */,
+				C25617D729CCB6040064FD50 /* SolarSystemControls.swift */,
+				C25774DD29E2401F00A75567 /* SolarSystemModule.swift */,
+				C2A8235D2A858A1C006F6AFF /* SolarSystemToggle.swift */,
+			);
+			path = "Solar System";
+			sourceTree = "<group>";
+		};
+		C25774DF29E2404500A75567 /* Orbit */ = {
+			isa = PBXGroup;
+			children = (
+				C2556369291D8A0300398FCE /* Orbit.swift */,
+				C25774E029E240EC00A75567 /* OrbitModule.swift */,
+				C2A8235F2A859109006F6AFF /* OrbitToggle.swift */,
+			);
+			path = Orbit;
+			sourceTree = "<group>";
+		};
+		C2589192297625D90071BD5F /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */,
+				C25774D529E219FE00A75567 /* DragRotationModifier.swift */,
+				C25774D729E2361000A75567 /* TypeTextModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C2A51FAB29AA902A00217068 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				C2B0AEEC2994B35600021509 /* RotationSystem.swift */,
+				C2B0AEEE2994B39300021509 /* TraceSystem.swift */,
+			);
+			path = Systems;
+			sourceTree = "<group>";
+		};
+		C2A51FAE29AB0AEB00217068 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C22D1AF528EB403600CE0F8F /* Assets.xcassets */,
+				C20A898E2A37D93C004E8608 /* Sunlight.skybox */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2A51FB229AB2E5800217068 /* RealityViews */ = {
+			isa = PBXGroup;
+			children = (
+				C25E9E7728EBB5430033B333 /* Earth.swift */,
+				C205CF962919CD070067444C /* Sun.swift */,
+				C205CF942919C70D0067444C /* Starfield.swift */,
+			);
+			path = RealityViews;
+			sourceTree = "<group>";
+		};
+		C2A837602A25286A00AD11D6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C2A837612A25286A00AD11D6 /* WorldAssets */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		C2DEDA222996F5ED00F5265B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C2F31EF729CA8F4E009742AD /* Modules.swift */,
+				C2F31EFB29CC01BC009742AD /* TableOfContents.swift */,
+				C2CD36422A3A7682003811D3 /* ModuleCard.swift */,
+				C2F31EFF29CC0858009742AD /* ModuleDetail.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C2F2CA322A391CDC00E1C2A2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C2A0F2AF29D115150009D46C /* SettingsButton.swift */,
+				C200227E29883B3900732240 /* GlobeSettings.swift */,
+				C253D5762947E44200B292CA /* OrbitSettings.swift */,
+				C2E652D32919E41A007934BC /* SolarSystemSettings.swift */,
+				C2F2CA332A391D4200E1C2A2 /* EarthSettings.swift */,
+				C2F2CA352A391D6B00E1C2A2 /* SatelliteSettings.swift */,
+				C258918E2975EB7E0071BD5F /* SliderGridRow.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E043781D4066DB10F3A83C6E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C22D1AED28EB403400CE0F8F /* World */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C22D1AFD28EB403600CE0F8F /* Build configuration list for PBXNativeTarget "World" */;
+			buildPhases = (
+				C22D1AEA28EB403400CE0F8F /* Sources */,
+				C22D1AEB28EB403400CE0F8F /* Frameworks */,
+				C22D1AEC28EB403400CE0F8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = World;
+			packageProductDependencies = (
+				C2A8375E2A2527DB00AD11D6 /* WorldAssets */,
+			);
+			productName = HelloGlobe;
+			productReference = C22D1AEE28EB403400CE0F8F /* World.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C22D1AE628EB403400CE0F8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1500;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					C22D1AED28EB403400CE0F8F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = C22D1AE928EB403400CE0F8F /* Build configuration list for PBXProject "World" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C22D1AE528EB403400CE0F8F;
+			productRefGroup = C22D1AEF28EB403400CE0F8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C22D1AED28EB403400CE0F8F /* World */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C22D1AEC28EB403400CE0F8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20A898F2A37D93C004E8608 /* Sunlight.skybox in Resources */,
+				C22D1AF928EB403600CE0F8F /* Preview Assets.xcassets in Resources */,
+				C22D1AF628EB403600CE0F8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C22D1AEA28EB403400CE0F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D21553294D210B00634A99 /* Globe.swift in Sources */,
+				C25EFB7029DE7D1500D3CBB6 /* Entity+Trace.swift in Sources */,
+				C25AD07D29EC6C1E0012834D /* EarthEntity.swift in Sources */,
+				C200227F29883B3900732240 /* GlobeSettings.swift in Sources */,
+				C205CF952919C70D0067444C /* Starfield.swift in Sources */,
+				C2A823602A859109006F6AFF /* OrbitToggle.swift in Sources */,
+				C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */,
+				C253D5772947E44200B292CA /* OrbitSettings.swift in Sources */,
+				C25617D829CCB6040064FD50 /* SolarSystemControls.swift in Sources */,
+				C205CF972919CD070067444C /* Sun.swift in Sources */,
+				C2F2CA362A391D6B00E1C2A2 /* SatelliteSettings.swift in Sources */,
+				C2C1C8DB29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift in Sources */,
+				C2A8235E2A858A1C006F6AFF /* SolarSystemToggle.swift in Sources */,
+				C2589191297625C90071BD5F /* PlacementGesturesModifier.swift in Sources */,
+				C2A823622A8591FC006F6AFF /* GlobeToggle.swift in Sources */,
+				C25774DE29E2401F00A75567 /* SolarSystemModule.swift in Sources */,
+				C25E9E7828EBB5430033B333 /* Earth.swift in Sources */,
+				C25774D829E2361000A75567 /* TypeTextModifier.swift in Sources */,
+				C2F31EFE29CC02D7009742AD /* Module.swift in Sources */,
+				C2F2CA342A391D4200E1C2A2 /* EarthSettings.swift in Sources */,
+				C2F31EFC29CC01BC009742AD /* TableOfContents.swift in Sources */,
+				C2DEDA242996FAAB00F5265B /* GlobeControls.swift in Sources */,
+				C2E652D42919E41A007934BC /* SolarSystemSettings.swift in Sources */,
+				C2F31EF829CA8F4E009742AD /* Modules.swift in Sources */,
+				C20197A629E4805900C6A20F /* SatelliteEntity+Configuration.swift in Sources */,
+				C25774DB29E23F8D00A75567 /* GlobeModule.swift in Sources */,
+				C25774E129E240EC00A75567 /* OrbitModule.swift in Sources */,
+				C2A0F2B029D115150009D46C /* SettingsButton.swift in Sources */,
+				C22D1AF228EB403400CE0F8F /* WorldApp.swift in Sources */,
+				C2E652D62919EBAB007934BC /* ViewModel.swift in Sources */,
+				C25774D629E219FE00A75567 /* DragRotationModifier.swift in Sources */,
+				C2B0AEED2994B35600021509 /* RotationSystem.swift in Sources */,
+				C2B0AEEF2994B39300021509 /* TraceSystem.swift in Sources */,
+				C2E652D8291B09AC007934BC /* SolarSystem.swift in Sources */,
+				C258918F2975EB7E0071BD5F /* SliderGridRow.swift in Sources */,
+				C2CD36432A3A7682003811D3 /* ModuleCard.swift in Sources */,
+				C20197A429E3D9C900C6A20F /* SatelliteEntity.swift in Sources */,
+				C255636A291D8A0300398FCE /* Orbit.swift in Sources */,
+				C2F31F0029CC0858009742AD /* ModuleDetail.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C22D1AFB28EB403600CE0F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		C22D1AFC28EB403600CE0F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "";
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		C22D1AFE28EB403600CE0F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"World/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.World${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		C22D1AFF28EB403600CE0F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"World/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.World${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C22D1AE928EB403400CE0F8F /* Build configuration list for PBXProject "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C22D1AFB28EB403600CE0F8F /* Debug */,
+				C22D1AFC28EB403600CE0F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C22D1AFD28EB403600CE0F8F /* Build configuration list for PBXNativeTarget "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C22D1AFE28EB403600CE0F8F /* Debug */,
+				C22D1AFF28EB403600CE0F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2A8375E2A2527DB00AD11D6 /* WorldAssets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WorldAssets;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C22D1AE628EB403400CE0F8F /* Project object */;
+}
