@@ -4,31 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b9b4a281ef0ec26b",
+        "id": "bc235800cf206d21",
         "type": "tabs",
         "children": [
           {
-            "id": "a8a30c1e34d7dc2f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "ae04fe1429c36f72",
+            "id": "ce78466e06292325",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "README.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,19 +148,19 @@
   },
   "active": "eec9085f09038e74",
   "lastOpenFiles": [
+    "imgs/Design.png",
+    "README.md",
     "imgs/Vision Pro.png",
+    "imgs/Screenshot 2023-06-06 at 02.23.46.png",
+    "imgs/Screenshot 2023-06-06 at 02.23.35.png",
+    "imgs/Screenshot 2023-06-06 at 02.23.29.png",
+    "imgs/Screenshot 2023-06-06 at 02.23.01.png",
+    "imgs/Screenshot 2023-06-06 at 02.22.39.png",
     "imgs/onemorething.png",
     "imgs/Screenshot 2023-06-06 at 09.03.34.png",
     "imgs/Screenshot 2023-06-06 at 09.03.30.png",
     "imgs/Screenshot 2023-06-06 at 03.02.13.png",
-    "imgs/Screenshot 2023-06-06 at 03.01.50.png",
-    "imgs/Screenshot 2023-06-06 at 03.01.41.png",
-    "imgs/Screenshot 2023-06-06 at 03.01.36.png",
-    "imgs/Screenshot 2023-06-06 at 03.01.13.png",
-    "imgs/Screenshot 2023-06-06 at 02.59.40.png",
-    "imgs/Screenshot 2023-06-06 at 02.58.37.png",
     "imgs",
-    "xrOS.md",
-    "README.md"
+    "xrOS.md"
   ]
 }
