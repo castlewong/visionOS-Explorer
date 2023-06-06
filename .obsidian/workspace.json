@@ -18,8 +18,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "308bb9e9e28a9c8d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Explore RealityKit and 3D content.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b5e48a3bc58549f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Highlights of new technologies introduced at WWDC23.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0cd0df8dc35989e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -148,8 +185,11 @@
   },
   "active": "eec9085f09038e74",
   "lastOpenFiles": [
-    "imgs/Design.png",
+    "Highlights of new technologies introduced at WWDC23.md",
+    "Explore RealityKit and 3D content.md",
+    "USD files.md",
     "README.md",
+    "imgs/Design.png",
     "imgs/Vision Pro.png",
     "imgs/Screenshot 2023-06-06 at 02.23.46.png",
     "imgs/Screenshot 2023-06-06 at 02.23.35.png",
@@ -159,7 +199,6 @@
     "imgs/onemorething.png",
     "imgs/Screenshot 2023-06-06 at 09.03.34.png",
     "imgs/Screenshot 2023-06-06 at 09.03.30.png",
-    "imgs/Screenshot 2023-06-06 at 03.02.13.png",
     "imgs",
     "xrOS.md"
   ]
