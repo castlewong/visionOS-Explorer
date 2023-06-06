@@ -10,12 +10,16 @@ I'd like to explore the possibility of this future, and this repository stands f
 
 # Intro
 [Introducing Vision Pro - the Hardware](https://www.apple.com/apple-vision-pro/)
+
 [Introducing Vision Pro and visionOS](https://developer.apple.com/news/?id=p7g1u5kk)
 
 # Dicover
 [Discover visionOS](https://developer.apple.com/visionos/)
+
 [Prepare for visionOS](https://developer.apple.com/visionos/prepare/)
+
 [Learn about visionOS](https://developer.apple.com/visionos/learn/)
+
 > Vision Pro developer kit
 
 > To support great ideas for apps and games for visionOS, developer kits will be available to help bring your creations to life on Apple Vision Pro. These kits provide the ability to quickly build, iterate, and test on Apple Vision Pro, so your app or game will be ready to deliver amazing experiences. Stay tuned for how to apply.
