@@ -11,13 +11,17 @@ We'd like to explore the possibility of a future that:
 
 This repository stands for a warehouse of collecting the **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of MR, every contributions of good-value to this repository is welcomed.
 
-
 ![[Screenshot 2023-06-06 at 02.22.56.png]]
 
 visionOS combined with Vision Pro, is this the future of the way human interacts with digital machine?
 
 ![[Screenshot 2023-06-06 at 02.23.29.png]]
 
+For starters, the official tutorial is always a good place to begin:
+
+https://developer.apple.com/visionos/learn/
+
+And
 
 > **SDK  for visionOS coming later this month**
 
