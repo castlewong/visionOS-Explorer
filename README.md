@@ -7,9 +7,7 @@ At WWDC2023, Apple finally launched its headset display, it's called: Vision Pro
 
 visionOS combined with Vision Pro, is this the future of the way human interacts with digital machine?
 
-We'd like to explore the possibility of a future that:
-
-> MR (eg. AR/VR) dominate the way we interact with digital machines
+We'd like to explore the possibility of a future that: MR (eg. AR/VR) dominate the way we interact with digital machines
 
 This repository stands for a warehouse of collecting the **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of MR, every contributions of good-value to this repository is welcomed.
 
@@ -20,9 +18,7 @@ For starters, the official tutorial is always a good place to begin:
 
 https://developer.apple.com/visionos/learn/
 
-And
-
-> **SDK  for visionOS coming later this month**
+And **SDK  for visionOS coming later this month**
 
 # Intro
 [Introducing Vision Pro - the Hardware](https://www.apple.com/apple-vision-pro/)
