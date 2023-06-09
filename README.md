@@ -27,7 +27,7 @@ And **SDK  for visionOS coming later this month**
 
 # Discover
 
-[[Design.png]]
+![Design.png](imgs/Design.png)
 
 [Discover visionOS](https://developer.apple.com/visionos/)
 
@@ -38,4 +38,12 @@ And **SDK  for visionOS coming later this month**
 > Vision Pro developer kit
 
 > To support great ideas for apps and games for visionOS, developer kits will be available to help bring your creations to life on Apple Vision Pro. These kits provide the ability to quickly build, iterate, and test on Apple Vision Pro, so your app or game will be ready to deliver amazing experiences. Stay tuned for how to apply.
+
+> Apple Vision Pro compatibility evaluations
+
+If you currently have an iPad or iPhone app on the App Store, we can help you test it on Apple Vision Pro. Request a compatibility evaluation from App Review to get a report on your app or game’s appearance and how it behaves in visionOS.
+
+> Apple Vision Pro developer labs
+
+Apply for the opportunity to attend an Apple Vision Pro developer lab, where you can experience your visionOS, iPadOS, and iOS apps running on Apple Vision Pro. With direct support from Apple, you’ll be able to test and optimize your apps and games, so they’ll be ready when Apple Vision Pro is available to customers. Labs will be available in six locations worldwide: Cupertino, London, Munich, Shanghai, Singapore, and Tokyo.
 
