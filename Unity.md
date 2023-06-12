@@ -1,4 +1,4 @@
-Apply now to be selected for Unity’s beta program for visionOS, where you can create with our tutorials, templates, and sample apps. You can bring your existing Unity-created content to reimagine your experiences or create something entirely new.
+Apply now to be selected for Unity’s beta program for visionOS, where you can create with our tutorials, templates, and sample apps. You can bring your existing Unity-created content to reimagine your experiences or create something entirely new. 
 
 To prepare for creating games and apps for visionOS: 
 
