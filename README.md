@@ -32,7 +32,7 @@ For starters, the official tutorial is always a good place to begin:
 
 [Prepare for visionOS](https://developer.apple.com/visionos/prepare/)
 
-[Learn about visionOS](https://developer.apple.com/visionos/learn/)
+[[Learn visionOS]]
 
 # Developer Kit
 
