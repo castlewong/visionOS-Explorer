@@ -3,8 +3,8 @@ This repository stands for a warehouse of collecting the **resources, tutorials,
 [**SDK  for visionOS came out at June 22**](https://developer.apple.com/download/all/?q=xcode%2015)
 
 Sample Projects for visionOS:
-[Hello World](../HelloWorld)
-[HW](../Sample Projects/Hello World)
+[Hello World](../Sample Projects/HelloWorld)
+
 
 ## Preface
 
