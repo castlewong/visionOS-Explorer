@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "url" : "http://playgrounds-cdn.apple.com/assets/beach/index.m3u8",
+        "title": "A Beach",
+        "image_name": "beach",
+        "description": "From an award-winning producer and actor, \"A Beach\" is a sweeping, awe-inspiring drama depicting waves crashing on a scenic California beach. Sit back and enjoy the sweet sounds of the ocean while relaxing on a soft, sandy beach.",
+        "destination": "beach",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "1m 1s",
+            "genres": ["Drama", "Romance"],
+            "directors": ["M. Seagull"],
+            "writers": ["R. Rock", "G. Seaglass"],
+            "stars": ["N. Sand", "P. Sky", "J. Sun", "L. Windy"]
+        }
+    },
+    {
+        "id": 2,
+        "url" : "http://playgrounds-cdn.apple.com/assets/lake/index.m3u8",
+        "title": "By the Lake",
+        "image_name": "lake",
+        "description": "The battle for the sunniest spot continues, as a group of turtles take their positions on the log. Find out who the last survivor is, and who must swim away cold.",
+        "destination": "lake",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "19s",
+            "genres": ["Comedy", "Action"],
+            "directors": ["D. Lily"],
+            "writers": ["Z. Splash"],
+            "stars": ["M. Turtle", "K. Green"]
+        }
+    },
+    {
+        "id": 3,
+        "url" : "http://playgrounds-cdn.apple.com/assets/camping/index.m3u8",
+        "title": "Camping in the Woods",
+        "image_name": "camping",
+        "description": "Come along for a journey of epic proportion as the perfect camp site is discovered. Listen to the magical wildlife and feel the gentle breeze of the wind as you watch the daisies dance in the field of flowers.",
+        "destination": "camping",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "28s",
+            "genres": ["Action", "Adventure"],
+            "directors": ["O. Poppy"],
+            "writers": ["T. Daisy"],
+            "stars": ["S. Sticks", "F. Log", "A. Tent"]
+        }
+    },
+
+    {
+        "id": 4,
+        "url" : "http://playgrounds-cdn.apple.com/assets/park/index.m3u8",
+        "title": "Birds in the Park",
+        "image_name": "park",
+        "description": "On a dreamy spring day near the California hillside, some friendly little birds flutter about, hopping from stalk to stalk munching on some tasty seeds. Listen to them chatter as they go about their busy afternoon.",
+        "destination": "park",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "23s",
+            "genres": ["Documentary"],
+            "directors": ["S. Dandy", "V. Sunny"],
+            "writers": ["G. Grass", "A. Cloud"],
+            "stars": ["B. Misty", "R. Hill"]
+        }
+    },
+    {
+        "id": 5,
+        "url" : "http://playgrounds-cdn.apple.com/assets/creek/index.m3u8",
+        "title": "Mystery Creek",
+        "image_name": "creek",
+        "description": "A mystery is brewing on a rainy Wednesday in California, as a couple of friends head to a local campsite for a weekend in the woods. They never anticipated what could be living down by the trickling, rocky creek.",
+        "destination": "creek",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "28s",
+            "genres": ["Mystery"],
+            "directors": ["N. Hide", "K. Dark"],
+            "writers": ["G. Run"],
+            "stars": ["O. Scary", "U. Dare"]
+        }
+    },
+    {
+        "id": 6,
+        "url" : "http://playgrounds-cdn.apple.com/assets/hillside/index.m3u8",
+        "title": "The Rolling Hills",
+        "image_name": "hillside",
+        "description": "Discover the beauty beyond the highway, just steps away from your normal commute. What lies beyond is a stunning show of delicate fog rolling over the hillside.",
+        "destination": "hillside",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "1m 20s",
+            "genres": ["Romance", "Drama"],
+            "directors": ["U. Brush"],
+            "writers": ["B. Cloud"],
+            "stars": ["L. Misty", "P. Hill"]
+        }
+    },
+    {
+        "id": 7,
+        "url" : "http://playgrounds-cdn.apple.com/assets/ocean/index.m3u8",
+        "title": "Ocean Breeze",
+        "image_name": "ocean",
+        "description": "Experience the great flight of a black beetle, as it crawls along a giant rock near the lake preparing for takeoff. Where it will go, nobody knows!",
+        "destination": "ocean",
+        "info": {
+            "releaseYear": "2023",
+            "contentRating": "NR",
+            "duration": "14s",
+            "genres": ["Comedy", "Action"],
+            "directors": ["B. Skies"],
+            "writers": ["V. Water", "L. Shore"],
+            "stars": ["A. Leaf", "E. Reed"]
+        }
+    }
+]
+
