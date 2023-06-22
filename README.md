@@ -1,5 +1,13 @@
 This repository stands for a warehouse of collecting the **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of spatial computing and MR, every contributions of good-value to this repository is welcomed.
 
+[**SDK  for visionOS came out at June 22**](https://developer.apple.com/download/all/?q=xcode%2015)
+
+Sample Projects for visionOS:
+[Hello World](../HelloWorld)
+[HW](../Sample Projects/Hello World)
+
+## Preface
+
 At WWDC2023, Apple finally launched its headset display, it's called: Vision Pro.
 
 > Apple Vision Pro is a revolutionary spatial computer that seamlessly blends digital content with the physical world, while allowing users to stay present and connected to others.
@@ -15,7 +23,6 @@ For starters, the official tutorial is always a good place to begin:
 
 [Learn visionOS](https://developer.apple.com/visionos/learn/)
 
-**SDK  for visionOS coming later this month**
 
 # Intro
 
@@ -61,3 +68,5 @@ Explore RealityKit and 3D content
  [MaterialX](https://materialx.org/) is an open standard supported by leading film, visual effects, entertainment, and gaming companies.
  
 - use Reality Composer Pro to build USDZ assets for visionOS projects.
+
+Let's Build !
