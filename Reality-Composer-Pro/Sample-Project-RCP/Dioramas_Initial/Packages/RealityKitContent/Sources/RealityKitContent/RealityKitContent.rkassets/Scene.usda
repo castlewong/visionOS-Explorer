@@ -7,53 +7,77 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Sphere", "_GridMaterial", "_PlainMaterial"]
+    reorder nameChildren = ["Diorama_Base", "Yosemite", "Wood_Plank", "Yosemite_Location_Pins"]
     rel material:binding = None (
         bindMaterialAs = "weakerThanDescendants"
     )
 
-    def Sphere "Sphere" (
+    def "Diorama_Base" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @Assets/Diorama_Base.usdz@
     )
     {
-        rel material:binding = </Root/_PlainMaterial/Material> (
+        rel material:binding = </Root/Wood_Plank> (
             bindMaterialAs = "weakerThanDescendants"
         )
-        double radius = 0.1
-        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Yosemite" (
+        active = true
+        references = @Assets/Yosemite.usdz@
+    )
+    {
         float3 xformOp:scale = (1, 1, 1)
         float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def RealityKitComponent "Collider"
-        {
-            uint group = 1
-            uniform token info:id = "RealityKit.Collider"
-            uint mask = 4294967295
-            token type = "Default"
-
-            def RealityKitStruct "Shape"
-            {
-                float3 extent = (0.2, 0.2, 0.2)
-                float radius = 0.1
-                token shapeType = "Sphere"
-            }
-        }
-
-        def RealityKitComponent "InputTarget"
-        {
-            uniform token info:id = "RealityKit.InputTarget"
-        }
     }
 
-    def "_PlainMaterial" (
+    def "Wood_Plank" (
         active = true
-        prepend references = @_PlainMaterial.usda@
+        references = @WoodPlank.usdz@
     )
     {
-        float3 xformOp:scale = (1, 1, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Xform "Yosemite_Location_Pins" (
+        active = true
+    )
+    {
+        def "Merced_River" (
+            active = true
+            references = @Assets/Location_Pin.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (-0.93059194, 0.68804646, 0.25084162)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "El_Capitan" (
+            active = true
+            references = @Assets/Location_Pin.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0.025983453, 1.0955234, -0.7012092)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "Cathedral_Rocks" (
+            active = true
+            references = @Assets/Location_Pin.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (-0.047134936, 0.9094322, 0.7835813)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
     }
 }
 
