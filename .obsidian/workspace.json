@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meet SwiftUI for spatial computing.md",
+                "file": "USDZ files.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meet SwiftUI for spatial computing.md",
+                "file": "USDZ files.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meet SwiftUI for spatial computing.md",
+                "file": "USDZ files.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meet SwiftUI for spatial computing.md"
+                "file": "USDZ files.md"
               }
             }
           }
@@ -157,6 +157,7 @@
   },
   "active": "962d9e37119e80c1",
   "lastOpenFiles": [
+    "Meet SwiftUI for spatial computing.md",
     "Hellow World/World.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
     "Hellow World/World.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes",
     "Hellow World/World.xcodeproj/xcuserdata/wilburwong.xcuserdatad",
@@ -170,7 +171,6 @@
     "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_roughness_1.jpg",
     "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_normal_1.png",
     "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/happyClouds_baseColor_1.png",
-    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/cloud_002_anim.usdz",
     "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_face_baseColor.jpg",
     "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_roughness.jpg",
     "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_occlusion.jpg",
@@ -182,11 +182,10 @@
     "HappyBeam/README.md",
     "Hellow World/Packages/WorldAssets/README.md",
     "Hellow World/README.md",
-    "Meet SwiftUI for spatial computing.md",
     "README.md",
     "Learn visionOS.md",
     "Unity.md",
-    "USD files.md",
+    "USDZ files.md",
     "a.md",
     "imgs/session2_2x.png.md",
     "imgs.md",
