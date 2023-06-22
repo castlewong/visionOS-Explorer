@@ -1,3 +1,6 @@
+This is Apple's preferred file format for 3D content.
+AKA **Universal Scene Descriptions**
+To learn more, check out [Understand USD fundamentals]() and [Create 3D workflows with USD]()
 
 [Create 3D workflows with USD](https://developer.apple.com/videos/play/wwdc2021/10077/)
 

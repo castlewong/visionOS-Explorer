@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0f2874ce571daf2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md"
               }
             }
           }
@@ -146,12 +159,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "962d9e37119e80c1",
+  "active": "0f2874ce571daf2a",
   "lastOpenFiles": [
+    "README.md",
+    "Reality-Composer-Pro/Meet Reality Composer Pro.md",
+    "USDZ files.md",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Forest_Sounds.wav",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Bird_Call_2.wav",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Bird_Call_1.wav",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Yosemite.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/SmoothConcrete.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Materials.usda",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Location_Pin.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/FlatTerrain.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/DioramaAssembled.usda",
+    "Reality-Composer-Pro/Sample-Project-RCP/Assets/Diorama_Base.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/README.md",
+    "Unity.md",
+    "Sample-Project-RCP.md",
+    "Learn visionOS.md",
+    "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_roughness_1.jpg",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_normal_1.png",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/happyClouds_baseColor_1.png",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/cloud_002_anim.usdz",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_face_baseColor.jpg",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_roughness.jpg",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_occlusion.jpg",
@@ -159,40 +189,22 @@
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_emmissive.jpg",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_baseColor.jpg",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/textures/mat_heart_Roughness_1.png",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/textures/mat_heart_Normal_1.png",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/cloud_lod1_anim_001_2-10.usdc",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/UpdatedGrumpyScene2.usdc",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/textures",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/heart_new.usdc",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/heartTurret.usdc",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/heartLight_longer.usdc",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2.usdz",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
     "Sample-Projects/HappyBeam/README.md",
     "Sample-Projects/DestinationVideo/README.md",
     "HappyBeam/Packages/HappyBeamAssets/README.md",
     "HappyBeam/README.md",
     "DestinationVideo/README.md",
-    "Learn visionOS.md",
-    "README.md",
     "Sample.md",
     "Sample-Projects/HelloWorld.md",
     "visionOS-Explorer/tree/master/Sample.md",
-    "Meet SwiftUI for spatial computing.md",
     "Sample-Projects/HelloWorld/Packages/WorldAssets/README.md",
     "Sample-Projects/HelloWorld/README.md",
     "HelloWorld.md",
-    "USDZ files.md",
     "HelloWorld/Packages/WorldAssets/README.md",
     "HelloWorld/README.md",
     "Hellow World/Packages/WorldAssets/README.md",
     "Hellow World/README.md",
-    "Unity.md",
-    "a.md",
-    "imgs/session2_2x.png.md",
-    "imgs.md",
-    "imgs 1.md"
+    "a.md"
   ]
 }
