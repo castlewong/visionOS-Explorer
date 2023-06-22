@@ -1,9 +1,9 @@
 This repository stands for a warehouse of collecting the **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of spatial computing and MR, every contributions of good-value to this repository is welcomed.
 
-[**SDK  for visionOS came out at June 22**](https://developer.apple.com/download/all/?q=xcode%2015)
+[**SDK for visionOS came out on June 22, 2023**](https://developer.apple.com/download/all/?q=xcode%2015)
 
 Sample Projects for visionOS:
-[Hello World](../Sample Projects/HelloWorld)
+[Hello World](/Sample-Projects/HelloWorld)
 
 
 ## Preface

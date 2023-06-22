@@ -8,14 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ed7f31b19b5dfbeb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "962d9e37119e80c1",
             "type": "leaf",
             "state": {
@@ -27,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -155,38 +146,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eec9085f09038e74",
+  "active": "962d9e37119e80c1",
   "lastOpenFiles": [
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_roughness_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_occlusion_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_normal_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_metallic_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_emissive_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_baseColor_1.png",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_roughness_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_occlusion_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_normal_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_metallic_1.jpg",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_emissive_1.jpg",
-    "Sample Projects/HelloWorld/World/Resources/Assets.xcassets/AppIcon.solidimagestack/Middle.solidimagestacklayer/Content.imageset/Contents.json",
-    "Sample Projects/HelloWorld/World/Resources/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Contents.json",
-    "Sample Projects/HelloWorld/World/Resources/Assets.xcassets/AppIcon.solidimagestack/Back.solidimagestacklayer/Content.imageset/Contents.json",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/Telescope.exported_compressed.usdc",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Sun/Sun.exported_compressed.usdc",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Sun/0",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Satellite/Satellite.exported_compressed.usdc",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Satellite/0",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Pole/Pole.exported_compressed.usdc",
-    "Sample Projects/HelloWorld/Packages/WorldAssets/README.md",
-    "Sample Projects/HelloWorld/README.md",
-    "Sample Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
-    "Sample Projects/HappyBeam/README.md",
-    "Sample Projects/DestinationVideo/README.md",
-    "HelloWorld.md",
+    "Sample-Projects/HelloWorld.md",
     "README.md",
+    "Sample.md",
+    "visionOS-Explorer/tree/master/Sample.md",
     "Learn visionOS.md",
     "Meet SwiftUI for spatial computing.md",
+    "visionOS-Explorer/tree/master",
+    "visionOS-Explorer/tree",
+    "visionOS-Explorer",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_roughness_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_occlusion_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_normal_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_metallic_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_emissive_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeReflectors_baseColor_1.png",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_roughness_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_occlusion_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_normal_1.jpg",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0/M_telescopeBase_metallic_1.jpg",
+    "Sample-Projects/HelloWorld/World/Resources/Assets.xcassets/AppIcon.solidimagestack/Middle.solidimagestacklayer/Content.imageset/Contents.json",
+    "Sample-Projects/HelloWorld/World/Resources/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Contents.json",
+    "Sample-Projects/HelloWorld/World/Resources/Assets.xcassets/AppIcon.solidimagestack/Back.solidimagestacklayer/Content.imageset/Contents.json",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/Telescope.exported_compressed.usdc",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Telescope/0",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Sun/Sun.exported_compressed.usdc",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/Sources/WorldAssets/WorldAssets.rkassets/Sun/0",
+    "Sample-Projects/HelloWorld/Packages/WorldAssets/README.md",
+    "Sample-Projects/HelloWorld/README.md",
+    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
+    "Sample-Projects/HappyBeam/README.md",
+    "Sample-Projects/DestinationVideo/README.md",
+    "HelloWorld.md",
     "USDZ files.md",
     "HelloWorld/Packages/WorldAssets/README.md",
     "HelloWorld/README.md",
