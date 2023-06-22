@@ -14,8 +14,21 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "962d9e37119e80c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meet SwiftUI for spatial computing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Meet SwiftUI for spatial computing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Meet SwiftUI for spatial computing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Meet SwiftUI for spatial computing.md"
+              }
             }
           }
         ]
@@ -138,27 +155,42 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ed7f31b19b5dfbeb",
+  "active": "962d9e37119e80c1",
   "lastOpenFiles": [
+    "Hellow World/World.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
+    "Hellow World/World.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes",
+    "Hellow World/World.xcodeproj/xcuserdata/wilburwong.xcuserdatad",
+    "Hellow World/World.xcodeproj/xcuserdata",
+    "Hellow World/World.xcodeproj/project.xcworkspace/xcuserdata/wilburwong.xcuserdatad/UserInterfaceState.xcuserstate",
+    "Hellow World/World.xcodeproj/project.xcworkspace/xcuserdata/wilburwong.xcuserdatad",
+    "Hellow World/World.xcodeproj/project.xcworkspace/xcuserdata",
+    "Hellow World/World.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+    "Hellow World/World.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration",
+    "Hellow World/World.xcodeproj/project.xcworkspace/xcshareddata/swiftpm",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_roughness_1.jpg",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_normal_1.png",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/happyClouds_baseColor_1.png",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/cloud_002_anim.usdz",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_face_baseColor.jpg",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_roughness.jpg",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_occlusion.jpg",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_normal.png",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_emmissive.jpg",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_baseColor.jpg",
+    "HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/textures/mat_heart_Roughness_1.png",
+    "HappyBeam/Packages/HappyBeamAssets/README.md",
+    "HappyBeam/README.md",
+    "Hellow World/Packages/WorldAssets/README.md",
+    "Hellow World/README.md",
+    "Meet SwiftUI for spatial computing.md",
     "README.md",
     "Learn visionOS.md",
     "Unity.md",
     "USD files.md",
     "a.md",
-    "imgs/Screenshot 2023-06-06 at 09.03.34.png",
-    "imgs/session2_2x.jpg",
     "imgs/session2_2x.png.md",
     "imgs.md",
-    "imgs/Screenshot.png",
-    "imgs/Screenshot 2023-06-06 at 02.22.39.png",
     "imgs 1.md",
-    "imgs/Design.png",
-    "imgs/Vision Pro.png",
-    "imgs/Screenshot 2023-06-06 at 02.23.46.png",
-    "imgs/Screenshot 2023-06-06 at 02.23.35.png",
-    "imgs/Screenshot 2023-06-06 at 02.23.29.png",
-    "imgs/Screenshot 2023-06-06 at 02.23.01.png",
-    "imgs",
     "xrOS.md"
   ]
 }
