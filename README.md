@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imgs/vH.png" alt="Header" width="60%">
+  <img src="imgs/vH.png" alt="Header" width="100%">
 </p>
 
 At WWDC2023, Apple finally launched the long-anticipated headset, it's called: **Apple Vision Pro**.
@@ -7,9 +7,11 @@ At WWDC2023, Apple finally launched the long-anticipated headset, it's called: *
 > Apple Vision Pro is a revolutionary spatial computer that seamlessly blends digital content with the physical world, while allowing users to stay present and connected to others.
 > ...visionOS, the world’s first spatial operating system, Apple Vision Pro lets users interact with digital content in a way that feels like it is physically present in their space.
 
-visionOS combined with Vision Pro, is Spatial Computing the future of the way human interacts with digital machine?
+visionOS combined with Vision Pro, is Spatial Computing the future of personal computer?
 
-We'd like to explore the possibility of a future that: MR (eg. AR/VR) dominate the way we interact with digital machines and contents.
+We'd like to explore the possibility that: MR (eg. AR/VR) dominate the way we interact with digital machines and contents.
+
+![UI](imgs/apple-design-resources-visionos_2x.jpg)
 
 This repository stands for a **warehouse** of collecting the **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of spatial computing and MR, every contributions of good-value to this repository is welcomed.
 
@@ -19,17 +21,17 @@ For starters, the official tutorial is always a good place to begin:
 
 [Learn visionOS](https://developer.apple.com/visionos/learn/)
 
-[**SDK for visionOS came out on June 22, 2023**](https://developer.apple.com/download/all/?q=xcode%2015)
+And [**SDK for visionOS came out on June 22, 2023**](https://developer.apple.com/download/all/?q=xcode%2015).
 
-[Sample Projects for visionOS](/Sample-Projects)
+Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
 
-# Intro
+## Intro
 
 [Introducing Vision Pro - the Hardware](https://www.apple.com/apple-vision-pro/)
 
 [Introducing Vision Pro and visionOS](https://developer.apple.com/news/?id=p7g1u5kk)
 
-# Discover
+## Discover
 
 ![Design.png](imgs/Design.png)
 
@@ -40,11 +42,17 @@ For starters, the official tutorial is always a good place to begin:
 ## Explore RealityKit and 3D content
 
 - consider using [RealityKit](https://developer.apple.com/documentation/RealityKit/) to render that content.
-
 - build surface and geometry shaders with MaterialX in Reality Composer Pro.
  [MaterialX](https://materialx.org/) is an open standard supported by leading film, visual effects, entertainment, and gaming companies.
- 
 - use Reality Composer Pro to build USDZ assets for visionOS projects.
+
+![rcp](imgs/rcp.jpg)
+
+**Right order for watching sessions**d
+
+Meet Reality Composer Pro
+Explore materials in Reality Composer Pro
+Work with Reality Composer Pro content in Xcode
 
 ## Developer Kit
 

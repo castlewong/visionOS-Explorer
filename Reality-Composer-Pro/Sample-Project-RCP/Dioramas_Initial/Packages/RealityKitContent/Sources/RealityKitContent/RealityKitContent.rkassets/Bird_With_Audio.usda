@@ -1,0 +1,45 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Bird", "SpatialAudio", "Bird_Calls", "Bird_Call_1_wav", "Bird_Call_2_wav"]
+    def "Bird" (
+        active = true
+        references = @Assets/Bird.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Xform "SpatialAudio"
+    {
+        float3 xformOp:translate = (0.0013946466, 0.0014252756, 0.020791847)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "SpatialAudio"
+        {
+            token info:id = "RealityKit.SpatialAudio"
+        }
+    }
+
+    def RealityKitAudioFileGroup "Bird_Calls"
+    {
+        reorder nameChildren = ["Bird_Call_1_wav", "Bird_Call_2_wav"]
+        def RealityKitAudioFile "Bird_Call_1_wav"
+        {
+            asset file = @Assets/Bird_Call_1.wav@
+        }
+
+        def RealityKitAudioFile "Bird_Call_2_wav"
+        {
+            asset file = @Assets/Bird_Call_2.wav@
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "lake_portrait.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

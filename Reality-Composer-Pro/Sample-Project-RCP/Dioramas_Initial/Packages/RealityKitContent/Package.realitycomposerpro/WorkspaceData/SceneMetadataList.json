@@ -38,6 +38,48 @@
       }
     ]
   },
+  "1A7B4797-F480-43C8-8605-023C4D78F0B6" : {
+    "cameraTransform" : [
+      0.93683689832687378,
+      7.0577970134877432e-09,
+      -0.34976664185523987,
+      0,
+      -0.10338780283927917,
+      0.9553147554397583,
+      -0.27692025899887085,
+      0,
+      0.33413717150688171,
+      0.29559075832366943,
+      0.8949739933013916,
+      0,
+      0.042890165001153946,
+      0.030360763892531395,
+      0.10279810428619385,
+      1
+    ],
+    "objectMetadataList" : [
+      [
+        "1A7B4797-F480-43C8-8605-023C4D78F0B6",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1A7B4797-F480-43C8-8605-023C4D78F0B6",
+        "Root",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_Calls"
+        }
+      }
+    ]
+  },
   "54AA772B-D465-475D-9482-3A22FDEE52D7" : {
     "cameraTransform" : [
       0.99999994039535522,
@@ -93,24 +135,145 @@
   },
   "90C576A0-F90A-43B8-9998-14918A66F863" : {
     "cameraTransform" : [
-      0.70504838228225708,
-      -6.5941449634010496e-08,
-      0.709159255027771,
+      -0.017972737550735474,
+      -6.0964438830524159e-08,
+      -0.99983841180801392,
       0,
-      0.23092377185821533,
-      0.94549721479415894,
-      -0.22958511114120483,
+      -0.62234598398208618,
+      0.78266239166259766,
+      0.011186879128217697,
       0,
-      -0.67050772905349731,
-      0.32563045620918274,
-      0.66662144660949707,
+      0.7825356125831604,
+      0.62244665622711182,
+      -0.014066954143345356,
       0,
-      -2.4592478275299072,
-      2.0221817493438721,
-      2.6964983940124512,
+      2.9380276203155518,
+      2.6817233562469482,
+      -0.091673187911510468,
       1
     ],
     "objectMetadataList" : [
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Group",
+        "Bird_With_Audio_2",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Group\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Bird_With_Audio_5",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Brids",
+        "Bird_With_Audio_5",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Brids\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Brids",
+        "Bird_With_Audio_4",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Brids\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Bird_With_Audio",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_With_Audio\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Group",
+        "Bird_With_Audio_5",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Group\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Brids",
+        "Bird_With_Audio_3",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Brids\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Brids\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Bird_With_Audio_3",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
       [
         "90C576A0-F90A-43B8-9998-14918A66F863",
         "Root"
@@ -122,11 +285,123 @@
       [
         "90C576A0-F90A-43B8-9998-14918A66F863",
         "Root",
-        "Clouds"
+        "Group",
+        "Bird_With_Audio_1",
+        "SpatialAudio"
       ],
       {
-        "isExpanded" : true,
-        "isLocked" : false
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Group\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Bird_With_Audio_4",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Brids",
+        "Bird_With_Audio_2",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Brids\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Nature_Ambience"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Forest_Sounds_wav"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Brids",
+        "Bird_With_Audio_1",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Brids\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Bird_With_Audio_2",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Bird_With_Audio_1",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Group",
+        "Bird_With_Audio_4",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Group\/Bird_With_Audio_1\/Bird_Calls"
+        }
+      },
+      [
+        "90C576A0-F90A-43B8-9998-14918A66F863",
+        "Root",
+        "Group",
+        "Bird_With_Audio_3",
+        "SpatialAudio"
+      ],
+      {
+        "isExpanded" : false,
+        "isLocked" : false,
+        "selectedAudioFilePrim" : {
+          "string" : "\/Root\/Group\/Bird_With_Audio_1\/Bird_Calls"
+        }
       }
     ]
   },

@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c8924dab6dc14edd",
+        "id": "1ac8195ec2dc6e96",
         "type": "tabs",
         "children": [
           {
-            "id": "962d9e37119e80c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0f2874ce571daf2a",
+            "id": "480dd9a9a19eedab",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 238.5
   },
   "right": {
     "id": "e797c870c16e7812",
@@ -159,53 +146,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0f2874ce571daf2a",
+  "active": "eec9085f09038e74",
   "lastOpenFiles": [
-    "imgs/vH.png",
-    "imgs/VisionProHeader.png",
-    "imgs/infinite-canvas.png",
-    "USDZ files.md",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/hilight_gradient.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Yosemite_TrailA.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Catalina_TrailB.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Yosemite_TrailB.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Catalina_TrailA.usdz",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_refit_h.exr",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_r.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_n.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_bc.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_ao.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/TrailPath_Export.usdc",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/ParticleEmitterPresetTextures/dustsheet.exr",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_refit_h.exr",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_r.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_n.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_bc.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_ao.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Diorama/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/diorama-export-top.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Diorama/Assets.xcassets/AppIcon.solidimagestack/Middle.solidimagestacklayer/Content.imageset/diorama-icon-middle.png",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/README.md",
+    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/README.md",
+    "Reality-Composer-Pro/Session - Explore materials in Reality Composer Pro.md",
+    "Reality-Composer-Pro/Session - Work with Reality Composer Pro content in Xcode.md",
+    "Reality-Composer-Pro/Session - Meet Reality Composer Pro.md",
     "README.md",
-    "imgs/visionOS-Header.png",
-    "Reality-Composer-Pro/Meet Reality Composer Pro.md",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Cloud_A.usda",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/ParticleEmitterPresetTextures/dustsheet.exr",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/ParticleEmitterPresetTextures",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Cloud_Chunk.usda",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/WoodPlank.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Yosemite.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Ocean_Sounds.wav",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Location_Pin.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Forest_Sounds.wav",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Diorama_Base.usdz",
+    "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
+    "Learn visionOS.md",
+    "USDZ files.md",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/README.md",
     "Unity.md",
     "Sample-Project-RCP.md",
-    "Learn visionOS.md",
-    "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_roughness_1.jpg",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/m_happyCloud_face_normal_1.png",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/happyClouds_baseColor_1.png",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_face_baseColor.jpg",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_roughness.jpg",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_occlusion.jpg",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_normal.png",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
-    "Sample-Projects/HappyBeam/README.md",
-    "Sample-Projects/DestinationVideo/README.md",
+    "Sample-Projects-for-visionOS/HappyBeam/Packages/HappyBeamAssets/README.md",
+    "Sample-Projects-for-visionOS/HappyBeam/README.md",
+    "Sample-Projects-for-visionOS/DestinationVideo/README.md",
     "HappyBeam/Packages/HappyBeamAssets/README.md",
     "HappyBeam/README.md",
     "DestinationVideo/README.md",
     "Sample.md",
     "Sample-Projects/HelloWorld.md",
     "visionOS-Explorer/tree/master/Sample.md",
-    "Sample-Projects/HelloWorld/Packages/WorldAssets/README.md",
-    "Sample-Projects/HelloWorld/README.md",
+    "Sample-Projects-for-visionOS/HelloWorld/Packages/WorldAssets/README.md",
+    "Sample-Projects-for-visionOS/HelloWorld/README.md",
     "HelloWorld.md",
-    "HelloWorld/Packages/WorldAssets/README.md",
-    "HelloWorld/README.md",
-    "Hellow World/Packages/WorldAssets/README.md",
-    "Hellow World/README.md",
-    "a.md"
+    "HelloWorld/Packages/WorldAssets/README.md"
   ]
 }
