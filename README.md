@@ -1,3 +1,4 @@
+![visionOS](imgs/visionOS-Header.png)
 At WWDC2023, Apple finally launched the long-anticipated headset, it's called: **Apple Vision Pro**.
 
 > Apple Vision Pro is a revolutionary spatial computer that seamlessly blends digital content with the physical world, while allowing users to stay present and connected to others.
@@ -21,7 +22,6 @@ For starters, the official tutorial is always a good place to begin:
 
 # Intro
 
-
 [Introducing Vision Pro - the Hardware](https://www.apple.com/apple-vision-pro/)
 
 [Introducing Vision Pro and visionOS](https://developer.apple.com/news/?id=p7g1u5kk)
@@ -33,8 +33,6 @@ For starters, the official tutorial is always a good place to begin:
 [Discover visionOS](https://developer.apple.com/visionos/)
 
 [Prepare for visionOS](https://developer.apple.com/visionos/prepare/)
-
-
 
 # Developer Kit
 
@@ -48,7 +46,7 @@ If you currently have an iPad or iPhone app on the App Store, we can help you te
 
 > Apple Vision Pro developer labs
 
-Apply for the opportunity to attend an Apple Vision Pro developer lab, where you can experience your visionOS, iPadOS, and iOS apps running on Apple Vision Pro. With direct support from Apple, you’ll be able to test and optimize your apps and games, so they’ll be ready when Apple Vision Pro is available to customers. Labs will be available in six locations worldwide: Cupertino, London, Munich, Shanghai, Singapore, and Tokyo.
+Apply for the opportunity to attend an Apple Vision Pro developer lab, where you can experience your visionOS, iPadOS, and iOS apps running on Apple Vision Pro. With direct support from Apple, you’ll be able to test and optimize your apps and games, so they’ll be ready when Apple Vision Pro is available to customers. Labs will be available in six locations worldwide: **Cupertino, London, Munich, Shanghai, Singapore**, and **Tokyo**.
 
 Highlights of new technologies introduced at WWDC23
 Browse a selection of documentation for new technologies, frameworks, and APIs introdu

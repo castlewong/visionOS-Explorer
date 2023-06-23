@@ -5,9 +5,11 @@
     upAxis = "Y"
 )
 
+reorder rootPrims = ["Root", "Clouds"]
+
 def Xform "Root"
 {
-    reorder nameChildren = ["Diorama_Base", "Yosemite", "Wood_Plank", "Yosemite_Location_Pins"]
+    reorder nameChildren = ["Yosemite", "Yosemite_Location_Pins", "Diorama_Base", "Wood_Plank", "Clouds"]
     rel material:binding = None (
         bindMaterialAs = "weakerThanDescendants"
     )
@@ -18,20 +20,11 @@ def Xform "Root"
         references = @Assets/Diorama_Base.usdz@
     )
     {
+        reorder nameChildren = ["Yosemite_Location_Pins", "Looks"]
         rel material:binding = </Root/Wood_Plank> (
             bindMaterialAs = "weakerThanDescendants"
         )
         float3 xformOp:scale = (1, 1, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "Yosemite" (
-        active = true
-        references = @Assets/Yosemite.usdz@
-    )
-    {
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
@@ -46,6 +39,12 @@ def Xform "Root"
         active = true
     )
     {
+        reorder nameChildren = ["Yosemite", "Merced_River", "El_Capitan", "Cathedral_Rocks"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
         def "Merced_River" (
             active = true
             references = @Assets/Location_Pin.usdz@
@@ -76,6 +75,60 @@ def Xform "Root"
             quatf xformOp:orient = (1, 0, 0, 0)
             float3 xformOp:scale = (0.01, 0.01, 0.01)
             float3 xformOp:translate = (-0.047134936, 0.9094322, 0.7835813)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def "Yosemite" (
+        active = true
+        references = @Assets/Yosemite.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Xform "Clouds" (
+        active = true
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def "Cloud_A" (
+            active = true
+            references = @Cloud_A.usda@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 1.3585937, -0.96672976)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "Cloud_B" (
+            active = true
+            references = @Cloud_A.usda@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0.3026048, 0.8945366, 1.139569)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "Cloud_C" (
+            active = true
+            references = @Cloud_A.usda@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (-0.8377787, 0.8945366, 0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
         }
     }

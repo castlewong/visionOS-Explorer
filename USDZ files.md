@@ -14,4 +14,4 @@ To download free USDZ files, there are some websites I found can be useful:
 
 4. Free3D: Free3D is a website that hosts a variety of 3D models, including USDZ files. While they have both free and paid models, you can filter the search results to display only free models. Visit the website at: [https://free3d.com/](https://free3d.com/)
 
-And, remember to check the licensing terms and restrictions for each model before using them in your own commerical projects.
+And, remember to check the licensing terms and restrictions for each model before using them in your own commercial projects.

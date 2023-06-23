@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md",
+                "file": "USDZ files.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md",
+                "file": "USDZ files.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md",
+                "file": "USDZ files.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reality-Composer-Pro/Meet Reality Composer Pro.md"
+                "file": "USDZ files.md"
               }
             }
           }
@@ -159,8 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0f2874ce571daf2a",
+  "active": "eec9085f09038e74",
   "lastOpenFiles": [
+    "README.md",
+    "imgs/visionOS-Header.png",
+    "Reality-Composer-Pro/Meet Reality Composer Pro.md",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Cloud_A.usda",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/ParticleEmitterPresetTextures/dustsheet.exr",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/ParticleEmitterPresetTextures",
@@ -171,9 +174,6 @@
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Location_Pin.usdz",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Forest_Sounds.wav",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Diorama_Base.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/Assets/Catalina.usdz",
-    "README.md",
-    "Reality-Composer-Pro/Meet Reality Composer Pro.md",
     "USDZ files.md",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/README.md",
     "Unity.md",
@@ -189,7 +189,6 @@
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_normal.png",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_emmissive.jpg",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/UpdatedGrumpyScene2/0/M_cloud_body_baseColor.jpg",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/Sources/HappyBeamAssets/HappyBeamAssets.rkassets/textures/mat_heart_Roughness_1.png",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
     "Sample-Projects/HappyBeam/README.md",
     "Sample-Projects/DestinationVideo/README.md",
