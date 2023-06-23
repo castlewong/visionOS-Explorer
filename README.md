@@ -1,7 +1,8 @@
-![visionOS](imgs/visionOS-Header.png)
-At WWDC2023, Apple finally launched the long-anticipated headset, it's called: **Apple Vision Pro**.
-<img src="imgs/visionOS-Header.png" alt="Image Description" style="width: 50%;">
+<p align="center">
+  <img src="imgs/vH.png" alt="Header" width="60%">
+</p>
 
+At WWDC2023, Apple finally launched the long-anticipated headset, it's called: **Apple Vision Pro**.
 
 > Apple Vision Pro is a revolutionary spatial computer that seamlessly blends digital content with the physical world, while allowing users to stay present and connected to others.
 > ...visionOS, the world’s first spatial operating system, Apple Vision Pro lets users interact with digital content in a way that feels like it is physically present in their space.
