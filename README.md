@@ -48,11 +48,13 @@ Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
 
 ![rcp](imgs/rcp.jpg)
 
-**Right order for watching sessions**d
+**Right order for watching sessions**:
 
-Meet Reality Composer Pro
-Explore materials in Reality Composer Pro
-Work with Reality Composer Pro content in Xcode
+1. Meet Reality Composer Pro
+2. Explore materials in Reality Composer Pro
+3. Work with Reality Composer Pro content in Xcode
+
+[Notes and Resource](/Reality-Composer-Pro) of Reality Composer Pro.
 
 ## Developer Kit
 

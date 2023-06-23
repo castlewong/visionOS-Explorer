@@ -1,9 +1,11 @@
+
 Open RCP by 
+
 1. Install Xcode 15 beta 2 and open it 
 2. Click Xcode top-left
 3. In Down Drop Menu, click RCP
 
-Outline of [this Session](https://developer.apple.com/videos/play/wwdc2023/10083/):
+Outline of [this session](https://developer.apple.com/videos/play/wwdc2023/10083/):
 
 **Project setup**
 
@@ -38,5 +40,5 @@ Great tool to help optimize the performance of a scene.
 - Duplicate 3D object: Command D
 
 
-[[Session - Explore materials in Reality Composer Pro]]
-[[Session - Work with Reality Composer Pro content in Xcode]]
+[[Session2 - Explore materials in Reality Composer Pro]]
+[[Session3 - Work with Reality Composer Pro content in Xcode]]

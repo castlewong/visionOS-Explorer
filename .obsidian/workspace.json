@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "1ac8195ec2dc6e96",
+        "id": "8cb91b8654c1e3bf",
         "type": "tabs",
         "children": [
           {
-            "id": "480dd9a9a19eedab",
+            "id": "737617b23f06a80e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5efc3e658e29546b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "USDZ files.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1366c5d24d34838c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bugs-on-visionOS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Bugs-on-visionOS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Bugs-on-visionOS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Bugs-on-visionOS.md"
               }
             }
           }
@@ -146,53 +171,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eec9085f09038e74",
+  "active": "1366c5d24d34838c",
   "lastOpenFiles": [
+    "USDZ files.md",
+    "Bugs-on-visionOS.md",
+    "Unity.md",
+    "Reality-Composer-Pro.md",
+    "Develop your first immersive app.md",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/xcuserdata/wilburwong.xcuserdatad",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/xcuserdata",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/project.xcworkspace/xcshareddata/swiftpm",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/project.xcworkspace/xcshareddata",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/project.xcworkspace/xcuserdata/wilburwong.xcuserdatad/UserInterfaceState.xcuserstate",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/MyFirstSimulatorCrash.xcodeproj/project.xcworkspace/xcuserdata/wilburwong.xcuserdatad",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/Packages/RealityKitContent/README.md",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Clock.png",
+    "Build spatial experiences with RealityKit.md",
+    "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
+    "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/Packages/RealityKitContent/README.md",
+    "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
+    "Reality-Composer-Pro/Session3 - Work with Reality Composer Pro content in Xcode.md",
+    "Reality-Composer-Pro/Session2 - Explore materials in Reality Composer Pro.md",
+    "README.md",
+    "Sample-Projects.md",
+    "().md",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/hilight_gradient.png",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Yosemite_TrailA.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Catalina_TrailB.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Yosemite_TrailB.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/Catalina_TrailA.usdz",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_refit_h.exr",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_r.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_n.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_bc.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData/DioramaYosemite_ao.png",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/TrailPath_Export.usdc",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/ParticleEmitterPresetTextures/dustsheet.exr",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_refit_h.exr",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_r.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_n.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_bc.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/CatalinaData/DioramaCatalina_ao.png",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/YosemiteData",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Diorama/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/diorama-export-top.png",
-    "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Diorama/Assets.xcassets/AppIcon.solidimagestack/Middle.solidimagestacklayer/Content.imageset/diorama-icon-middle.png",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/README.md",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/README.md",
-    "Reality-Composer-Pro/Session - Explore materials in Reality Composer Pro.md",
-    "Reality-Composer-Pro/Session - Work with Reality Composer Pro content in Xcode.md",
-    "Reality-Composer-Pro/Session - Meet Reality Composer Pro.md",
-    "README.md",
-    "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
     "Learn visionOS.md",
-    "USDZ files.md",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/README.md",
-    "Unity.md",
     "Sample-Project-RCP.md",
     "Sample-Projects-for-visionOS/HappyBeam/Packages/HappyBeamAssets/README.md",
     "Sample-Projects-for-visionOS/HappyBeam/README.md",
     "Sample-Projects-for-visionOS/DestinationVideo/README.md",
     "HappyBeam/Packages/HappyBeamAssets/README.md",
     "HappyBeam/README.md",
-    "DestinationVideo/README.md",
-    "Sample.md",
-    "Sample-Projects/HelloWorld.md",
-    "visionOS-Explorer/tree/master/Sample.md",
-    "Sample-Projects-for-visionOS/HelloWorld/Packages/WorldAssets/README.md",
-    "Sample-Projects-for-visionOS/HelloWorld/README.md",
-    "HelloWorld.md",
-    "HelloWorld/Packages/WorldAssets/README.md"
+    "DestinationVideo/README.md"
   ]
 }

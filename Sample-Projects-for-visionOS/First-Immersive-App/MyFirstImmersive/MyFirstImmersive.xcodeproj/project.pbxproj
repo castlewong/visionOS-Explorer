@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E03709B72A45C69000793C1F /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = E03709B62A45C69000793C1F /* RealityKitContent */; };
+		E03709B92A45C69000793C1F /* MyFirstImmersiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03709B82A45C69000793C1F /* MyFirstImmersiveApp.swift */; };
+		E03709BB2A45C69000793C1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03709BA2A45C69000793C1F /* ContentView.swift */; };
+		E03709BD2A45C69200793C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03709BC2A45C69200793C1F /* Assets.xcassets */; };
+		E03709C02A45C69200793C1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03709BF2A45C69200793C1F /* Preview Assets.xcassets */; };
+		E03709CB2A45C69200793C1F /* MyFirstImmersiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03709CA2A45C69200793C1F /* MyFirstImmersiveTests.swift */; };
+		E03709D52A45DD5400793C1F /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03709D42A45DD5400793C1F /* ImmersiveView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E03709C72A45C69200793C1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E03709A92A45C69000793C1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E03709B02A45C69000793C1F;
+			remoteInfo = MyFirstImmersive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E03709B12A45C69000793C1F /* MyFirstImmersive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstImmersive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03709B52A45C69000793C1F /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		E03709B82A45C69000793C1F /* MyFirstImmersiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstImmersiveApp.swift; sourceTree = "<group>"; };
+		E03709BA2A45C69000793C1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E03709BC2A45C69200793C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E03709BF2A45C69200793C1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E03709C12A45C69200793C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E03709C62A45C69200793C1F /* MyFirstImmersiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstImmersiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03709CA2A45C69200793C1F /* MyFirstImmersiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstImmersiveTests.swift; sourceTree = "<group>"; };
+		E03709D42A45DD5400793C1F /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E03709AE2A45C69000793C1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03709B72A45C69000793C1F /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03709C32A45C69200793C1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E03709A82A45C69000793C1F = {
+			isa = PBXGroup;
+			children = (
+				E03709B32A45C69000793C1F /* MyFirstImmersive */,
+				E03709B42A45C69000793C1F /* Packages */,
+				E03709C92A45C69200793C1F /* MyFirstImmersiveTests */,
+				E03709B22A45C69000793C1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E03709B22A45C69000793C1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E03709B12A45C69000793C1F /* MyFirstImmersive.app */,
+				E03709C62A45C69200793C1F /* MyFirstImmersiveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E03709B32A45C69000793C1F /* MyFirstImmersive */ = {
+			isa = PBXGroup;
+			children = (
+				E03709B82A45C69000793C1F /* MyFirstImmersiveApp.swift */,
+				E03709BA2A45C69000793C1F /* ContentView.swift */,
+				E03709D42A45DD5400793C1F /* ImmersiveView.swift */,
+				E03709BC2A45C69200793C1F /* Assets.xcassets */,
+				E03709C12A45C69200793C1F /* Info.plist */,
+				E03709BE2A45C69200793C1F /* Preview Content */,
+			);
+			path = MyFirstImmersive;
+			sourceTree = "<group>";
+		};
+		E03709B42A45C69000793C1F /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				E03709B52A45C69000793C1F /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		E03709BE2A45C69200793C1F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E03709BF2A45C69200793C1F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E03709C92A45C69200793C1F /* MyFirstImmersiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				E03709CA2A45C69200793C1F /* MyFirstImmersiveTests.swift */,
+			);
+			path = MyFirstImmersiveTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E03709B02A45C69000793C1F /* MyFirstImmersive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03709CE2A45C69200793C1F /* Build configuration list for PBXNativeTarget "MyFirstImmersive" */;
+			buildPhases = (
+				E03709AD2A45C69000793C1F /* Sources */,
+				E03709AE2A45C69000793C1F /* Frameworks */,
+				E03709AF2A45C69000793C1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyFirstImmersive;
+			packageProductDependencies = (
+				E03709B62A45C69000793C1F /* RealityKitContent */,
+			);
+			productName = MyFirstImmersive;
+			productReference = E03709B12A45C69000793C1F /* MyFirstImmersive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E03709C52A45C69200793C1F /* MyFirstImmersiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03709D12A45C69200793C1F /* Build configuration list for PBXNativeTarget "MyFirstImmersiveTests" */;
+			buildPhases = (
+				E03709C22A45C69200793C1F /* Sources */,
+				E03709C32A45C69200793C1F /* Frameworks */,
+				E03709C42A45C69200793C1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E03709C82A45C69200793C1F /* PBXTargetDependency */,
+			);
+			name = MyFirstImmersiveTests;
+			productName = MyFirstImmersiveTests;
+			productReference = E03709C62A45C69200793C1F /* MyFirstImmersiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E03709A92A45C69000793C1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E03709B02A45C69000793C1F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E03709C52A45C69200793C1F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E03709B02A45C69000793C1F;
+					};
+				};
+			};
+			buildConfigurationList = E03709AC2A45C69000793C1F /* Build configuration list for PBXProject "MyFirstImmersive" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E03709A82A45C69000793C1F;
+			productRefGroup = E03709B22A45C69000793C1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E03709B02A45C69000793C1F /* MyFirstImmersive */,
+				E03709C52A45C69200793C1F /* MyFirstImmersiveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E03709AF2A45C69000793C1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03709C02A45C69200793C1F /* Preview Assets.xcassets in Resources */,
+				E03709BD2A45C69200793C1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03709C42A45C69200793C1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E03709AD2A45C69000793C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03709BB2A45C69000793C1F /* ContentView.swift in Sources */,
+				E03709B92A45C69000793C1F /* MyFirstImmersiveApp.swift in Sources */,
+				E03709D52A45DD5400793C1F /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03709C22A45C69200793C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03709CB2A45C69200793C1F /* MyFirstImmersiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E03709C82A45C69200793C1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E03709B02A45C69000793C1F /* MyFirstImmersive */;
+			targetProxy = E03709C72A45C69200793C1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E03709CC2A45C69200793C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		E03709CD2A45C69200793C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		E03709CF2A45C69200793C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyFirstImmersive/Preview Content\"";
+				DEVELOPMENT_TEAM = H774PB33GD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyFirstImmersive/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atease.MyFirstImmersive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		E03709D02A45C69200793C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyFirstImmersive/Preview Content\"";
+				DEVELOPMENT_TEAM = H774PB33GD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyFirstImmersive/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atease.MyFirstImmersive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		E03709D22A45C69200793C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H774PB33GD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atease.MyFirstImmersiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFirstImmersive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyFirstImmersive";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		E03709D32A45C69200793C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H774PB33GD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atease.MyFirstImmersiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyFirstImmersive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyFirstImmersive";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E03709AC2A45C69000793C1F /* Build configuration list for PBXProject "MyFirstImmersive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03709CC2A45C69200793C1F /* Debug */,
+				E03709CD2A45C69200793C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E03709CE2A45C69200793C1F /* Build configuration list for PBXNativeTarget "MyFirstImmersive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03709CF2A45C69200793C1F /* Debug */,
+				E03709D02A45C69200793C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E03709D12A45C69200793C1F /* Build configuration list for PBXNativeTarget "MyFirstImmersiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03709D22A45C69200793C1F /* Debug */,
+				E03709D32A45C69200793C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E03709B62A45C69000793C1F /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E03709A92A45C69000793C1F /* Project object */;
+}
