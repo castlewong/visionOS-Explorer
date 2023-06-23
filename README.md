@@ -1,5 +1,7 @@
 ![visionOS](imgs/visionOS-Header.png)
 At WWDC2023, Apple finally launched the long-anticipated headset, it's called: **Apple Vision Pro**.
+<img src="imgs/visionOS-Header.png" alt="Image Description" style="width: 50%;">
+
 
 > Apple Vision Pro is a revolutionary spatial computer that seamlessly blends digital content with the physical world, while allowing users to stay present and connected to others.
 > ...visionOS, the world’s first spatial operating system, Apple Vision Pro lets users interact with digital content in a way that feels like it is physically present in their space.
@@ -34,7 +36,16 @@ For starters, the official tutorial is always a good place to begin:
 
 [Prepare for visionOS](https://developer.apple.com/visionos/prepare/)
 
-# Developer Kit
+## Explore RealityKit and 3D content
+
+- consider using [RealityKit](https://developer.apple.com/documentation/RealityKit/) to render that content.
+
+- build surface and geometry shaders with MaterialX in Reality Composer Pro.
+ [MaterialX](https://materialx.org/) is an open standard supported by leading film, visual effects, entertainment, and gaming companies.
+ 
+- use Reality Composer Pro to build USDZ assets for visionOS projects.
+
+## Developer Kit
 
 > Vision Pro developer kit
 
@@ -48,18 +59,8 @@ If you currently have an iPad or iPhone app on the App Store, we can help you te
 
 Apply for the opportunity to attend an Apple Vision Pro developer lab, where you can experience your visionOS, iPadOS, and iOS apps running on Apple Vision Pro. With direct support from Apple, you’ll be able to test and optimize your apps and games, so they’ll be ready when Apple Vision Pro is available to customers. Labs will be available in six locations worldwide: **Cupertino, London, Munich, Shanghai, Singapore**, and **Tokyo**.
 
-Highlights of new technologies introduced at WWDC23
-Browse a selection of documentation for new technologies, frameworks, and APIs introdu
-ced at WWDC23. Many existing frameworks have added significant functionality, and you’ll find new ways to enhance your apps targeting the latest platform release.
-https://developer.apple.com/documentation/Updates/wwdc2023
+[Highlights of new technologies introduced at WWDC23](https://developer.apple.com/documentation/Updates/wwdc2023)
+Browse a selection of documentation for new technologies, frameworks, and APIs introduced at WWDC23. Many existing frameworks have added significant functionality, and you’ll find new ways to enhance your apps targeting the latest platform release.
 
-Explore RealityKit and 3D content
-
-- consider using [RealityKit](https://developer.apple.com/documentation/RealityKit/) to render that content.
-
-- build surface and geometry shaders with MaterialX in Reality Composer Pro.
- [MaterialX](https://materialx.org/) is an open standard supported by leading film, visual effects, entertainment, and gaming companies.
- 
-- use Reality Composer Pro to build USDZ assets for visionOS projects.
 
 Let's Build !
