@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sample-Projects/Build spatial experiences with RealityKit.md",
+                "file": "Develop your first immersive app.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sample-Projects/Build spatial experiences with RealityKit.md",
+                "file": "Develop your first immersive app.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sample-Projects/Build spatial experiences with RealityKit.md",
+                "file": "Develop your first immersive app.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sample-Projects/Build spatial experiences with RealityKit.md"
+                "file": "Develop your first immersive app.md"
               }
             }
           }
@@ -146,17 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eec9085f09038e74",
+  "active": "efe2ee1fe277246c",
   "lastOpenFiles": [
+    "Data/Reality-Composer-Pro.md",
+    "Data/USD.md",
+    "Data",
+    "Data/Unity.md",
+    "Sample-Projects/Build spatial experiences with RealityKit.md",
     "Develop your first immersive app.md",
     "SwiftUI-visionOS/Bugs-on-visionOS.md",
-    "Sample-Projects/Build spatial experiences with RealityKit.md",
-    "Reality-Composer-Pro.md",
     "README.md",
     "Apple-Accelerator/Shanghai-20230629.md",
     "Apple-Accelerator/WWDC23__Reference_sheet.pdf",
-    "USD.md",
-    "Unity.md",
     "Apple-Accelerator",
     "Apple-Acce",
     "untitled folder",
@@ -165,7 +166,6 @@
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/MyFirstImmersiveApp~.swift",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/Packages/RealityKitContent/README.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/Packages/RealityKitContent/README.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Clock.png",

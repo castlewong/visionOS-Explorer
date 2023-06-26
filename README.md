@@ -44,12 +44,12 @@ Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
 ## Explore RealityKit and 3D content
 
 - consider using [RealityKit](https://developer.apple.com/documentation/RealityKit/) to render 3D content.
-- you'll also be able use [Unity](Unity)’s authoring tools to create great experiences for spatial computing.
+- you'll also be able use [Unity](Unity.md)’s authoring tools to create great experiences for spatial computing.
 - build surface and geometry shaders with MaterialX in Reality Composer Pro.
  [MaterialX](https://materialx.org/) is an open standard supported by leading film, visual effects, entertainment, and gaming companies.
 - use Reality Composer Pro to build USDZ assets for visionOS projects.
 
-[More on USD](USD)
+[More on USD](USD.md)
 
 ![rcp](imgs/rcp.jpg)
 
@@ -60,7 +60,7 @@ Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
 2. Explore materials in Reality Composer Pro
 3. Work with Reality Composer Pro content in Xcode
 
-[Notes and Resource](/Reality-Composer-Pro) of Reality Composer Pro.
+[Notes and Resource](Reality-Composer-Pro.md) of Reality Composer Pro.
 
 ## Design fro visionOS
 
