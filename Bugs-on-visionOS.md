@@ -4,3 +4,4 @@ When I build and run a default template app of visionOS, and run it in simulator
 Manually adding the rootViewController's view to the view hierarchy is no longer supported. Please allow UIWindow to add the rootViewController's view to the view hierarchy itself.
 ```
 below the preview canvas.
+

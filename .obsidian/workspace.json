@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "USDZ files.md",
+                "file": "USD.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bugs-on-visionOS.md",
+                "file": "USD.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bugs-on-visionOS.md",
+                "file": "USD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bugs-on-visionOS.md",
+                "file": "USD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bugs-on-visionOS.md"
+                "file": "USD.md"
               }
             }
           }
@@ -171,8 +171,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eec9085f09038e74",
+  "active": "1366c5d24d34838c",
   "lastOpenFiles": [
+    "Unity.md",
+    "USD.md",
+    "Develop your first immersive app.md",
+    "Bugs-on-visionOS.md",
+    "Sample-Projects/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/ContentView~.swift",
+    "Sample-Projects/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/MyFirstImmersiveApp~.swift",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad",
@@ -181,15 +187,8 @@
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata/swiftpm",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcuserdata/wilburwong.xcuserdatad/UserInterfaceState.xcuserstate",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcuserdata/wilburwong.xcuserdatad",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcuserdata",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/Packages/RealityKitContent/README.md",
-    "USDZ files.md",
-    "Bugs-on-visionOS.md",
-    "Unity.md",
     "Reality-Composer-Pro.md",
-    "Develop your first immersive app.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/Packages/RealityKitContent/README.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Clock.png",
     "Build spatial experiences with RealityKit.md",

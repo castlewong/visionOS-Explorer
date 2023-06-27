@@ -1,8 +1,11 @@
-This is Apple's preferred file format for 3D content.
-AKA **Universal Scene Descriptions**
-To learn more, check out [Understand USD fundamentals]() and [Create 3D workflows with USD]()
+[USD](https://openusd.org/release/intro.html) (Universal Scene Description) is the first publicly available software that addresses the need to robustly and scalably interchange and augment arbitrary 3D scenes that may be composed **from many elemental assets.**
 
-[Create 3D workflows with USD](https://developer.apple.com/videos/play/wwdc2021/10077/)
+USD provides a [rich toolset](https://openusd.org/release/toolset.html) for reading, writing, editing, and rapidly previewing 3D geometry, shading, lighting, physics, and a growing number of other graphics-related domains. In addition, because USD’s core scenegraph and [composition engine](https://openusd.org/release/glossary.html#composition) are agnostic of any particular domain, USD can be extended in a maintainable way to encode and compose data in other domains.
+
+USDZ is Apple's preferred file format for 3D content.
+
+
+To learn more, check out [Understand USD fundamentals]() and [Create 3D workflows with USD](https://developer.apple.com/videos/play/wwdc2021/10077/)
 
 To download free USDZ files, there are some websites I found can be useful:
 

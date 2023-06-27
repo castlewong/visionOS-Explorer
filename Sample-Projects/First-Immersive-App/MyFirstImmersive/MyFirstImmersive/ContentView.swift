@@ -14,9 +14,11 @@ struct ContentView: View {
     @State var enlarge = false
     
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
     var body: some View {
         VStack {
+            Text(String(enlarge))
             RealityView { content in
                 // Add the initial RealityKit content
                 if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
@@ -33,11 +35,18 @@ struct ContentView: View {
                 enlarge.toggle()
             })
             
-            Button("Open") {
-                Task {
-                    await openImmersiveSpace(id: "ImmersiveSpace")
+//            HStack {
+                Button("Open") {
+                    Task {
+                        await openImmersiveSpace(id: "ImmersiveSpace")
+                    }
                 }
-            }
+//                Button("Close") {
+//                    Task {
+//                        await dismissImmersiveSpace()
+//                    }
+//                }
+//            }.padding()
 
             VStack {
                 Toggle("Enlarge RealityView Content", isOn: $enlarge)
