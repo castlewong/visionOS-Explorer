@@ -13,17 +13,19 @@ We'd like to explore the possibility that: MR (eg. AR/VR) dominate the way we in
 
 ![UI](imgs/apple-design-resources-visionos_2x.jpg)
 
-This repository stands for a **warehouse** of collecting the **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of spatial computing and MR, every contributions of good-value to this repository is welcomed.
+This repository stands for a **Warehouse** for collecting **resources, tutorials, notes and codes** for building visionOS apps and exploring all the possibilities of spatial computing and MR, every contributions of good-value to this repository is welcomed.
 
 ![Vision Pro](imgs/Screenshot.png)
 
-For starters, the official tutorial is always a good place to begin:
-
+For starters, the official tutorial is always 
+<details>
+<summary>a good place to begin:</summary>
 [Learn visionOS](https://developer.apple.com/visionos/learn/)
 
 And [**SDK for visionOS came out on June 22, 2023**](https://developer.apple.com/download/all/?q=xcode%2015).
 
 Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
+</details>
 
 ## Intro
 
@@ -41,12 +43,16 @@ Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
 
 ## Explore RealityKit and 3D content
 
-- consider using [RealityKit](https://developer.apple.com/documentation/RealityKit/) to render that content.
+- consider using [RealityKit](https://developer.apple.com/documentation/RealityKit/) to render 3D content.
+- you'll also be able use [Unity](Unity)’s authoring tools to create great experiences for spatial computing.
 - build surface and geometry shaders with MaterialX in Reality Composer Pro.
  [MaterialX](https://materialx.org/) is an open standard supported by leading film, visual effects, entertainment, and gaming companies.
 - use Reality Composer Pro to build USDZ assets for visionOS projects.
 
+[More on USD](USD)
+
 ![rcp](imgs/rcp.jpg)
+
 
 **Right order for watching sessions**:
 
@@ -55,6 +61,10 @@ Apple also provided few [Sample Projects for visionOS](/Sample-Projects)
 3. Work with Reality Composer Pro content in Xcode
 
 [Notes and Resource](/Reality-Composer-Pro) of Reality Composer Pro.
+
+## Design fro visionOS
+
+[Apple Design Resources for visionOS](https://developer.apple.com/design/resources/#visionos-apps)
 
 ## Developer Kit
 
@@ -69,6 +79,8 @@ If you currently have an iPad or iPhone app on the App Store, we can help you te
 > Apple Vision Pro developer labs
 
 Apply for the opportunity to attend an Apple Vision Pro developer lab, where you can experience your visionOS, iPadOS, and iOS apps running on Apple Vision Pro. With direct support from Apple, you’ll be able to test and optimize your apps and games, so they’ll be ready when Apple Vision Pro is available to customers. Labs will be available in six locations worldwide: **Cupertino, London, Munich, Shanghai, Singapore**, and **Tokyo**.
+
+## WWDC2023
 
 [Highlights of new technologies introduced at WWDC23](https://developer.apple.com/documentation/Updates/wwdc2023)
 Browse a selection of documentation for new technologies, frameworks, and APIs introduced at WWDC23. Many existing frameworks have added significant functionality, and you’ll find new ways to enhance your apps targeting the latest platform release.

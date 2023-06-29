@@ -8,43 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "737617b23f06a80e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5efc3e658e29546b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "USD.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "1366c5d24d34838c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "USD.md",
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "08a5b13e18008fc9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Apple-Accelerator/Shanghai-20230629.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "USD.md",
+                "file": "Apple-Accelerator/Shanghai-20230629.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "USD.md",
+                "file": "Apple-Accelerator/Shanghai-20230629.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "USD.md"
+                "file": "Apple-Accelerator/Shanghai-20230629.md"
               }
             }
           }
@@ -171,10 +159,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1366c5d24d34838c",
+  "active": "08a5b13e18008fc9",
   "lastOpenFiles": [
+    "README.md",
+    "Apple-Accelerator/Shanghai-20230629.md",
+    "Apple-Accelerator/WWDC23__Reference_sheet.pdf",
+    "Apple-Accelerator",
+    "Apple-Acce",
+    "untitled folder",
+    "WWDC23__Reference_sheet.pdf",
     "Unity.md",
     "USD.md",
+    "Reality-Composer-Pro.md",
     "Develop your first immersive app.md",
     "Bugs-on-visionOS.md",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/ContentView~.swift",
@@ -182,13 +178,7 @@
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata/swiftpm",
-    "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/project.xcworkspace/xcshareddata",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/Packages/RealityKitContent/README.md",
-    "Reality-Composer-Pro.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/Packages/RealityKitContent/README.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Clock.png",
     "Build spatial experiences with RealityKit.md",
@@ -197,7 +187,6 @@
     "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
     "Reality-Composer-Pro/Session3 - Work with Reality Composer Pro content in Xcode.md",
     "Reality-Composer-Pro/Session2 - Explore materials in Reality Composer Pro.md",
-    "README.md",
     "Sample-Projects.md",
     "().md",
     "Reality-Composer-Pro/Sample-Project-RCP/Diorama-Completed/Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/TrailPath_Export/0/hilight_gradient.png",
