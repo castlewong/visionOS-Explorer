@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "8cb91b8654c1e3bf",
+        "id": "5dd228e9a72004b9",
         "type": "tabs",
         "children": [
           {
-            "id": "1366c5d24d34838c",
+            "id": "efe2ee1fe277246c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "08a5b13e18008fc9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Apple-Accelerator/Shanghai-20230629.md",
+                "file": "Sample-Projects/Build spatial experiences with RealityKit.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Apple-Accelerator/Shanghai-20230629.md",
+                "file": "Sample-Projects/Build spatial experiences with RealityKit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Apple-Accelerator/Shanghai-20230629.md",
+                "file": "Sample-Projects/Build spatial experiences with RealityKit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Apple-Accelerator/Shanghai-20230629.md"
+                "file": "Sample-Projects/Build spatial experiences with RealityKit.md"
               }
             }
           }
@@ -159,20 +146,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08a5b13e18008fc9",
+  "active": "eec9085f09038e74",
   "lastOpenFiles": [
+    "Develop your first immersive app.md",
+    "SwiftUI-visionOS/Bugs-on-visionOS.md",
+    "Sample-Projects/Build spatial experiences with RealityKit.md",
+    "Reality-Composer-Pro.md",
     "README.md",
     "Apple-Accelerator/Shanghai-20230629.md",
     "Apple-Accelerator/WWDC23__Reference_sheet.pdf",
+    "USD.md",
+    "Unity.md",
     "Apple-Accelerator",
     "Apple-Acce",
     "untitled folder",
     "WWDC23__Reference_sheet.pdf",
-    "Unity.md",
-    "USD.md",
-    "Reality-Composer-Pro.md",
-    "Develop your first immersive app.md",
-    "Bugs-on-visionOS.md",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/ContentView~.swift",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/MyFirstImmersiveApp~.swift",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/TestWindows.xcodeproj/xcuserdata/wilburwong.xcuserdatad/xcschemes/xcschememanagement.plist",
@@ -181,7 +169,6 @@
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/TestWindows/Packages/RealityKitContent/README.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstSimulatorCrash/Packages/RealityKitContent/README.md",
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Clock.png",
-    "Build spatial experiences with RealityKit.md",
     "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/Packages/RealityKitContent/README.md",
     "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
@@ -205,7 +192,6 @@
     "Sample-Project-RCP.md",
     "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
     "Sample-Projects/HappyBeam/README.md",
-    "Sample-Projects/DestinationVideo/README.md",
-    "HappyBeam/Packages/HappyBeamAssets/README.md"
+    "Sample-Projects/DestinationVideo/README.md"
   ]
 }
