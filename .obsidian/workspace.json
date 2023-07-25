@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Develop your first immersive app.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Develop your first immersive app.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Develop your first immersive app.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Develop your first immersive app.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,14 +148,14 @@
   },
   "active": "efe2ee1fe277246c",
   "lastOpenFiles": [
+    "Develop your first immersive app.md",
+    "README.md",
+    "Sample-Projects/Build spatial experiences with RealityKit.md",
     "Data/Reality-Composer-Pro.md",
     "Data/USD.md",
     "Data",
     "Data/Unity.md",
-    "Sample-Projects/Build spatial experiences with RealityKit.md",
-    "Develop your first immersive app.md",
     "SwiftUI-visionOS/Bugs-on-visionOS.md",
-    "README.md",
     "Apple-Accelerator/Shanghai-20230629.md",
     "Apple-Accelerator/WWDC23__Reference_sheet.pdf",
     "Apple-Accelerator",
