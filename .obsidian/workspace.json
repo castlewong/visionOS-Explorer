@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b125c32dfd51718e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Apple Vision Pro Developer Labs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "volume",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Apple Vision Pro Developer Labs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Apple Vision Pro Developer Labs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Apple Vision Pro Developer Labs.md"
               }
             }
           }
@@ -146,10 +159,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "efe2ee1fe277246c",
+  "active": "b125c32dfd51718e",
   "lastOpenFiles": [
-    "Develop your first immersive app.md",
     "README.md",
+    "Apple Vision Pro Developer Labs.md",
+    "Develop your first immersive app.md",
+    "SwiftUI-visionOS/Take SwiftUI to the next dimension.md",
+    "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
+    "Sample-Projects/DestinationVideo/README.md",
     "Sample-Projects/Build spatial experiences with RealityKit.md",
     "Data/Reality-Composer-Pro.md",
     "Data/USD.md",
@@ -171,7 +188,6 @@
     "Sample-Projects-for-visionOS/First-Immersive-App/MyFirstImmersive/MyFirstImmersive/Assets.xcassets/AppIcon.solidimagestack/Front.solidimagestacklayer/Content.imageset/Clock.png",
     "SwiftUI-visionOS/Meet SwiftUI for spatial computing.md",
     "Sample-Projects/First-Immersive-App/MyFirstImmersive/Packages/RealityKitContent/README.md",
-    "Reality-Composer-Pro/Session1 - Meet Reality Composer Pro.md",
     "Reality-Composer-Pro/Session3 - Work with Reality Composer Pro content in Xcode.md",
     "Reality-Composer-Pro/Session2 - Explore materials in Reality Composer Pro.md",
     "Sample-Projects.md",
@@ -190,8 +206,6 @@
     "Learn visionOS.md",
     "Reality-Composer-Pro/Sample-Project-RCP/Dioramas_Initial/Packages/RealityKitContent/README.md",
     "Sample-Project-RCP.md",
-    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md",
-    "Sample-Projects/HappyBeam/README.md",
-    "Sample-Projects/DestinationVideo/README.md"
+    "Sample-Projects/HappyBeam/Packages/HappyBeamAssets/README.md"
   ]
 }
