@@ -1,0 +1,17 @@
+{
+  "pathsToIds" : {
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/DioramaAssembled.usda" : "B62923A5-3D32-4FF7-9E72-56E71BC855DD",
+    "\/YosemiteTrial\/Sources\/YosemiteTrial\/YosemiteTrial.rkassets\/Bird_With_Audio.usda" : "69721414-29C2-4608-8B38-F8F64EEB5A59",
+    "\/YosemiteTrial\/Sources\/YosemiteTrial\/YosemiteTrial.rkassets\/DioramaAssembled.usda" : "3862B2E2-8ABF-41BB-B8D7-4CA5B0CFE539",
+    "\/YosemiteTrial\/Sources\/YosemiteTrial\/YosemiteTrial.rkassets\/Scene.usda" : "08A538A4-3690-49C4-89EC-010134C2686C",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Bird_With_Audio.usda" : "5297D9AC-B326-49EE-AE9B-4BB66765CE10",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Cloud_A.usda" : "7D6042B0-1A14-4AC3-9EF0-961FC5F8FC96",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Cloud_B.usda" : "0586295D-D1F5-4BED-AF67-A4602DF296F6",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Cloud_C.usda" : "858E7393-62AA-4C2A-9102-B10972209D9D",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/DioramaAssembled.usda" : "78ECD410-2A7C-426C-8B41-255869BB4F8B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Materials.usda" : "64253C25-3E85-4B1A-9D49-5CE8DB15BF46",
+    "YosemiteTrial\/Sources\/YosemiteTrial\/YosemiteTrial.rkassets\/Bird_With_Audio.usda" : "15732C65-9273-4ADE-9789-EC1D16EF7352",
+    "YosemiteTrial\/Sources\/YosemiteTrial\/YosemiteTrial.rkassets\/DioramaAssembled.usda" : "F4E6323C-1DD1-4E24-8672-A56E09BC2512",
+    "YosemiteTrial\/Sources\/YosemiteTrial\/YosemiteTrial.rkassets\/Scene.usda" : "98C4F57E-8470-4BD2-A95F-40E09B6D667A"
+  }
+}
