@@ -17,6 +17,7 @@ struct TableOfContents: View {
         VStack {
             Image("SunSliver")
                 .opacity(model.isTitleFinished ? 1 : 0)
+            // when the type effect end, show this bg image
 
             Spacer(minLength: 120)
 
