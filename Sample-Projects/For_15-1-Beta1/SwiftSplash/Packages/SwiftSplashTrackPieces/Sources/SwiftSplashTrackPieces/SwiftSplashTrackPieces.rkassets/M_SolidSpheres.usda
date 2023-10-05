@@ -1,0 +1,294 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def Material "M_SolidSpheres" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["MaterialXPreviewSurface", "Ramplr", "Color_Blend2", "Ramplr_1", "Contrast_1", "Separate3", "Clamp_1", "Clamp", "Time", "Speed", "Multiply", "Floor", "Convert", "Subtract", "Contrast", "Overlay"]
+        float inputs:speed_multiplier = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1314.3931, -100.37727)
+                    float2 sizeInSubgraph = (172.5, 53)
+                    int stackingOrderInSubgraph = 1427
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/M_SolidSpheres/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (792.4909, 174.42038)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 975
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_SolidSpheres/Contrast.outputs:out>
+            color3f inputs:emissiveColor.connect = </Root/M_SolidSpheres/Contrast.outputs:out>
+            float inputs:ior
+            float inputs:metallic
+            float3 inputs:normal
+            float inputs:occlusion
+            float inputs:opacity.connect = </Root/M_SolidSpheres/Separate3.outputs:outr>
+            float inputs:opacityThreshold = 0.1
+            float inputs:roughness.connect = None
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (537.99097, 174.42038)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 975
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "Ramplr"
+        {
+            uniform token info:id = "ND_ramplr_float"
+            float2 inputs:texcoord
+            float inputs:valuer = 1
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-867.01385, 277.66977)
+            float2 ui:nodegraph:node:size = (148.5, 145)
+            int ui:nodegraph:node:stackingOrder = 836
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:valuer", "inputs:texcoord"]
+        }
+
+        def Shader "Overlay"
+        {
+            uniform token info:id = "ND_overlay_color3"
+            color3f inputs:bg.connect = </Root/M_SolidSpheres/Color2.outputs:out>
+            color3f inputs:fg.connect = </Root/M_SolidSpheres/Color1.outputs:out>
+            float inputs:mix = 1
+            float inputs:mix.connect = </Root/M_SolidSpheres/Clamp_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-34.76477, 253.25179)
+            float2 ui:nodegraph:node:size = (109, 145)
+            int ui:nodegraph:node:stackingOrder = 904
+        }
+
+        def Shader "Contrast"
+        {
+            uniform token info:id = "ND_contrast_color3FA"
+            float inputs:amount.connect = </Root/M_SolidSpheres/Emmissive_Intensity.outputs:out>
+            prepend color3f inputs:in.connect = </Root/M_SolidSpheres/Overlay.outputs:out>
+            float inputs:pivot
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (245.8393, 416.02548)
+            float2 ui:nodegraph:node:size = (106, 145)
+            int ui:nodegraph:node:stackingOrder = 1005
+        }
+
+        def Shader "Color_Blend2"
+        {
+            uniform token info:id = "ND_contrast_float"
+            float inputs:amount = 50
+            float inputs:amount.connect = </Root/M_SolidSpheres/Color_Blend.outputs:out>
+            float inputs:in.connect = </Root/M_SolidSpheres/Ramplr.outputs:out>
+            float inputs:pivot
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-662.94867, 326.01703)
+            float2 ui:nodegraph:node:size = (136, 145)
+            int ui:nodegraph:node:stackingOrder = 922
+        }
+
+        def Shader "Ramplr_1"
+        {
+            uniform token info:id = "ND_ramplr_color3"
+            float2 inputs:texcoord.connect = </Root/M_SolidSpheres/Combine2.outputs:out>
+            color3f inputs:valuel = (1, 1, 1) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f inputs:valuel.connect = None
+            color3f inputs:valuer = (0, 0, 0) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f inputs:valuer.connect = None
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-332.2638, -121.16124)
+            float2 ui:nodegraph:node:size = (148.5, 145)
+            int ui:nodegraph:node:stackingOrder = 1424
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:valuer", "inputs:valuer", "inputs:texcoord"]
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_SolidSpheres/Clamp.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (193.91336, -61.9248)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 936
+        }
+
+        def Shader "Clamp_1"
+        {
+            uniform token info:id = "ND_clamp_float"
+            float inputs:high = 1
+            float inputs:in.connect = </Root/M_SolidSpheres/Color_Blend2.outputs:out>
+            float inputs:low = 0
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-460.3441, 334.21982)
+            float2 ui:nodegraph:node:size = (103, 145)
+            int ui:nodegraph:node:stackingOrder = 931
+        }
+
+        def Shader "Clamp"
+        {
+            uniform token info:id = "ND_clamp_color3"
+            color3f inputs:high.connect = None
+            color3f inputs:in.connect = </Root/M_SolidSpheres/Contrast_2.outputs:out>
+            color3f inputs:low.connect = None
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (21.523338, -34.92268)
+            float2 ui:nodegraph:node:size = (92, 145)
+            int ui:nodegraph:node:stackingOrder = 1442
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:low", "inputs:in"]
+        }
+
+        def Shader "Time"
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1314.0634, -167.19406)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1324
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_float"
+            float inputs:in1.connect = </Root/M_SolidSpheres/Time.outputs:out>
+            float inputs:in2.connect = </Root/M_SolidSpheres.inputs:speed_multiplier>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1111.4309, -115.28023)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 1308
+        }
+
+        def Shader "Floor"
+        {
+            uniform token info:id = "ND_floor_float"
+            float inputs:in.connect = </Root/M_SolidSpheres/Multiply.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1020.3671, -226.33966)
+            float2 ui:nodegraph:node:size = (118, 40)
+            int ui:nodegraph:node:stackingOrder = 1305
+        }
+
+        def Shader "Subtract"
+        {
+            uniform token info:id = "ND_subtract_float"
+            float inputs:in1.connect = </Root/M_SolidSpheres/Floor.outputs:out>
+            float inputs:in2.connect = </Root/M_SolidSpheres/Multiply.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-914.56946, -121.50173)
+            float2 ui:nodegraph:node:size = (61.5, 36)
+            int ui:nodegraph:node:stackingOrder = 1259
+        }
+
+        def Shader "Add"
+        {
+            uniform token info:id = "ND_add_float"
+            float inputs:in1.connect = </Root/M_SolidSpheres/Separate2.outputs:outx>
+            float inputs:in2.connect = </Root/M_SolidSpheres/Subtract.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-793.6932, -107.70108)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 1421
+        }
+
+        def Shader "Separate2"
+        {
+            uniform token info:id = "ND_separate2_vector2"
+            float2 inputs:in.connect = </Root/M_SolidSpheres/Texcoord.outputs:out>
+            float outputs:outx
+            float outputs:outy
+            float2 ui:nodegraph:node:pos = (-1084.267, 29.959806)
+            float2 ui:nodegraph:node:size = (115, 127)
+            int ui:nodegraph:node:stackingOrder = 1404
+        }
+
+        def Shader "Texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1271.319, 32.60084)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1452
+        }
+
+        def Shader "Combine2"
+        {
+            uniform token info:id = "ND_combine2_vector2"
+            float inputs:in1.connect = </Root/M_SolidSpheres/Add.outputs:out>
+            float inputs:in2.connect = </Root/M_SolidSpheres/Separate2.outputs:outy>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-624.80994, -96.735275)
+            float2 ui:nodegraph:node:size = (144.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1410
+        }
+
+        def Shader "Emmissive_Intensity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 5
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-60.03013, 438.17416)
+            float2 ui:nodegraph:node:size = (212, 53)
+        }
+
+        def Shader "Color1"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.5187667, 0.9236654, 1) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-336.64105, 89.20786)
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        def Shader "Color2"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.97903395, 1, 0.9989551) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-342.88895, 184.20192)
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        def Shader "Color_Blend"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 50
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-856.2565, 395.60342)
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        def Shader "Contrast_2"
+        {
+            uniform token info:id = "ND_contrast_color3FA"
+            float inputs:amount = 50
+            prepend color3f inputs:in.connect = </Root/M_SolidSpheres/Ramplr_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-147.57487, -82.944435)
+            float2 ui:nodegraph:node:size = (121.5, 145)
+            int ui:nodegraph:node:stackingOrder = 1451
+        }
+    }
+}
+

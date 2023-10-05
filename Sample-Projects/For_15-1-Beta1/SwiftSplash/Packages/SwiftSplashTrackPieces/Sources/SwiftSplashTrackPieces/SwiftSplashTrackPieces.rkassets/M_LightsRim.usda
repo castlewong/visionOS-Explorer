@@ -1,0 +1,222 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "M_lightsRims"]
+
+def Xform "Root"
+{
+    def Material "M_lightsRims" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["MaterialXPreviewSurface", "Image", "Separate3", "Image_1", "Remap_1", "Image_2", "Luminance", "Multiply", "Range", "Roughness"]
+        prepend token outputs:mtlx:surface.connect = </Root/M_lightsRims/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (809.3995, 148.21158)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 156
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_lightsRims/Multiply.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float inputs:metallic.connect = </Root/M_lightsRims/metallic.outputs:out>
+            float3 inputs:normal.connect = </Root/M_lightsRims/Remap_1.outputs:out>
+            float inputs:occlusion.connect = None
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_lightsRims/Roughness.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (554.89954, 148.21158)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 156
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "Image"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file.connect = </Root/M_lightsRims/BC.outputs:out>
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-266.96954, -5.385838)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 237
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_lightsRims/Image_1.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-126.99493, 233.18625)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 236
+        }
+
+        def Shader "Image_1"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file.connect = </Root/M_lightsRims/ORM.outputs:out>
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-276.21765, 222.71199)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 236
+        }
+
+        def Shader "Remap_1"
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/M_lightsRims/Image_2.outputs:out>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outhigh
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-126.71575, 446.70456)
+            float2 ui:nodegraph:node:size = (105.5, 181)
+            int ui:nodegraph:node:stackingOrder = 236
+        }
+
+        def Shader "Image_2"
+        {
+            uniform token info:id = "ND_image_vector3"
+            asset inputs:file.connect = </Root/M_lightsRims/N.outputs:out>
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-282.4598, 446.40866)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 236
+        }
+
+        def Shader "Luminance"
+        {
+            uniform token info:id = "ND_luminance_color3"
+            color3f inputs:in.connect = </Root/M_lightsRims/Image.outputs:out>
+            color3f inputs:lumacoeffs
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-25.143438, 3.0231557)
+            float2 ui:nodegraph:node:size = (138.5, 127)
+            int ui:nodegraph:node:stackingOrder = 236
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1.connect = </Root/M_lightsRims/Range.outputs:out>
+            color3f inputs:in2.connect = </Root/M_lightsRims/Color.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (335.11932, -119.17295)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 236
+        }
+
+        def Shader "Range"
+        {
+            uniform token info:id = "ND_range_color3FA"
+            bool inputs:doclamp
+            float inputs:gamma = 2
+            float inputs:gamma.connect = </Root/M_lightsRims/Color_Brightness.outputs:out>
+            prepend color3f inputs:in.connect = </Root/M_lightsRims/Luminance.outputs:out>
+            float inputs:inhigh
+            float inputs:outhigh
+            float inputs:outlow
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (183.24992, -7.1956797)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 236
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+        }
+
+        def Shader "BC"
+        {
+            uniform token info:id = "ND_constant_filename"
+            asset inputs:value = @Textures/Universal/mat_lightsRim_BaseColor.png@
+            asset outputs:out
+            float2 ui:nodegraph:node:pos = (-466.76953, -41.10547)
+            float2 ui:nodegraph:node:size = (133.5, 53)
+            int ui:nodegraph:node:stackingOrder = 238
+        }
+
+        def Shader "ORM"
+        {
+            uniform token info:id = "ND_constant_filename"
+            asset inputs:value = @Textures/Universal/mat_lightsRim_OcclusionRoughnessMetallic.png@
+            asset outputs:out
+            float2 ui:nodegraph:node:pos = (-482.4436, 153.38808)
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        def Shader "N"
+        {
+            uniform token info:id = "ND_constant_filename"
+            asset inputs:value = @Textures/Universal/mat_lightsRim_Normal.png@
+            asset outputs:out
+            float2 ui:nodegraph:node:pos = (-476.36243, 382.71246)
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        def Shader "Color_Brightness"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-24.633453, 109.43435)
+            float2 ui:nodegraph:node:size = (192.5, 53)
+        }
+
+        def Shader "Color"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.60848904, 0.47071865, 0.23136024) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-30.08025, -116.076866)
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        def Shader "Roughness"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.5
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (181, 164.7539)
+            float2 ui:nodegraph:node:size = (154, 53)
+        }
+
+        def Shader "metallic"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 1
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (180.52695, 251.07086)
+            float2 ui:nodegraph:node:size = (134, 53)
+        }
+    }
+}
+

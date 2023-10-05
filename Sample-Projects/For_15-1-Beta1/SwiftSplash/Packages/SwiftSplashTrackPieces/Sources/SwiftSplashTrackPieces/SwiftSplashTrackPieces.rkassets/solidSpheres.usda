@@ -1,0 +1,216 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["solidSpheres", "out_connection_vector"]
+    def "solidSpheres" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @solidSpheres.usdz@
+    )
+    {
+        reorder nameChildren = ["solidSpheres", "Looks", "connect_in", "M_solidSpheres", "connect_out", "in_connection_vector", "out_connection_vector"]
+        rel material:binding = </Root/solidSpheres/M_solidSpheres/M_SolidSpheres> (
+            bindMaterialAs = "strongerThanDescendants"
+        )
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "connect_in" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "M_solidSpheres" (
+            active = true
+            references = @M_SolidSpheres.usda@
+        )
+        {
+            reorder nameChildren = ["M_SolidSpheres", "connect_in"]
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "M_SolidSpheres"
+            {
+                float inputs:speed_multiplier (
+                    customData = {
+                        dictionary realitykit = {
+                            float2 positionInSubgraph = (-1314.3931, -100.37727)
+                            float2 sizeInSubgraph = (172.5, 53)
+                            int stackingOrderInSubgraph = 1427
+                        }
+                    }
+                )
+                float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+                over "Emmissive_Intensity"
+                {
+                    float2 ui:nodegraph:node:size = (212, 53)
+                }
+
+                over "Color1"
+                {
+                    float2 ui:nodegraph:node:size = (151, 53)
+                }
+
+                over "Color2"
+                {
+                    float2 ui:nodegraph:node:size = (151, 53)
+                }
+
+                over "Color_Blend"
+                {
+                    float2 ui:nodegraph:node:size = (161, 53)
+                }
+
+                over "Ramplr"
+                {
+                    float2 ui:nodegraph:node:size = (148.5, 145)
+                }
+
+                over "Overlay"
+                {
+                    float2 ui:nodegraph:node:size = (109, 145)
+                }
+
+                over "Color_Blend2"
+                {
+                    float2 ui:nodegraph:node:size = (136, 145)
+                }
+
+                over "Clamp_1"
+                {
+                    float2 ui:nodegraph:node:size = (103, 145)
+                }
+
+                over "Separate3"
+                {
+                    float2 ui:nodegraph:node:size = (115.5, 145)
+                }
+
+                over "MaterialXPreviewSurface"
+                {
+                    float2 ui:nodegraph:node:size = (207.5, 307)
+                }
+
+                over "Contrast"
+                {
+                    float2 ui:nodegraph:node:size = (106, 145)
+                }
+
+                over "Subtract"
+                {
+                    float2 ui:nodegraph:node:size = (61.5, 36)
+                }
+
+                over "Floor"
+                {
+                    float2 ui:nodegraph:node:size = (118, 40)
+                }
+
+                over "Multiply"
+                {
+                    float2 ui:nodegraph:node:size = (60, 36)
+                }
+
+                over "Time"
+                {
+                    float2 ui:nodegraph:node:size = (122.5, 53)
+                }
+
+                over "Clamp"
+                {
+                    float2 ui:nodegraph:node:size = (92, 145)
+                }
+
+                over "Separate2"
+                {
+                    float2 ui:nodegraph:node:size = (115, 127)
+                }
+
+                over "Combine2"
+                {
+                    float2 ui:nodegraph:node:size = (144.5, 53)
+                }
+
+                over "Texcoord"
+                {
+                    float2 ui:nodegraph:node:size = (180.5, 53)
+                }
+
+                over "Ramplr_1"
+                {
+                    float2 ui:nodegraph:node:size = (148.5, 145)
+                }
+
+                over "Add"
+                {
+                    float2 ui:nodegraph:node:size = (61.5, 36.5)
+                }
+
+                over "Contrast_1"
+                {
+                    float2 ui:nodegraph:node:size = (118.5, 145)
+                }
+
+                over "Contrast_2"
+                {
+                    float2 ui:nodegraph:node:size = (121.5, 145)
+                }
+            }
+        }
+
+        def Xform "connect_out" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "in_connection_vector" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, -1.788295)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "out_connection_vector" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (100, 100, 100)
+            float3 xformOp:translate = (0, 0, 2.204223)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        over "solidSpheres" (
+            active = false
+        )
+        {
+            float3 xformOp:translate = (0, 1.0680071, 0.08972473)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+}
+

@@ -1,0 +1,2291 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "Materials"]
+
+def Xform "Root"
+{
+    reorder nameChildren = ["start", "slide_01", "slide_02", "slide_03", "slide_04", "slide_05", "end", "place_piece_marker", "adventureFish_end_anim_001", "AquariumGlass", "FishBody", "FishAccessories", "FishGlass", "FishEyelids", "FishEyes", "SlideTop", "SlideLights", "LightsMetal", "MovingWater", "SlideBottom", "Glow", "MetalRims", "End", "CheckeredFlag", "RainbowLights", "StillWater", "SlideBottom_2", "SolidSpheres"]
+    rel material:binding = None (
+        bindMaterialAs = "weakerThanDescendants"
+    )
+}
+
+def Scope "Materials" (
+    active = true
+)
+{
+    reorder nameChildren = ["SlideLights", "LightsMetal", "RainbowLights", "MovingWater", "SlideBottom", "Glow", "MetalRims", "FishEyes", "SlideTop", "FishGlass", "FishEyelids", "FishBody", "FishAccessories"]
+    def Material "RainbowLights" (
+        active = true
+        references = None
+    )
+    {
+        float inputs:powered = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1231.5938, -72.699936)
+                    float2 sizeInSubgraph = (122, 53)
+                    int stackingOrderInSubgraph = 5095
+                }
+            }
+        )
+        bool inputs:ride_running = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1705.842, -573.754)
+                    float2 sizeInSubgraph = (147, 53)
+                    int stackingOrderInSubgraph = 5095
+                }
+            }
+        )
+        float inputs:speed_multiplier = 0.5 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-2989.4126, -356.805)
+                    float2 sizeInSubgraph = (172.5, 53)
+                    int stackingOrderInSubgraph = 5094
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Materials/RainbowLights/MaterialXPreviewSurface2.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (687.4492, 275.60938)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 4
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def Shader "separate2"
+        {
+            uniform token info:id = "ND_separate2_vector2"
+            float2 inputs:in.connect = </Materials/RainbowLights/texcoord.outputs:out>
+            float outputs:outx
+            float outputs:outy
+            float2 ui:nodegraph:node:pos = (-2322.4302, -560.11816)
+            float2 ui:nodegraph:node:size = (113.5, 127)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "divide"
+        {
+            uniform token info:id = "ND_divide_float"
+            float inputs:in1.connect = </Materials/RainbowLights.inputs:powered>
+            float inputs:in2.connect = </Materials/RainbowLights/four.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-925.1953, -282.51953)
+            float2 ui:nodegraph:node:size = (61.5, 36)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "leftmost_left_uv"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.013
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2532.765, -35.043064)
+            float2 ui:nodegraph:node:size = (187.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "add2"
+        {
+            uniform token info:id = "ND_add_float"
+            float inputs:in1.connect = </Materials/RainbowLights/divide.outputs:out>
+            float inputs:in2.connect = </Materials/RainbowLights/zero_point_two_five.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-841.16406, -253.44531)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 5095
+        }
+
+        def NodeGraph "lerp"
+        {
+            float inputs:End = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-118.49609, 334.47656)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 2637
+                    }
+                }
+            )
+            float inputs:End.connect = None
+            float inputs:start = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-277.8789, 244.59766)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 2635
+                    }
+                }
+            )
+            float inputs:start.connect = None
+            float inputs:t = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-337.20312, 167.76562)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 2633
+                    }
+                }
+            )
+            float inputs:t.connect = None
+            float outputs:result.connect = None
+            float2 ui:nodegraph:node:pos = (-875.80786, 208.13364)
+            float2 ui:nodegraph:node:size = (105.5, 145)
+            int ui:nodegraph:node:stackingOrder = 5091
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (758.14844, 77.30859)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (122.5, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 2633
+
+            def Shader "add"
+            {
+                uniform token info:id = "ND_add_float"
+                float inputs:in1.connect = </Materials/RainbowLights/lerp/multiply4.outputs:out>
+                float inputs:in2.connect = </Materials/RainbowLights/lerp/multiply5.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (447.25, 71.25)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1.connect = </Materials/RainbowLights/lerp/one.outputs:out>
+                float inputs:in2.connect = </Materials/RainbowLights/lerp.inputs:t>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (205.75, 21.5)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "one"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (57.5, 21.5)
+                float2 ui:nodegraph:node:size = (115, 43)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "multiply4"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Materials/RainbowLights/lerp/subtract.outputs:out>
+                float inputs:in2.connect = </Materials/RainbowLights/lerp.inputs:start>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (326.5, 21.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "multiply5"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Materials/RainbowLights/lerp.inputs:t>
+                float inputs:in2.connect = </Materials/RainbowLights/lerp.inputs:End>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (326.5, 157)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+        }
+
+        def Shader "zero_point_two_five"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.25
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1212.207, -245.35156)
+            float2 ui:nodegraph:node:size = (211.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5098
+        }
+
+        def Shader "multiply3"
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            color3f inputs:in1.connect = </Materials/RainbowLights/rainbow_lights.outputs:out>
+            float inputs:in2.connect = </Materials/RainbowLights/add2.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-307.31976, -385.88324)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "rightmost_left_uv"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.505
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2526.2146, -92.16634)
+            float2 ui:nodegraph:node:size = (196, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "subtract"
+        {
+            uniform token info:id = "ND_subtract_float"
+            float inputs:in1.connect = </Materials/RainbowLights/multiply2.outputs:out>
+            float inputs:in2.connect = </Materials/RainbowLights/floor.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2281.5308, -269.97064)
+            float2 ui:nodegraph:node:size = (61.5, 36)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "multiply2"
+        {
+            uniform token info:id = "ND_multiply_float"
+            float inputs:in1.connect = </Materials/RainbowLights.inputs:speed_multiplier>
+            float inputs:in2.connect = </Materials/RainbowLights/time.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2616.053, -286.246)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "time"
+        {
+            uniform token info:id = "ND_time_float"
+            float inputs:fps = 30
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2979.6836, -272.6062)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "rainbow_lights"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @rainbowLights_baseColor.png@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Materials/RainbowLights/ifequal.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1022.91235, -495.82617)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5091
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "floor"
+        {
+            uniform token info:id = "ND_floor_float"
+            float inputs:in.connect = </Materials/RainbowLights/multiply2.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2443.0664, -188.14062)
+            float2 ui:nodegraph:node:size = (116, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "modulo"
+        {
+            uniform token info:id = "ND_modulo_float"
+            float inputs:in1.connect = </Materials/RainbowLights/subtract.outputs:out>
+            float inputs:in2.connect = </Materials/RainbowLights/light_count.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2161.1238, -272.3357)
+            float2 ui:nodegraph:node:size = (63, 38.5)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "four"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 4
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1157.1523, -326.08203)
+            float2 ui:nodegraph:node:size = (115, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "light_count"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 7
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-2527.5774, 98.391754)
+            float2 ui:nodegraph:node:size = (155.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-2549.7295, -580.67395)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "add"
+        {
+            uniform token info:id = "ND_add_float"
+            float inputs:in1.connect = </Materials/RainbowLights/separate2.outputs:outx>
+            float inputs:in2.connect = </Materials/RainbowLights/modulo.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1846.5332, -384.7696)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "MaterialXPreviewSurface2"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat = 1
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Materials/RainbowLights/multiply3.outputs:out>
+            color3f inputs:emissiveColor.connect = </Materials/RainbowLights/multiply.outputs:out>
+            float inputs:ior
+            float inputs:metallic.connect = </Materials/RainbowLights/metallic.outputs:out>
+            float3 inputs:normal
+            float inputs:occlusion
+            float inputs:opacity
+            float inputs:roughness.connect = </Materials/RainbowLights/roughness.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (218.34373, -24.240143)
+            float2 ui:nodegraph:node:size = (215.5, 307)
+            int ui:nodegraph:node:stackingOrder = 5093
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:roughness"]
+        }
+
+        def Shader "roughness"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-420.26154, -316.40277)
+            float2 ui:nodegraph:node:size = (150.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "combine2"
+        {
+            uniform token info:id = "ND_combine2_vector2"
+            float inputs:in1.connect = </Materials/RainbowLights/add.outputs:out>
+            float inputs:in2.connect = </Materials/RainbowLights/separate2.outputs:outy>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1675.97, -483.2121)
+            float2 ui:nodegraph:node:size = (142.5, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "metallic"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-424.90924, -251.9288)
+            float2 ui:nodegraph:node:size = (134, 53)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "ifequal"
+        {
+            uniform token info:id = "ND_ifequal_vector2B"
+            float2 inputs:in1.connect = </Materials/RainbowLights/combine2.outputs:out>
+            float2 inputs:in2.connect = </Materials/RainbowLights/texcoord.outputs:out>
+            bool inputs:value1.connect = </Materials/RainbowLights.inputs:ride_running>
+            bool inputs:value2 = 1
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1440.016, -413.6883)
+            float2 ui:nodegraph:node:size = (109, 163)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+
+        def Shader "multiply"
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            color3f inputs:in1.connect = </Materials/RainbowLights/rainbow_lights.outputs:out>
+            float inputs:in2.connect = </Materials/RainbowLights.inputs:powered>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-356.82587, -39.243637)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 5091
+        }
+    }
+
+    def Material "MovingWater"
+    {
+        token outputs:mtlx:surface.connect = </Materials/MovingWater/MaterialXPreviewSurface2.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (628.65234, 176.60156)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 6
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def NodeGraph "lerp"
+        {
+            float inputs:End = 1 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-118.49609, 334.47656)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 2637
+                    }
+                }
+            )
+            float inputs:End.connect = None
+            float inputs:start = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-277.8789, 244.59766)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 2635
+                    }
+                }
+            )
+            float inputs:start.connect = </Materials/MovingWater/height_map_for_showing_water.outputs:out>
+            float inputs:t = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-337.20312, 167.76562)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 2633
+                    }
+                }
+            )
+            float inputs:t.connect = </Materials/MovingWater/constant.outputs:out>
+            float outputs:result.connect = None
+            float2 ui:nodegraph:node:pos = (-571.09784, 851.27716)
+            float2 ui:nodegraph:node:size = (105.5, 145)
+            int ui:nodegraph:node:stackingOrder = 7780
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (758.14844, 77.30859)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (122.5, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 2633
+
+            def Shader "add"
+            {
+                uniform token info:id = "ND_add_float"
+                float inputs:in1.connect = </Materials/MovingWater/lerp/multiply4.outputs:out>
+                float inputs:in2.connect = </Materials/MovingWater/lerp/multiply5.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (447.25, 71.25)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1.connect = </Materials/MovingWater/lerp/one.outputs:out>
+                float inputs:in2.connect = </Materials/MovingWater/lerp.inputs:t>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (205.75, 21.5)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "one"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (57.5, 21.5)
+                float2 ui:nodegraph:node:size = (115, 43)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "multiply4"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Materials/MovingWater/lerp/subtract.outputs:out>
+                float inputs:in2.connect = </Materials/MovingWater/lerp.inputs:start>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (326.5, 21.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+
+            def Shader "multiply5"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Materials/MovingWater/lerp.inputs:t>
+                float inputs:in2.connect = </Materials/MovingWater/lerp.inputs:End>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (326.5, 157)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 2631
+            }
+        }
+
+        def Shader "MaterialXPreviewSurface2"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Materials/MovingWater/base_color.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float inputs:metallic
+            float3 inputs:normal.connect = </Materials/MovingWater/normals.outputs:out>
+            float inputs:occlusion.connect = </Materials/MovingWater/Occlusion.outputs:out>
+            float inputs:opacity = 0.85
+            float inputs:opacity.connect = None
+            float inputs:opacityThreshold
+            float inputs:roughness = 0.01
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-55.726562, 4.78125)
+            float2 ui:nodegraph:node:size = (215.5, 307)
+            int ui:nodegraph:node:stackingOrder = 7783
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:emissiveColor", "inputs:roughness"]
+        }
+
+        def Shader "constant"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1013.28357, 989.4479)
+            float2 ui:nodegraph:node:size = (139.5, 53)
+            int ui:nodegraph:node:stackingOrder = 7780
+        }
+
+        def Shader "normals"
+        {
+            uniform token info:id = "ND_image_vector3"
+            float3 inputs:default
+            asset inputs:file = @Start/Start/Common/water_normal.png@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Materials/MovingWater/uv_animation.outputs:combine2_out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-903.09375, 117.75391)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 7780
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:uaddressmode", "inputs:uaddressmode"]
+        }
+
+        def Shader "realitykit_geometrymodifier_vertexshader"
+        {
+            uniform token info:id = "ND_realitykit_geometrymodifier_vertexshader"
+            float3 inputs:bitangent
+            color4f inputs:color
+            float3 inputs:modelPositionOffset
+            float3 inputs:normal.connect = None
+            float4 inputs:userAttribute
+            half2 inputs:userAttributeHalf2_0
+            half2 inputs:userAttributeHalf2_1
+            half4 inputs:userAttributeHalf4_0
+            half4 inputs:userAttributeHalf4_1
+            half4 inputs:userAttributeHalf4_2
+            half4 inputs:userAttributeHalf4_3
+            float2 inputs:uv0
+            float2 inputs:uv1
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (68.129715, 436.1704)
+            float2 ui:nodegraph:node:size = (250, 325)
+            int ui:nodegraph:node:stackingOrder = 7780
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:modelPositionOffset"]
+        }
+
+        def Shader "Height_Map"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @Start/Start/Common/water_height.png@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Materials/MovingWater/uv_animation.outputs:combine2_out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-814.7344, 422.45703)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 7780
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:default", "inputs:texcoord"]
+        }
+
+        def Shader "base_color"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @Start/Start/Common/water_basecolor.png@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Materials/MovingWater/uv_animation.outputs:combine2_out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-654.8281, -276.66797)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 7780
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:file", "inputs:vaddressmode"]
+        }
+
+        def Shader "Occlusion"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @Start/Start/Common/water_ambientocclusion.png@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Materials/MovingWater/uv_animation.outputs:combine2_out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1039.9432, -121.72775)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 7780
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:default"]
+        }
+
+        def Shader "dot"
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Materials/MovingWater/lerp.outputs:result>
+            string inputs:note = "Waiting for the ND_realitykit_combine3_matrix33 to show up in builds"
+            float2 ui:nodegraph:node:pos = (-351.29932, 610.2025)
+            float2 ui:nodegraph:node:size = (44, 18)
+            int ui:nodegraph:node:stackingOrder = 7780
+        }
+
+        def NodeGraph "uv_animation"
+        {
+            float2 outputs:combine2_out.connect = </Materials/MovingWater/uv_animation/combine2.outputs:out>
+            float2 ui:nodegraph:node:pos = (-1783.5247, -165.25745)
+            float2 ui:nodegraph:node:size = (134.5, 81)
+            int ui:nodegraph:node:stackingOrder = 7782
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1149.75, 109.84375)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (179.99776, 71)
+
+            def Shader "texcoord"
+            {
+                uniform token info:id = "ND_texcoord_vector2"
+                int inputs:index = 0
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (311.9961, 203.86328)
+                float2 ui:nodegraph:node:size = (180.5, 43)
+                int ui:nodegraph:node:stackingOrder = 6838
+            }
+
+            def Shader "add2"
+            {
+                uniform token info:id = "ND_add_float"
+                float inputs:in1.connect = </Materials/MovingWater/uv_animation/separate2.outputs:outy>
+                float inputs:in2.connect = </Materials/MovingWater/uv_animation/subtract.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (784.0469, 162.84375)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 6824
+            }
+
+            def Shader "multiply2"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Materials/MovingWater/uv_animation/time.outputs:out>
+                float inputs:in2.connect = </Materials/MovingWater/uv_animation/constant.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (231.5, 63.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 6815
+            }
+
+            def Shader "combine2"
+            {
+                uniform token info:id = "ND_combine2_vector2"
+                float inputs:in1.connect = </Materials/MovingWater/uv_animation/separate2.outputs:outx>
+                float inputs:in2.connect = </Materials/MovingWater/uv_animation/add2.outputs:out>
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (928.25, 109.84375)
+                float2 ui:nodegraph:node:size = (142.5, 43)
+                int ui:nodegraph:node:stackingOrder = 6815
+            }
+
+            def Shader "separate2"
+            {
+                uniform token info:id = "ND_separate2_vector2"
+                float2 inputs:in.connect = </Materials/MovingWater/uv_animation/texcoord.outputs:out>
+                float outputs:outx
+                float outputs:outy
+                float2 ui:nodegraph:node:pos = (618.75, 204.5)
+                float2 ui:nodegraph:node:size = (113.5, 117)
+                int ui:nodegraph:node:stackingOrder = 6815
+            }
+
+            def Shader "floor"
+            {
+                uniform token info:id = "ND_floor_float"
+                float inputs:in.connect = </Materials/MovingWater/uv_animation/multiply2.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (411.75, 21.5)
+                float2 ui:nodegraph:node:size = (116, 43)
+                int ui:nodegraph:node:stackingOrder = 6815
+            }
+
+            def Shader "time"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (70.75, 33.5)
+                float2 ui:nodegraph:node:size = (141.5, 43)
+                int ui:nodegraph:node:stackingOrder = 6815
+            }
+
+            def Shader "subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1.connect = </Materials/MovingWater/uv_animation/multiply2.outputs:out>
+                float inputs:in2.connect = </Materials/MovingWater/uv_animation/floor.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (618.75, 51.5)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 6815
+            }
+
+            def Shader "constant"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = -0.1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (70.75, 136.5)
+                float2 ui:nodegraph:node:size = (139.5, 43)
+                int ui:nodegraph:node:stackingOrder = 6839
+            }
+        }
+
+        def Shader "height_map_for_showing_water"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @Textures/Universal/water_ramp_2.png@
+            string inputs:filtertype
+            float2 inputs:texcoord.connect = </Materials/MovingWater/texcoord.outputs:out>
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1011.87805, 683.0431)
+            float2 ui:nodegraph:node:size = (250, 199)
+            int ui:nodegraph:node:stackingOrder = 7780
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def Shader "texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            int inputs:index = 0
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1549.296, 640.2433)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 7780
+        }
+    }
+
+    def Material "SlideBottom"
+    {
+        int inputs:material = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-657.21484, -83.41797)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 2534
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Materials/SlideBottom/MaterialXPreviewSurface2.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (535.3789, 113.70703)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 2
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def NodeGraph "normals"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (76, 768.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/SlideBottom.inputs:material>
+            float3 outputs:switch_out.connect = </Materials/SlideBottom/normals/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-276.031, 95.83029)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2643
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (601.1484, 377.92657)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (133.1777, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 594
+
+            def Shader "normals_metal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Metal/M_slides01_normal_metal.png@
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (76, 94.5)
+                float2 ui:nodegraph:node:size = (148.5, 189)
+                int ui:nodegraph:node:stackingOrder = 595
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default", "inputs:default", "inputs:vaddressmode", "inputs:texcoord", "inputs:file"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_vector3I"
+                float3 inputs:in1.connect = </Materials/SlideBottom/normals/normals_metal.outputs:out>
+                float3 inputs:in2.connect = </Materials/SlideBottom/normals/normals_wood.outputs:out>
+                float3 inputs:in3.connect = </Materials/SlideBottom/normals/normals_plastic.outputs:out>
+                float3 inputs:in4
+                float3 inputs:in5
+                float3 inputs:in6
+                float3 inputs:in10
+                int inputs:which.connect = </Materials/SlideBottom/normals.inputs:switch_which>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (258.25, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 586
+            }
+
+            def Shader "normals_wood"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Wood/M_slides01_normal_wood.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (76, 343.5)
+                float2 ui:nodegraph:node:size = (148.5, 189)
+                int ui:nodegraph:node:stackingOrder = 594
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "normals_plastic"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Plastic/M_slides01_normal_plastic.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (76, 592.5)
+                float2 ui:nodegraph:node:size = (151, 189)
+                int ui:nodegraph:node:stackingOrder = 596
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+        }
+
+        def NodeGraph "roughness"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (83.25, 768.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/SlideBottom.inputs:material>
+            float outputs:switch_out.connect = </Materials/SlideBottom/roughness/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-277.0655, -122.05505)
+            float2 ui:nodegraph:node:size = (117.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2643
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (461, 373.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (145.50725, 71)
+
+            def Shader "roughness_plastic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/Plastic/M_slides01_roughness_plastic.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-63.234375, 458.5078)
+                float2 ui:nodegraph:node:size = (166.5, 189)
+                int ui:nodegraph:node:stackingOrder = 462
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "roughness_metal"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/Metal/M_slides01_roughness_metal.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-90.453125, 33.601562)
+                float2 ui:nodegraph:node:size = (159.5, 189)
+                int ui:nodegraph:node:stackingOrder = 460
+            }
+
+            def Shader "roughness_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Wood/M_slides01_roughness_wood.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-73.71484, 247.45312)
+                float2 ui:nodegraph:node:size = (157.5, 189)
+                int ui:nodegraph:node:stackingOrder = 461
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/SlideBottom/roughness/roughness_metal.outputs:out>
+                float inputs:in2.connect = </Materials/SlideBottom/roughness/roughness_wood.outputs:out>
+                float inputs:in3.connect = </Materials/SlideBottom/roughness/roughness_plastic.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/SlideBottom/roughness.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (272.75, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 446
+            }
+        }
+
+        def NodeGraph "base_color"
+        {
+            reorder nameChildren = ["base_color_plastic", "base_color_metal", "switch", "base_color_wood"]
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-220.71516, 780.18695)
+                        float2 sizeInSubgraph = (152, 43)
+                        int stackingOrderInSubgraph = 285
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/SlideBottom.inputs:material>
+            color3f outputs:switch_out.connect = </Materials/SlideBottom/base_color/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-272.86298, -242.97955)
+            float2 ui:nodegraph:node:size = (120.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2643
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:switch_which", "inputs:switch_which", "inputs:switch_which"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (668.89453, 473.17188)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (211.12277, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 282
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Materials/SlideBottom/base_color/base_color_metal.outputs:out>
+                color3f inputs:in2.connect = </Materials/SlideBottom/base_color/base_color_wood.outputs:out>
+                color3f inputs:in3.connect = </Materials/SlideBottom/base_color/hsvadjust.outputs:out>
+                color3f inputs:in4
+                color3f inputs:in5
+                color3f inputs:in6
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Materials/SlideBottom/base_color.inputs:switch_which>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (340.75, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 288
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+            }
+
+            def Shader "base_color_metal"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @Textures/Metal/M_slides01_baseColor_metal.png@
+                string inputs:filtertype
+                float2 inputs:texcoord.connect = </Materials/SlideBottom/base_color/texcoord.outputs:out>
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-61.222656, 65.26172)
+                float2 ui:nodegraph:node:size = (162, 189)
+                int ui:nodegraph:node:stackingOrder = 296
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "base_color_wood"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Textures/Wood/M_slides01_baseColor_wood.jpg@
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-62.25, 269.69922)
+                float2 ui:nodegraph:node:size = (160, 189)
+                int ui:nodegraph:node:stackingOrder = 292
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "base_color_plastic"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Textures/Plastic/M_slides01_baseColor_plastic.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-790.7346, 494.49628)
+                float2 ui:nodegraph:node:size = (169, 189)
+                int ui:nodegraph:node:stackingOrder = 300
+            }
+
+            def Shader "hsvadjust"
+            {
+                uniform token info:id = "ND_hsvadjust_color3"
+                float3 inputs:amount = (0.31, 1, 1)
+                color3f inputs:in.connect = </Materials/SlideBottom/base_color/base_color_plastic.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-230.17188, 528.71094)
+                float2 ui:nodegraph:node:size = (112, 117)
+                int ui:nodegraph:node:stackingOrder = 6245
+            }
+
+            def Shader "texcoord"
+            {
+                uniform token info:id = "ND_texcoord_vector2"
+                int inputs:index = 0
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (-910.89734, 107.76244)
+                float2 ui:nodegraph:node:size = (180.5, 43)
+                int ui:nodegraph:node:stackingOrder = 7785
+            }
+        }
+
+        def Shader "MaterialXPreviewSurface2"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            color3f inputs:diffuseColor = (0.40732336, 0.060055397, 0) (
+                colorSpace = "Input - Texture - Linear - sRGB"
+            )
+            color3f inputs:diffuseColor.connect = </Materials/SlideBottom/base_color.outputs:switch_out>
+            float inputs:ior
+            float inputs:metallic.connect = </Materials/SlideBottom/metallic.outputs:switch_out>
+            float3 inputs:normal.connect = </Materials/SlideBottom/normals.outputs:switch_out>
+            float inputs:occlusion.connect = </Materials/SlideBottom/occlusion.outputs:switch_out>
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Materials/SlideBottom/roughness.outputs:switch_out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (143.26562, 27.519531)
+            float2 ui:nodegraph:node:size = (215.5, 307)
+            int ui:nodegraph:node:stackingOrder = 2532
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def NodeGraph "metallic"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (76, 768.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/SlideBottom.inputs:material>
+            float outputs:switch_out.connect = </Materials/SlideBottom/metallic/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-273.03723, -12.376633)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2643
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:switch_which", "outputs:switch_out"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (446.5, 373.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (145.0804, 71)
+
+            def Shader "metallic_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Wood/M_slides01_metallic_wood.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-196.33961, 243.8152)
+                float2 ui:nodegraph:node:size = (148.5, 189)
+                int ui:nodegraph:node:stackingOrder = 384
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:uaddressmode"]
+            }
+
+            def Shader "metallic_metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Metal/M_slides01_metallic_metal.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (1.407774, 138.29277)
+                float2 ui:nodegraph:node:size = (148.5, 189)
+                int ui:nodegraph:node:stackingOrder = 382
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/SlideBottom/metallic/metallic_metal.outputs:out>
+                float inputs:in2.connect = </Materials/SlideBottom/metallic/metallic_wood.outputs:out>
+                float inputs:in3.connect = </Materials/SlideBottom/metallic/metallic_plastic.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in6
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/SlideBottom/metallic.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (258.25, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 352
+            }
+
+            def Shader "metallic_plastic"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Plastic/M_slides01_metallic_plastic.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-33.21642, 431.52)
+                float2 ui:nodegraph:node:size = (150, 189)
+                int ui:nodegraph:node:stackingOrder = 385
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:texcoord", "inputs:filtertype", "inputs:filtertype", "inputs:default"]
+            }
+        }
+
+        def NodeGraph "occlusion"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (80, 768.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/SlideBottom.inputs:material>
+            float outputs:switch_out.connect = </Materials/SlideBottom/occlusion/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-281.03656, 222.56494)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2643
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (452.90762, 439.3668)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (145.2892, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 4403
+
+            def Shader "occlusion_wood2"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/Plastic/M_slides01_occlusion_plastic.jpg@
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (80, 94.5)
+                float2 ui:nodegraph:node:size = (160, 189)
+                int ui:nodegraph:node:stackingOrder = 4401
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype"]
+            }
+
+            def Shader "occlusion_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Wood/M_slides01_occlusion_wood.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (80, 343.5)
+                float2 ui:nodegraph:node:size = (152, 189)
+                int ui:nodegraph:node:stackingOrder = 4401
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/SlideBottom/occlusion/occlusion_metal.outputs:out>
+                float inputs:in2.connect = </Materials/SlideBottom/occlusion/occlusion_wood.outputs:out>
+                float inputs:in3.connect = </Materials/SlideBottom/occlusion/occlusion_wood2.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in6
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/SlideBottom/occlusion.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (266.25, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 4401
+            }
+
+            def Shader "occlusion_metal"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/Metal/M_slides01_occlusion_metal.jpg@
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (80, 592.5)
+                float2 ui:nodegraph:node:size = (154, 189)
+                int ui:nodegraph:node:stackingOrder = 4401
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype"]
+            }
+        }
+    }
+
+    def Material "Glow"
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+        prepend token outputs:surface.connect = </Materials/Glow/UsdPreviewSurface.outputs:surface>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 104.5)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.010409393, 0.67537475, 0.8000001) (
+                colorSpace = "Input - Texture - Linear - sRGB"
+            )
+            float inputs:opacity = 0.1
+            float inputs:opacityThreshold = 0
+            token outputs:surface
+        }
+    }
+
+    def Material "MetalRims" (
+        active = true
+    )
+    {
+        int inputs:material = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-770.72266, -26.398438)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 2665
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Materials/MetalRims/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (424.9297, 85.67578)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 2665
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def Shader "MaterialXPreviewSurface"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Materials/MetalRims/base_color.outputs:switch_out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float inputs:metallic.connect = </Materials/MetalRims/metallic.outputs:switch_out>
+            float3 inputs:normal.connect = </Materials/MetalRims/normals.outputs:switch_out>
+            float inputs:occlusion.connect = </Materials/MetalRims/occlusion.outputs:switch_out>
+            float inputs:opacity
+            float inputs:opacityThreshold.connect = None
+            float inputs:roughness.connect = </Materials/MetalRims/roughness.outputs:switch_out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (31.342823, -29.623121)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 2653
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:occlusion"]
+        }
+
+        def NodeGraph "normals"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (76, 768.5)
+                        float2 sizeInSubgraph = (152, 53)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/MetalRims.inputs:material>
+            float3 outputs:switch_out.connect = </Materials/MetalRims/normals/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-256.031, 115.83029)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2660
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (601.1484, 377.92657)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (203, 81)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 594
+
+            def Shader "normals_metal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Metal/M_metalRims_normal_metal.png@
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (76, 94.5)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 597
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default", "inputs:default", "inputs:vaddressmode", "inputs:texcoord", "inputs:file"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_vector3I"
+                float3 inputs:in1.connect = </Materials/MetalRims/normals/normals_metal.outputs:out>
+                float3 inputs:in2.connect = </Materials/MetalRims/normals/normals_wood.outputs:out>
+                float3 inputs:in3.connect = </Materials/MetalRims/normals/normals_plastic.outputs:out>
+                float3 inputs:in4
+                float3 inputs:in5
+                float3 inputs:in6
+                float3 inputs:in10
+                int inputs:which.connect = </Materials/MetalRims/normals.inputs:switch_which>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (258.25, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 289)
+                int ui:nodegraph:node:stackingOrder = 586
+            }
+
+            def Shader "normals_wood"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Wood/M_metalRims_normal_wood.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (76, 343.5)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 598
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default", "inputs:default"]
+            }
+
+            def Shader "normals_plastic"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Plastic/M_metalRims_normal_plastic.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (76, 592.5)
+                float2 ui:nodegraph:node:size = (151, 199)
+                int ui:nodegraph:node:stackingOrder = 599
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+        }
+
+        def NodeGraph "occlusion"
+        {
+            reorder nameChildren = ["occlusion_plastic", "occlusion_wood", "switch", "occlusion_metal"]
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (80, 768.5)
+                        float2 sizeInSubgraph = (152, 53)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/MetalRims.inputs:material>
+            float outputs:switch_out.connect = </Materials/MetalRims/occlusion/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-260.85645, 242.91232)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2661
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (452.90762, 439.3668)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (149, 81)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 4403
+
+            def Shader "occlusion_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Wood/M_metalRims_occlusion_wood.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-294.8949, 102.66414)
+                float2 ui:nodegraph:node:size = (152, 199)
+                int ui:nodegraph:node:stackingOrder = 4417
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype", "inputs:default"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/MetalRims/occlusion/occlusion_metal.outputs:out>
+                float inputs:in2.connect = </Materials/MetalRims/occlusion/occlusion_wood.outputs:out>
+                float inputs:in3.connect = None
+                float inputs:in4
+                float inputs:in5
+                float inputs:in6
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/MetalRims/occlusion.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (266.25, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 289)
+                int ui:nodegraph:node:stackingOrder = 4401
+            }
+
+            def Shader "occlusion_metal"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-103.04515, -15.191406)
+                float2 ui:nodegraph:node:size = (154, 199)
+                int ui:nodegraph:node:stackingOrder = 4415
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype"]
+            }
+        }
+
+        def NodeGraph "base_color"
+        {
+            reorder nameChildren = ["base_color_plastic", "base_color_metal", "switch", "base_color_wood"]
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-220.71516, 780.18695)
+                        float2 sizeInSubgraph = (152, 53)
+                        int stackingOrderInSubgraph = 285
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/MetalRims.inputs:material>
+            color3f outputs:switch_out.connect = </Materials/MetalRims/base_color/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-252.86298, -222.97955)
+            float2 ui:nodegraph:node:size = (120.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2663
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:switch_which", "inputs:switch_which", "inputs:switch_which"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (668.89453, 473.17188)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (196, 81)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 282
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Materials/MetalRims/base_color/base_color_metal.outputs:out>
+                color3f inputs:in2.connect = </Materials/MetalRims/base_color/base_color_wood.outputs:out>
+                color3f inputs:in3.connect = </Materials/MetalRims/base_color/hsvadjust.outputs:out>
+                color3f inputs:in4
+                color3f inputs:in5
+                color3f inputs:in6
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Materials/MetalRims/base_color.inputs:switch_which>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (340.75, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 289)
+                int ui:nodegraph:node:stackingOrder = 288
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1"]
+            }
+
+            def Shader "base_color_metal"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @Textures/Metal/M_metalRims_baseColor_metal.png@
+                string inputs:filtertype
+                float2 inputs:texcoord.connect = None
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-61.222656, 65.26172)
+                float2 ui:nodegraph:node:size = (162, 199)
+                int ui:nodegraph:node:stackingOrder = 6246
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "base_color_wood"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Textures/Wood/M_metalRims_baseColor_wood.jpg@
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-62.25, 269.69922)
+                float2 ui:nodegraph:node:size = (160, 199)
+                int ui:nodegraph:node:stackingOrder = 6247
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "base_color_plastic"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Textures/Plastic/M_metalRims_baseColor_plastic.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-790.7346, 494.49628)
+                float2 ui:nodegraph:node:size = (169, 199)
+                int ui:nodegraph:node:stackingOrder = 6249
+            }
+
+            def Shader "hsvadjust"
+            {
+                uniform token info:id = "ND_hsvadjust_color3"
+                float3 inputs:amount = (0.31, 1, 1)
+                color3f inputs:in.connect = </Materials/MetalRims/base_color/base_color_plastic.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-230.17188, 528.71094)
+                float2 ui:nodegraph:node:size = (112, 127)
+                int ui:nodegraph:node:stackingOrder = 6245
+            }
+        }
+
+        def NodeGraph "metallic"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (76, 768.5)
+                        float2 sizeInSubgraph = (152, 53)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/MetalRims.inputs:material>
+            float outputs:switch_out.connect = </Materials/MetalRims/metallic/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-253.03723, 7.6233673)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2658
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:switch_which", "outputs:switch_out"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (446.5, 373.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (149, 81)
+
+            def Shader "metallic_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Wood/M_metalRims_metallic_wood.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-196.33961, 243.8152)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 387
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:uaddressmode", "inputs:texcoord"]
+            }
+
+            def Shader "metallic_metal"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Metal/M_metalRims_metallic_metal.jpg@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (1.407774, 138.29277)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 386
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/MetalRims/metallic/metallic_metal.outputs:out>
+                float inputs:in2.connect = </Materials/MetalRims/metallic/metallic_wood.outputs:out>
+                float inputs:in3.connect = </Materials/MetalRims/metallic/metallic_plastic.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in6
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/MetalRims/metallic.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (258.25, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 289)
+                int ui:nodegraph:node:stackingOrder = 352
+            }
+
+            def Shader "metallic_plastic"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Plastic/M_metalRims_metallic_plastic.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-33.21642, 431.52)
+                float2 ui:nodegraph:node:size = (150, 199)
+                int ui:nodegraph:node:stackingOrder = 388
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:texcoord", "inputs:filtertype", "inputs:filtertype", "inputs:default"]
+            }
+        }
+
+        def NodeGraph "roughness"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (83.25, 768.5)
+                        float2 sizeInSubgraph = (152, 53)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/MetalRims.inputs:material>
+            float outputs:switch_out.connect = </Materials/MetalRims/roughness/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-257.0655, -102.05505)
+            float2 ui:nodegraph:node:size = (117.5, 109)
+            int ui:nodegraph:node:stackingOrder = 2657
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (461, 373.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (149, 81)
+
+            def Shader "roughness_plastic"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/Plastic/M_metalRims_roughness_plastic.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-63.234375, 458.5078)
+                float2 ui:nodegraph:node:size = (166.5, 199)
+                int ui:nodegraph:node:stackingOrder = 465
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "roughness_metal"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Textures/Metal/M_metalRims_roughness_metal.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-90.453125, 33.601562)
+                float2 ui:nodegraph:node:size = (159.5, 199)
+                int ui:nodegraph:node:stackingOrder = 463
+            }
+
+            def Shader "roughness_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Textures/Wood/M_metalRims_roughness_wood.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-73.71484, 247.45312)
+                float2 ui:nodegraph:node:size = (157.5, 199)
+                int ui:nodegraph:node:stackingOrder = 464
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:texcoord"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/MetalRims/roughness/roughness_metal.outputs:out>
+                float inputs:in2.connect = </Materials/MetalRims/roughness/roughness_wood.outputs:out>
+                float inputs:in3.connect = </Materials/MetalRims/roughness/roughness_plastic.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/MetalRims/roughness.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (272.75, 373.5)
+                float2 ui:nodegraph:node:size = (92.5, 289)
+                int ui:nodegraph:node:stackingOrder = 446
+            }
+        }
+    }
+
+    def Material "SlideLights"
+    {
+        float inputs:powered = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-801.3332, 105.039536)
+                    float2 sizeInSubgraph = (122, 53)
+                    int stackingOrderInSubgraph = 6485
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Materials/SlideLights/MaterialXPreviewSurface_12.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (455.2578, 144.9375)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 113
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def Shader "zero2"
+        {
+            uniform token info:id = "ND_constant_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-723.2527, 251.73451)
+            float2 ui:nodegraph:node:size = (120.5, 53)
+            int ui:nodegraph:node:stackingOrder = 6483
+        }
+
+        def Shader "base_color2"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @Textures/Plastic/M_slideLights_emissive_plastic.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-864.70166, -61.876144)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 6483
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def Shader "multiply2"
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            color3f inputs:in1.connect = </Materials/SlideLights/base_color2.outputs:out>
+            float inputs:in2.connect = </Materials/SlideLights.inputs:powered>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-506.7644, 51.0392)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 6483
+        }
+
+        def Shader "MaterialXPreviewSurface_12"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat = 1
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Materials/SlideLights/multiply2.outputs:out>
+            color3f inputs:emissiveColor.connect = </Materials/SlideLights/multiply2.outputs:out>
+            float inputs:ior
+            float inputs:metallic.connect = </Materials/SlideLights/zero2.outputs:out>
+            float3 inputs:normal
+            float inputs:occlusion
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Materials/SlideLights/zero2.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-142.31165, 256.7385)
+            float2 ui:nodegraph:node:size = (228, 307)
+            int ui:nodegraph:node:stackingOrder = 6483
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+    }
+
+    def Material "LightsMetal"
+    {
+        int inputs:material = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-577.0742, 55.48828)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 2
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Materials/LightsMetal/MaterialXPreviewSurface2.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (596.7578, 255.83984)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 4
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def Shader "MaterialXPreviewSurface2"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            color3f inputs:diffuseColor.connect = </Materials/LightsMetal/base_color.outputs:switch_out>
+            float inputs:metallic.connect = </Materials/LightsMetal/metallic.outputs:switch_out>
+            float3 inputs:normal.connect = </Materials/LightsMetal/normals.outputs:switch_out>
+            float inputs:opacity
+            float inputs:roughness.connect = </Materials/LightsMetal/roughness.outputs:switch_out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (119.33203, 103.64844)
+            float2 ui:nodegraph:node:size = (215.5, 199)
+            int ui:nodegraph:node:stackingOrder = 4546
+        }
+
+        def NodeGraph "normals"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (96.75, 519.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/LightsMetal.inputs:material>
+            float3 outputs:switch_out.connect = </Materials/LightsMetal/normals/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-297.76538, 332.45886)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 4546
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (548.1797, 290.625)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (133, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 3384
+
+            def Shader "normals_metal_plastic"
+            {
+                uniform token info:id = "ND_image_vector3"
+                float3 inputs:default
+                asset inputs:file = @Start/Start/Plastic/AquariumGlass/M_lightsMetal_normal.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (96.75, 94.5)
+                float2 ui:nodegraph:node:size = (193.5, 189)
+                int ui:nodegraph:node:stackingOrder = 3382
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_vector3I"
+                float3 inputs:in1.connect = </Materials/LightsMetal/normals/normals_metal_wood.outputs:out>
+                float3 inputs:in2.connect = </Materials/LightsMetal/normals/normals_metal_wood.outputs:out>
+                float3 inputs:in3.connect = </Materials/LightsMetal/normals/normals_metal_plastic.outputs:out>
+                float3 inputs:in4
+                float3 inputs:in5
+                float3 inputs:in6
+                float3 inputs:in7
+                float3 inputs:in9
+                float3 inputs:in10
+                int inputs:which.connect = </Materials/LightsMetal/normals.inputs:switch_which>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (299.75, 249)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 3382
+            }
+
+            def Shader "normals_metal_wood"
+            {
+                uniform token info:id = "ND_image_vector3"
+                float3 inputs:default
+                asset inputs:file = @Start/Start/Wood/AquariumGlass/M_lightsMetal_normal.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (96.75, 343.5)
+                float2 ui:nodegraph:node:size = (184.5, 189)
+                int ui:nodegraph:node:stackingOrder = 3382
+            }
+        }
+
+        def NodeGraph "base_color"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (105.75, 519.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/LightsMetal.inputs:material>
+            color3f outputs:switch_out.connect = </Materials/LightsMetal/base_color/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-301.06, -6.201462)
+            float2 ui:nodegraph:node:size = (120.5, 109)
+            int ui:nodegraph:node:stackingOrder = 4548
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:switch_which"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (647.2969, 261.41016)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (211, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 3140
+
+            def Shader "base_color_metal_wood"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Start/Start/Wood/AquariumGlass/M_lightsMetal_baseColor.jpg@
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-12.9609375, 99.00781)
+                float2 ui:nodegraph:node:size = (202.5, 189)
+                int ui:nodegraph:node:stackingOrder = 3138
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Materials/LightsMetal/base_color/base_color_metal_wood.outputs:out>
+                color3f inputs:in2.connect = </Materials/LightsMetal/base_color/base_color_metal_wood.outputs:out>
+                color3f inputs:in3.connect = </Materials/LightsMetal/base_color/base_color_metal_plastic.outputs:out>
+                color3f inputs:in4
+                color3f inputs:in5
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Materials/LightsMetal/base_color.inputs:switch_which>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (317.75, 249)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 3136
+            }
+
+            def Shader "base_color_metal_plastic"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @Start/Start/Plastic/AquariumGlass/M_lightsMetal_baseColor.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (105.75, 343.5)
+                float2 ui:nodegraph:node:size = (211.5, 189)
+                int ui:nodegraph:node:stackingOrder = 3136
+            }
+        }
+
+        def NodeGraph "metallic"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (96, 519.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/LightsMetal.inputs:material>
+            float outputs:switch_out.connect = </Materials/LightsMetal/metallic/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-301.99146, 209.75624)
+            float2 ui:nodegraph:node:size = (116.5, 109)
+            int ui:nodegraph:node:stackingOrder = 4546
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (595.4883, 276.1797)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (145, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 3217
+
+            def Shader "metallic_metal_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Start/Start/Wood/AquariumGlass/M_lightsMetal_metallic.jpg@
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (83.609375, 21.15625)
+                float2 ui:nodegraph:node:size = (183.5, 189)
+                int ui:nodegraph:node:stackingOrder = 6234
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/LightsMetal/metallic/metallic_metal_wood.outputs:out>
+                float inputs:in2.connect = </Materials/LightsMetal/metallic/constant.outputs:out>
+                float inputs:in3.connect = </Materials/LightsMetal/metallic/metallic_metal_plastic.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/LightsMetal/metallic.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (298.25, 249)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 3215
+            }
+
+            def Shader "metallic_metal_plastic"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Start/Start/Wood/AquariumGlass/M_lightsMetal_metallic.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (96, 343.5)
+                float2 ui:nodegraph:node:size = (192, 189)
+                int ui:nodegraph:node:stackingOrder = 3215
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+            }
+
+            def Shader "constant"
+            {
+                uniform token info:id = "ND_constant_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-309.96875, 173.32812)
+                float2 ui:nodegraph:node:size = (139.5, 43)
+                int ui:nodegraph:node:stackingOrder = 6232
+            }
+        }
+
+        def NodeGraph "roughness"
+        {
+            int inputs:switch_which (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (104.25, 519.5)
+                        float2 sizeInSubgraph = (152, 43)
+                    }
+                }
+            )
+            int inputs:switch_which.connect = </Materials/LightsMetal.inputs:material>
+            float outputs:switch_out.connect = </Materials/LightsMetal/roughness/switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-301.80103, 102.22383)
+            float2 ui:nodegraph:node:size = (117.5, 109)
+            int ui:nodegraph:node:stackingOrder = 4546
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (598.16797, 266.0664)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (145, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 3332
+
+            def Shader "roughness_metal_plastic"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Start/Start/Wood/AquariumGlass/M_lightsMetal_roughness.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (104.25, 94.5)
+                float2 ui:nodegraph:node:size = (208.5, 189)
+                int ui:nodegraph:node:stackingOrder = 3330
+            }
+
+            def Shader "switch"
+            {
+                uniform token info:id = "ND_switch_floatI"
+                float inputs:in1.connect = </Materials/LightsMetal/roughness/roughness_metal_wood.outputs:out>
+                float inputs:in2.connect = </Materials/LightsMetal/roughness/roughness_metal_wood.outputs:out>
+                float inputs:in3.connect = </Materials/LightsMetal/roughness/roughness_metal_plastic.outputs:out>
+                float inputs:in4
+                float inputs:in5
+                float inputs:in7
+                float inputs:in8
+                float inputs:in9
+                float inputs:in10
+                int inputs:which.connect = </Materials/LightsMetal/roughness.inputs:switch_which>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (314.75, 249)
+                float2 ui:nodegraph:node:size = (92.5, 279)
+                int ui:nodegraph:node:stackingOrder = 3330
+            }
+
+            def Shader "roughness_metal_wood"
+            {
+                uniform token info:id = "ND_image_float"
+                float inputs:default
+                asset inputs:file = @Start/Start/Wood/AquariumGlass/M_lightsMetal_roughness.jpg@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (104.25, 343.5)
+                float2 ui:nodegraph:node:size = (200, 189)
+                int ui:nodegraph:node:stackingOrder = 3330
+            }
+        }
+    }
+
+    def Material "SlideTop"
+    {
+        token outputs:mtlx:surface.connect = </Materials/SlideTop/MaterialXPreviewSurface2.outputs:out>
+        token outputs:realitykit:vertex
+        token outputs:surface
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (841.6172, 71.17578)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 4
+
+        def Shader "UsdPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            token outputs:surface
+        }
+
+        def Shader "metallic"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @Textures/Metal/M_slidesTops_metallic_metal.jpg@
+            string inputs:filtertype
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-935.9985, 142.08965)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:texcoord", "inputs:default"]
+        }
+
+        def Shader "alpha"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @Textures/Metal/M_slidesTops_Opacity.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1374.1523, 37.589844)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "MaterialXPreviewSurface2"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Materials/SlideTop/base_color.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float inputs:metallic.connect = </Materials/SlideTop/metallic.outputs:out>
+            float3 inputs:normal.connect = </Materials/SlideTop/normals.outputs:out>
+            float inputs:occlusion.connect = </Materials/SlideTop/ao.outputs:out>
+            float inputs:opacity.connect = </Materials/SlideTop/alpha.outputs:out>
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Materials/SlideTop/roughness.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-101.13672, 1.7304688)
+            float2 ui:nodegraph:node:size = (215.5, 307)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:emissiveColor"]
+        }
+
+        def Shader "roughness"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @Textures/Metal/M_slidesTops_roughness_metal.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1083.0471, -67.77728)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def Shader "ao"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @Textures/Metal/M_slidesTops_occlusion_metal.jpg@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-507.08984, 429.75)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "normals"
+        {
+            uniform token info:id = "ND_image_vector3"
+            asset inputs:file = @Textures/Metal/M_slidesTops_normal_metal.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-847.66644, 389.14435)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:filtertype", "inputs:texcoord", "inputs:default", "inputs:texcoord"]
+        }
+
+        def Shader "base_color"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @Textures/Metal/M_slidesTops_baseColor_metal.png@
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-912.9922, -238.27734)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 5681
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+    }
+}
+
