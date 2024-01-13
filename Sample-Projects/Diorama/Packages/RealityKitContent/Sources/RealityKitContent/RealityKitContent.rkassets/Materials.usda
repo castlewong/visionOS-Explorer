@@ -1,0 +1,1246 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["", "", "Root", "AmbientAudio"]
+
+def Xform "Root"
+{
+    reorder nameChildren = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "FlatTerrain", "Catalina", "Catalina_Location_Pins", "Yosemite", "Yosemite_Location_Pins", "Diorama_Base", "SmoothConcrete", "Nature_Ambience", "Forest_Sounds_wav", "Ocean_Sounds_wav", "Clouds", "Birds", "DynamicTerrainMaterial", "HeightMix_1", "DynamicTerrainMaterialEnhanced", "NodeGraphs", "LineFuzzWidth", "Multiply", "NormalMap"]
+    rel material:binding = None (
+        bindMaterialAs = "weakerThanDescendants"
+    )
+
+    def Material "DynamicTerrainMaterial" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["", "", "", "", "", "", "", "", "", "", "MaterialXPreviewSurface", "GeometryModifier", "YosemiteColors", "Image_1", "Combine3", "Image_2", "Remap", "CatalinaColors", "Image_4", "Image_5"]
+        float inputs:Progress = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-935.5011, 184.34294)
+                    float2 sizeInSubgraph = (123.5, 43)
+                    int stackingOrderInSubgraph = 314
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/DynamicTerrainMaterial/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex.connect = </Root/DynamicTerrainMaterial/GeometryModifier.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 94.5)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 89)
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            color3f inputs:diffuseColor.connect = </Root/DynamicTerrainMaterial/Mix.outputs:out>
+            float inputs:metallic
+            float3 inputs:normal.connect = </Root/DynamicTerrainMaterial/Remap.outputs:out>
+            float inputs:opacity
+            float inputs:roughness
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (103.75, 94.5)
+            float2 ui:nodegraph:node:size = (207.5, 189)
+            int ui:nodegraph:node:stackingOrder = 321
+        }
+
+        def Shader "GeometryModifier"
+        {
+            uniform token info:id = "ND_realitykit_geometrymodifier_vertexshader"
+            color4f inputs:color
+            float3 inputs:modelPositionOffset.connect = </Root/DynamicTerrainMaterial/Combine3.outputs:out>
+            float3 inputs:normal
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (96.36719, 378.0547)
+            float2 ui:nodegraph:node:size = (196.5, 315)
+            int ui:nodegraph:node:stackingOrder = 299
+        }
+
+        def Shader "Combine3"
+        {
+            uniform token info:id = "ND_combine3_vector3"
+            float inputs:in1
+            float inputs:in2.connect = </Root/DynamicTerrainMaterial/Mix_2.outputs:out>
+            float inputs:in3
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-147.21118, 395.1296)
+            float2 ui:nodegraph:node:size = (145, 54)
+            int ui:nodegraph:node:stackingOrder = 245
+        }
+
+        def Shader "Remap"
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/DynamicTerrainMaterial/Mix_1.outputs:out>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-150.41823, 152.22505)
+            float2 ui:nodegraph:node:size = (94, 171)
+            int ui:nodegraph:node:stackingOrder = 243
+        }
+
+        def Shader "YosemiteColors"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @YosemiteData/DioramaYosemite_bc.png@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-610.65265, -72.9606)
+            float2 ui:nodegraph:node:size = (149.5, 189)
+            int ui:nodegraph:node:stackingOrder = 320
+        }
+
+        def Shader "CatalinaColors"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @CatalinaData/DioramaCatalina_bc.png@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-571.89, -113.88301)
+            float2 ui:nodegraph:node:size = (148.5, 189)
+            int ui:nodegraph:node:stackingOrder = 320
+        }
+
+        def Shader "YosemiteNormals"
+        {
+            uniform token info:id = "ND_image_vector3"
+            float3 inputs:default
+            asset inputs:file = @YosemiteData/DioramaYosemite_n.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-607.43835, 180.19655)
+            float2 ui:nodegraph:node:size = (161, 189)
+            int ui:nodegraph:node:stackingOrder = 302
+        }
+
+        def Shader "CatalinaNormals"
+        {
+            uniform token info:id = "ND_image_vector3"
+            float3 inputs:default
+            asset inputs:file = @CatalinaData/DioramaCatalina_n.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-575.2943, 134.88934)
+            float2 ui:nodegraph:node:size = (154.5, 189)
+            int ui:nodegraph:node:stackingOrder = 305
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "YosemiteHeights"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @YosemiteData/DioramaYosemite_refit_h.exr@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-610.079, 453.88797)
+            float2 ui:nodegraph:node:size = (157, 189)
+            int ui:nodegraph:node:stackingOrder = 303
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "CatalinaHeights"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @CatalinaData/DioramaCatalina_refit_h.exr@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-583.10236, 406.58588)
+            float2 ui:nodegraph:node:size = (151, 189)
+            int ui:nodegraph:node:stackingOrder = 306
+        }
+
+        def Shader "Mix"
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/DynamicTerrainMaterial/YosemiteColors.outputs:out>
+            color3f inputs:fg.connect = </Root/DynamicTerrainMaterial/CatalinaColors.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterial.inputs:Progress>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-356.1173, -46.223034)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 320
+        }
+
+        def Shader "Mix_1"
+        {
+            uniform token info:id = "ND_mix_vector3"
+            float3 inputs:bg.connect = </Root/DynamicTerrainMaterial/YosemiteNormals.outputs:out>
+            float3 inputs:fg.connect = </Root/DynamicTerrainMaterial/CatalinaNormals.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterial.inputs:Progress>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-357.19574, 162.36856)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 298
+        }
+
+        def Shader "Mix_2"
+        {
+            uniform token info:id = "ND_mix_float"
+            float inputs:bg.connect = </Root/DynamicTerrainMaterial/YosemiteHeights.outputs:out>
+            float inputs:fg.connect = </Root/DynamicTerrainMaterial/CatalinaHeights.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterial.inputs:Progress>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-377.20993, 391.45648)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 300
+        }
+    }
+
+    def Material "DynamicTerrainMaterialEnhanced" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "MaterialXPreviewSurface", "GeometryModifier", "YosemiteColors", "Combine3", "Remap", "CatalinaColors", "YosemiteNormals", "CatalinaNormals", "YosemiteHeights", "CatalinaHeights", "Mix", "MixNormals", "Normalize", "Mix_2", "Mix_3", "CatalinaRoughness", "YosemiteRoughness", "CatalinaAmbientOcclusion", "YosemiteAmbientOcclusion", "Mix_4", "AngleCompensation", "Lines", "SecondaryLines", "LineFuzzWidth", "Multiply", "Dot", "Dot_1", "TestProgressDriver", "Multiply_1", "NormalMap", "Progress"]
+        float inputs:Progress = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-2268.9553, -102.13123)
+                    float2 sizeInSubgraph = (123.5, 43)
+                    int stackingOrderInSubgraph = 8257
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/DynamicTerrainMaterialEnhanced/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex.connect = </Root/DynamicTerrainMaterialEnhanced/GeometryModifier.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 94.5)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (210, 89)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 8150
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            color3f inputs:diffuseColor.connect = </Root/DynamicTerrainMaterialEnhanced/Multiply_1.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float inputs:metallic
+            float3 inputs:normal.connect = </Root/DynamicTerrainMaterialEnhanced/Remap.outputs:out>
+            float inputs:occlusion.connect = </Root/DynamicTerrainMaterialEnhanced/Mix_4.outputs:out>
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/DynamicTerrainMaterialEnhanced/Mix_3.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (55.553413, -472.86444)
+            float2 ui:nodegraph:node:size = (207.5, 297)
+            int ui:nodegraph:node:stackingOrder = 8158
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "GeometryModifier"
+        {
+            uniform token info:id = "ND_realitykit_geometrymodifier_vertexshader"
+            color4f inputs:color
+            float3 inputs:modelPositionOffset.connect = </Root/DynamicTerrainMaterialEnhanced/Combine3.outputs:out>
+            float3 inputs:normal
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (96.36719, 378.0547)
+            float2 ui:nodegraph:node:size = (196.5, 315)
+            int ui:nodegraph:node:stackingOrder = 8240
+        }
+
+        def Shader "Combine3"
+        {
+            uniform token info:id = "ND_combine3_vector3"
+            float inputs:in1
+            float inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/Mix_2.outputs:out>
+            float inputs:in3
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-1023.3898, 266.5673)
+            float2 ui:nodegraph:node:size = (145, 54)
+            int ui:nodegraph:node:stackingOrder = 8156
+        }
+
+        def Shader "Remap"
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/Normalize.outputs:out>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-246.24062, -190.56055)
+            float2 ui:nodegraph:node:size = (94, 171)
+            int ui:nodegraph:node:stackingOrder = 8154
+        }
+
+        def Shader "YosemiteColors"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @YosemiteData/DioramaYosemite_bc.png@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1487.3112, -894.75885)
+            float2 ui:nodegraph:node:size = (149.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8237
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "CatalinaColors"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @CatalinaData/DioramaCatalina_bc.png@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1448.5486, -935.6813)
+            float2 ui:nodegraph:node:size = (148.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8237
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:vaddressmode", "inputs:default"]
+        }
+
+        def Shader "YosemiteNormals"
+        {
+            uniform token info:id = "ND_image_vector3"
+            float3 inputs:default
+            asset inputs:file = @YosemiteData/DioramaYosemite_n.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-1487.7197, -240.35104)
+            float2 ui:nodegraph:node:size = (161, 189)
+            int ui:nodegraph:node:stackingOrder = 8171
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:filtertype"]
+        }
+
+        def Shader "CatalinaNormals"
+        {
+            uniform token info:id = "ND_image_vector3"
+            float3 inputs:default
+            asset inputs:file = @CatalinaData/DioramaCatalina_n.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-1455.5757, -285.65823)
+            float2 ui:nodegraph:node:size = (154.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8172
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "YosemiteHeights"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @YosemiteData/DioramaYosemite_refit_h.exr@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1505.3527, 477.21112)
+            float2 ui:nodegraph:node:size = (157, 189)
+            int ui:nodegraph:node:stackingOrder = 8148
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "CatalinaHeights"
+        {
+            uniform token info:id = "ND_image_float"
+            float inputs:default
+            asset inputs:file = @CatalinaData/DioramaCatalina_refit_h.exr@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1478.3761, 429.90903)
+            float2 ui:nodegraph:node:size = (151, 189)
+            int ui:nodegraph:node:stackingOrder = 8148
+        }
+
+        def Shader "Mix"
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/DynamicTerrainMaterialEnhanced/YosemiteColors.outputs:out>
+            color3f inputs:fg.connect = </Root/DynamicTerrainMaterialEnhanced/CatalinaColors.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterialEnhanced/Dot_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-1214.2379, -796.3795)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 8058
+        }
+
+        def Shader "Mix_2"
+        {
+            uniform token info:id = "ND_mix_float"
+            float inputs:bg.connect = </Root/DynamicTerrainMaterialEnhanced/YosemiteHeights.outputs:out>
+            float inputs:fg.connect = </Root/DynamicTerrainMaterialEnhanced/CatalinaHeights.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterialEnhanced/Progress.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1272.4836, 414.77963)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 8148
+        }
+
+        def Shader "Mix_3"
+        {
+            uniform token info:id = "ND_mix_float"
+            float inputs:bg.connect = </Root/DynamicTerrainMaterialEnhanced/YosemiteRoughness.outputs:out>
+            float inputs:fg.connect = </Root/DynamicTerrainMaterialEnhanced/CatalinaRoughness.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterialEnhanced/Progress.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1223.0446, -477.043)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 8054
+        }
+
+        def Shader "CatalinaRoughness"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @CatalinaData/DioramaCatalina_r.png@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1444.0022, -591.7787)
+            float2 ui:nodegraph:node:size = (171.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8054
+        }
+
+        def Shader "YosemiteRoughness"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @YosemiteData/DioramaYosemite_r.png@
+            string inputs:filtertype
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1483.7522, -545.18494)
+            float2 ui:nodegraph:node:size = (177.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8054
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def Shader "Mix_4"
+        {
+            uniform token info:id = "ND_mix_float"
+            float inputs:bg.connect = </Root/DynamicTerrainMaterialEnhanced/YosemiteAmbientOcclusion.outputs:out>
+            float inputs:fg.connect = </Root/DynamicTerrainMaterialEnhanced/CatalinaAmbientOcclusion.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterialEnhanced/Progress.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1203.26, 139.61383)
+            float2 ui:nodegraph:node:size = (109, 135)
+            int ui:nodegraph:node:stackingOrder = 8105
+        }
+
+        def Shader "CatalinaAmbientOcclusion"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @CatalinaData/DioramaCatalina_ao.png@
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1424.2177, 24.878143)
+            float2 ui:nodegraph:node:size = (216.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8105
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def Shader "YosemiteAmbientOcclusion"
+        {
+            uniform token info:id = "ND_image_float"
+            asset inputs:file = @YosemiteData/DioramaYosemite_ao.png@
+            string inputs:filtertype
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1463.9677, 71.47189)
+            float2 ui:nodegraph:node:size = (222.5, 189)
+            int ui:nodegraph:node:stackingOrder = 8105
+        }
+
+        def Shader "MixNormals"
+        {
+            uniform token info:id = "ND_mix_vector3"
+            float3 inputs:bg.connect = </Root/DynamicTerrainMaterialEnhanced/YosemiteNormals.outputs:out>
+            float3 inputs:fg.connect = </Root/DynamicTerrainMaterialEnhanced/CatalinaNormals.outputs:out>
+            float inputs:mix.connect = </Root/DynamicTerrainMaterialEnhanced/Progress.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-1237.477, -258.17902)
+            float2 ui:nodegraph:node:size = (121, 135)
+            int ui:nodegraph:node:stackingOrder = 8054
+        }
+
+        def Shader "Normalize"
+        {
+            uniform token info:id = "ND_normalize_vector3"
+            float3 inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/MixNormals.outputs:out>
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-993.0393, -216.8567)
+            float2 ui:nodegraph:node:size = (149, 30)
+            int ui:nodegraph:node:stackingOrder = 8152
+        }
+
+        def NodeGraph "AngleCompensation"
+        {
+            reorder nameChildren = ["", "", "", "", "", "DotProduct", "Multiply_1", "Subtract", "Ifgreater", "HeightMix_1"]
+            float3 inputs:Normal = (0, 0, 0) (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-177.60938, 42.4375)
+                        float2 sizeInSubgraph = (113, 43)
+                        int stackingOrderInSubgraph = 7511
+                    }
+                }
+            )
+            float3 inputs:Normal.connect = </Root/DynamicTerrainMaterialEnhanced/NormalMap.outputs:out>
+            float outputs:Multiply_1_out.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation/Ifgreater.outputs:out>
+            float2 ui:nodegraph:node:pos = (-770.5289, -935.8738)
+            float2 ui:nodegraph:node:size = (177.5, 99)
+            int ui:nodegraph:node:stackingOrder = 8250
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:Multiply_1_out", "outputs:Multiply_1_out"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (712.515, 102.66016)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (165.99559, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 5748
+
+            def Shader "DotProduct"
+            {
+                uniform token info:id = "ND_dotproduct_vector3"
+                float3 inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation.inputs:Normal>
+                float3 inputs:in2 = (0, 1, 0)
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (15.640625, 42.4375)
+                float2 ui:nodegraph:node:size = (153.5, 43)
+                int ui:nodegraph:node:stackingOrder = 7471
+            }
+
+            def Shader "Ifgreater"
+            {
+                uniform token info:id = "ND_ifgreater_float"
+                float inputs:in1
+                float inputs:in2 = 0.005
+                float inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation/Subtract.outputs:out>
+                float inputs:value1.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation/Absval.outputs:out>
+                float inputs:value2 = 0.995
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (531.1406, 60.61328)
+                float2 ui:nodegraph:node:size = (109, 153)
+                int ui:nodegraph:node:stackingOrder = 7616
+            }
+
+            def Shader "Multiply_1"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation/DotProduct.outputs:out>
+                float inputs:in2 = 0.0032
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (293.8164, 192.03516)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 7614
+            }
+
+            def Shader "Absval"
+            {
+                uniform token info:id = "ND_absval_float"
+                float inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation/DotProduct.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (277.1797, 31.824219)
+                float2 ui:nodegraph:node:size = (121.5, 43)
+                int ui:nodegraph:node:stackingOrder = 7580
+            }
+
+            def Shader "Subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1 = 0.004
+                float inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation/Multiply_1.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (376.5, 109.18359)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 7613
+            }
+        }
+
+        def "Lines" (
+            active = true
+            instanceable = true
+            references = </Root/NodeGraphs/AntiAliasedTopographyLines>
+        )
+        {
+            float inputs:FuzzWidth.connect = </Root/DynamicTerrainMaterialEnhanced/LineFuzzWidth.outputs:out>
+            float inputs:LineWidth_value = 0.001
+            float inputs:LineWidth_value.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation.outputs:Multiply_1_out>
+            float inputs:Spacing = 0.05
+            float2 ui:nodegraph:node:pos = (-531.7251, -995.9503)
+            float2 ui:nodegraph:node:size = (135, 153)
+            int ui:nodegraph:node:stackingOrder = 8220
+        }
+
+        def "SecondaryLines" (
+            active = true
+            instanceable = true
+            references = </Root/NodeGraphs/AntiAliasedTopographyLines>
+        )
+        {
+            float inputs:FuzzWidth (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (59.930267, 473.81567)
+                        float2 sizeInSubgraph = (134, 43)
+                        int stackingOrderInSubgraph = 5767
+                    }
+                }
+            )
+            float inputs:FuzzWidth.connect = </Root/DynamicTerrainMaterialEnhanced/LineFuzzWidth.outputs:out>
+            color3f inputs:LineColor = (0.75406885, 0.7540868, 0.75407714) (
+                colorSpace = "Input - Texture - sRGB - sRGB"
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (67, 560.75)
+                        float2 sizeInSubgraph = (127.5, 43)
+                        int stackingOrderInSubgraph = 4313
+                    }
+                }
+            )
+            color3f inputs:LineColor.connect = None
+            float inputs:LineWidth_value = 0.001 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (50.71946, 377.60477)
+                        float2 sizeInSubgraph = (171, 43)
+                        int stackingOrderInSubgraph = 5773
+                    }
+                }
+            )
+            float inputs:LineWidth_value.connect = </Root/DynamicTerrainMaterialEnhanced/AngleCompensation.outputs:Multiply_1_out>
+            float inputs:Spacing = 0.01 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (68.50054, 299.94638)
+                        float2 sizeInSubgraph = (118.5, 43)
+                        int stackingOrderInSubgraph = 4363
+                    }
+                }
+            )
+            float2 ui:nodegraph:node:pos = (-526.79315, -754.96735)
+            float2 ui:nodegraph:node:size = (149.5, 153)
+            int ui:nodegraph:node:stackingOrder = 8220
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (224, 71)
+        }
+
+        def Shader "LineFuzzWidth"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.001
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-768.0301, -823.47705)
+            float2 ui:nodegraph:node:size = (177, 43)
+            int ui:nodegraph:node:stackingOrder = 8220
+        }
+
+        def Shader "Multiply_1"
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1 = (0.999996, 1, 1) (
+                colorSpace = "Input - Texture - sRGB - sRGB"
+            )
+            color3f inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/Multiply.outputs:out>
+            color3f inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/Dot.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-136.82896, -583.1944)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 8241
+        }
+
+        def Shader "NormalMap"
+        {
+            uniform token info:id = "ND_normalmap_vector2"
+            float3 inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/MixNormals.outputs:out>
+            float3 inputs:normal
+            float2 inputs:scale
+            string inputs:space
+            float3 inputs:tangent
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-971.10803, -902.82275)
+            float2 ui:nodegraph:node:size = (124, 171)
+            int ui:nodegraph:node:stackingOrder = 8220
+        }
+
+        def Shader "Progress"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.5
+            float inputs:value.connect = </Root/DynamicTerrainMaterialEnhanced.inputs:Progress>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1944.5425, 55.71174)
+            float2 ui:nodegraph:node:size = (140.5, 43)
+            int ui:nodegraph:node:stackingOrder = 8239
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/Lines.outputs:Multiply_out>
+            color3f inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/SecondaryLines.outputs:Multiply_out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-366.66583, -855.7777)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 8220
+        }
+
+        def Shader "Dot"
+        {
+            uniform token info:id = "ND_dot_color3"
+            color3f inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/Mix.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-966.12213, -568.37756)
+            float2 ui:nodegraph:node:size = (44, 18)
+            int ui:nodegraph:node:stackingOrder = 8225
+        }
+
+        def Shader "Dot_1"
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/Progress.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1602.4569, -754.3279)
+            float2 ui:nodegraph:node:size = (44, 18)
+            int ui:nodegraph:node:stackingOrder = 8238
+        }
+
+        def NodeGraph "TestProgressDriver"
+        {
+            float outputs:Progress.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Ifgreater_1.outputs:out>
+            float2 ui:nodegraph:node:pos = (-2249.6958, 70.22948)
+            float2 ui:nodegraph:node:size = (171.5, 71)
+            int ui:nodegraph:node:stackingOrder = 8249
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1309.75, 225)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (142, 71)
+
+            def Shader "Multiply_2"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Multiply_5.outputs:out>
+                float inputs:in2 = 3.14159
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (334.5, 85.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Ifgreater_1"
+            {
+                uniform token info:id = "ND_ifgreater_float"
+                float inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Ifgreater_2.outputs:out>
+                float inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Ifgreater.outputs:out>
+                float inputs:value1 = 1.5
+                float inputs:value1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Modulo.outputs:out>
+                float inputs:value2 = 3
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (1101.25, 225)
+                float2 ui:nodegraph:node:size = (113.5, 153)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Cos"
+            {
+                uniform token info:id = "ND_cos_float"
+                float inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Multiply_2.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (482.5, 85.5)
+                float2 ui:nodegraph:node:size = (116, 30)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Multiply_5"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Time.outputs:out>
+                float inputs:in2 = 0.5
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (214.5, 136.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Remap_1"
+            {
+                uniform token info:id = "ND_remap_float"
+                float inputs:in.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Cos.outputs:out>
+                float inputs:inlow = -1
+                float inputs:outhigh
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (686, 85.5)
+                float2 ui:nodegraph:node:size = (105.5, 171)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Ifgreater_2"
+            {
+                uniform token info:id = "ND_ifgreater_float"
+                float inputs:in1 = 1
+                float inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Remap_1.outputs:out>
+                float inputs:value1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Modulo.outputs:out>
+                float inputs:value2 = 4
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (908, 88.5)
+                float2 ui:nodegraph:node:size = (117, 153)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Modulo"
+            {
+                uniform token info:id = "ND_modulo_float"
+                float inputs:in1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Multiply_5.outputs:out>
+                float inputs:in2 = 6
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (482.5, 196.5)
+                float2 ui:nodegraph:node:size = (63, 36)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Ifgreater"
+            {
+                uniform token info:id = "ND_ifgreater_float"
+                float inputs:in1
+                float inputs:in2.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Remap_1.outputs:out>
+                float inputs:value1.connect = </Root/DynamicTerrainMaterialEnhanced/TestProgressDriver/Modulo.outputs:out>
+                float inputs:value2 = 1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (908, 301.5)
+                float2 ui:nodegraph:node:size = (109, 153)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+
+            def Shader "Time"
+            {
+                uniform token info:id = "ND_time_float"
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (62.25, 136.5)
+                float2 ui:nodegraph:node:size = (124.5, 43)
+                int ui:nodegraph:node:stackingOrder = 8319
+            }
+        }
+    }
+
+    def Xform "NodeGraphs" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["", "", "", "", "AntiAliasedTopographyLines", "HeightMix", "MiddleDuckMixFunction", "MiddleDuckMixFunction_1"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def NodeGraph "AntiAliasedTopographyLines"
+        {
+            reorder nameChildren = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "SmoothStep_1", "LineWidth", "Subtract", "position", "Separate3", "Add_1", "SmoothStep", "Modulo", "Multiply", "Mix", "Multiply_1", "Dot", "Dot_1", "HeightMix_1"]
+            float inputs:FuzzWidth = 0.05 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (59.930267, 473.81567)
+                        float2 sizeInSubgraph = (134, 43)
+                        int stackingOrderInSubgraph = 5767
+                    }
+                }
+            )
+            color3f inputs:LineColor = (0, 0, 0) (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (67, 560.75)
+                        float2 sizeInSubgraph = (127.5, 43)
+                        int stackingOrderInSubgraph = 4313
+                    }
+                }
+            )
+            float inputs:LineWidth_value (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (50.71946, 377.60477)
+                        float2 sizeInSubgraph = (171, 43)
+                        int stackingOrderInSubgraph = 5773
+                    }
+                }
+            )
+            float inputs:LineWidth_value.connect = </Root/Topology_Material_1/AngleCompensation.outputs:Multiply_1_out>
+            float inputs:Spacing = 5 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (68.50054, 299.94638)
+                        float2 sizeInSubgraph = (118.5, 43)
+                        int stackingOrderInSubgraph = 4363
+                    }
+                }
+            )
+            color3f outputs:Multiply_out.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Mix.outputs:out>
+            float2 ui:nodegraph:node:pos = (1007.4795, 233.996)
+            float2 ui:nodegraph:node:size = (135, 135)
+            int ui:nodegraph:node:stackingOrder = 3696
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1669.012, 337.42154)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (224.63309, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 5798
+
+            def Shader "SmoothStep_1"
+            {
+                uniform token info:id = "ND_smoothstep_float"
+                float inputs:high = 0.2
+                float inputs:high.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Dot_1.outputs:out>
+                float inputs:in.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Modulo.outputs:out>
+                float inputs:low = 0
+                float inputs:low.connect = None
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (959.2738, 69.77695)
+                float2 ui:nodegraph:node:size = (139.5, 135)
+                int ui:nodegraph:node:stackingOrder = 5804
+            }
+
+            def Shader "LineWidth"
+            {
+                uniform token info:id = "ND_constant_float"
+                float inputs:value = 4
+                float inputs:value.connect = </Root/NodeGraphs/AntiAliasedTopographyLines.inputs:LineWidth_value>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (433.09647, 377.41068)
+                float2 ui:nodegraph:node:size = (147.5, 43)
+                int ui:nodegraph:node:stackingOrder = 5771
+            }
+
+            def Shader "Subtract"
+            {
+                uniform token info:id = "ND_subtract_float"
+                float inputs:in1 = 1
+                float inputs:in2.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/SmoothStep.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (1140.25, 341.75)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 3944
+            }
+
+            def Shader "position"
+            {
+                uniform token info:id = "ND_position_vector3"
+                string inputs:space = "object"
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (321.00922, 184.4027)
+                float2 ui:nodegraph:node:size = (133.5, 43)
+                int ui:nodegraph:node:stackingOrder = 5805
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_vector3"
+                float3 inputs:in.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/position.outputs:out>
+                float outputs:outx
+                float outputs:outy
+                float outputs:outz
+                float2 ui:nodegraph:node:pos = (502.8454, 194.7234)
+                float2 ui:nodegraph:node:size = (115.5, 135)
+                int ui:nodegraph:node:stackingOrder = 5828
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+            }
+
+            def Shader "Add_1"
+            {
+                uniform token info:id = "ND_add_float"
+                float inputs:in1.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/LineWidth.outputs:out>
+                float inputs:in2.connect = </Root/NodeGraphs/AntiAliasedTopographyLines.inputs:FuzzWidth>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (780.79736, 446.38593)
+                float2 ui:nodegraph:node:size = (61.5, 36)
+                int ui:nodegraph:node:stackingOrder = 5765
+            }
+
+            def Shader "SmoothStep"
+            {
+                uniform token info:id = "ND_smoothstep_float"
+                float inputs:high = 0.5
+                float inputs:high.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Add_1.outputs:out>
+                float inputs:in.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Modulo.outputs:out>
+                float inputs:low = 0
+                float inputs:low.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/LineWidth.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (943, 341.75)
+                float2 ui:nodegraph:node:size = (127.5, 135)
+                int ui:nodegraph:node:stackingOrder = 5802
+            }
+
+            def Shader "Modulo"
+            {
+                uniform token info:id = "ND_modulo_float"
+                float inputs:in1.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Separate3.outputs:outy>
+                float inputs:in2 = 5
+                float inputs:in2.connect = </Root/NodeGraphs/AntiAliasedTopographyLines.inputs:Spacing>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (784, 285.78085)
+                float2 ui:nodegraph:node:size = (63, 36)
+                int ui:nodegraph:node:stackingOrder = 5806
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/SmoothStep_1.outputs:out>
+                float inputs:in2.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Subtract.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (1256.9951, 127.83506)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 5794
+            }
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg = (0.999996, 1, 1) (
+                    colorSpace = "Input - Texture - sRGB - sRGB"
+                )
+                color3f inputs:bg.connect = None
+                color3f inputs:fg = (0.57045853, 0.57047236, 0.5704649) (
+                    colorSpace = "Input - Texture - sRGB - sRGB"
+                )
+                color3f inputs:fg.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Dot.outputs:out>
+                float inputs:mix.connect = </Root/NodeGraphs/AntiAliasedTopographyLines/Multiply.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (1423.829, 310.33777)
+                float2 ui:nodegraph:node:size = (109, 135)
+                int ui:nodegraph:node:stackingOrder = 5796
+            }
+
+            def Shader "Dot"
+            {
+                uniform token info:id = "ND_dot_color3"
+                color3f inputs:in.connect = </Root/NodeGraphs/AntiAliasedTopographyLines.inputs:LineColor>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (1283.1832, 554.0311)
+                float2 ui:nodegraph:node:size = (44, 18)
+                int ui:nodegraph:node:stackingOrder = 4343
+            }
+
+            def Shader "Dot_1"
+            {
+                uniform token info:id = "ND_dot_float"
+                float inputs:in.connect = </Root/NodeGraphs/AntiAliasedTopographyLines.inputs:FuzzWidth>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (199.62276, 100.1357)
+                float2 ui:nodegraph:node:size = (44, 18)
+                int ui:nodegraph:node:stackingOrder = 5761
+            }
+        }
+
+        def NodeGraph "HeightMix" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["", "", "", "", "", "_2_pi", "Multiply_1", "Multiply_2", "Cos", "Oneminus"]
+            float inputs:a = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (44.38672, 41.664062)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 7374
+                    }
+                }
+            )
+            float inputs:b = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (40.804688, 300.21875)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 7381
+                    }
+                }
+            )
+            float inputs:mix = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (43.285156, -27.640625)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 7382
+                    }
+                }
+            )
+            float outputs:out.connect = </Root/NodeGraphs/HeightMix/Ifgreater.outputs:out>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1249, 284)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (114, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 7364
+
+            def Shader "Multiply_1"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/NodeGraphs/HeightMix.inputs:b>
+                float inputs:in2.connect = </Root/NodeGraphs/HeightMix/Remap.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (916.381, 320.9454)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 7404
+            }
+
+            def Shader "Multiply_2"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/NodeGraphs/HeightMix.inputs:a>
+                float inputs:in2.connect = </Root/NodeGraphs/HeightMix/Remap.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (903.2507, 43.705647)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 7405
+            }
+
+            def Shader "Cos"
+            {
+                uniform token info:id = "ND_cos_float"
+                float inputs:in.connect = </Root/NodeGraphs/HeightMix/_2_pi.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (336, 149.5)
+                float2 ui:nodegraph:node:size = (116, 30)
+                int ui:nodegraph:node:stackingOrder = 7407
+            }
+
+            def Shader "_2_pi"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/NodeGraphs/HeightMix.inputs:mix>
+                float inputs:in2 = 6.28319
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (188, 149.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 7408
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_float"
+                float inputs:in.connect = </Root/NodeGraphs/HeightMix/Cos.outputs:out>
+                float inputs:inhigh
+                float inputs:inlow = -1
+                float inputs:outhigh
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (539.5, 149.5)
+                float2 ui:nodegraph:node:size = (94, 171)
+                int ui:nodegraph:node:stackingOrder = 7406
+            }
+
+            def Shader "Ifgreater"
+            {
+                uniform token info:id = "ND_ifgreater_float"
+                float inputs:in1.connect = </Root/NodeGraphs/HeightMix/Multiply_2.outputs:out>
+                float inputs:in2.connect = </Root/NodeGraphs/HeightMix/Multiply_1.outputs:out>
+                float inputs:value1.connect = </Root/NodeGraphs/HeightMix/Dot.outputs:out>
+                float inputs:value2 = 0.5
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (1077.5, 284)
+                float2 ui:nodegraph:node:size = (109, 153)
+                int ui:nodegraph:node:stackingOrder = 7386
+            }
+
+            def Shader "Dot"
+            {
+                uniform token info:id = "ND_dot_float"
+                float inputs:in.connect = </Root/NodeGraphs/HeightMix.inputs:mix>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (939.7899, -29.783403)
+                float2 ui:nodegraph:node:size = (44, 18)
+                int ui:nodegraph:node:stackingOrder = 7400
+            }
+        }
+
+        def NodeGraph "MiddleDuckMixFunction" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["", "", "", "", "", "_2_pi", "Multiply_1", "Multiply_2", "Cos", "Oneminus"]
+            float inputs:mix = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (49, 85.5)
+                        float2 sizeInSubgraph = (98, 43)
+                        int stackingOrderInSubgraph = 7448
+                    }
+                }
+            )
+            float outputs:out.connect = </Root/NodeGraphs/MiddleDuckMixFunction/Remap.outputs:out>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (665, 85.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (165, 71)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 7444
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_float"
+                float inputs:in.connect = </Root/NodeGraphs/MiddleDuckMixFunction/Cos.outputs:out>
+                float inputs:inhigh
+                float inputs:inlow = -1
+                float inputs:outhigh
+                float inputs:outlow
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (501, 85.5)
+                float2 ui:nodegraph:node:size = (94, 171)
+                int ui:nodegraph:node:stackingOrder = 7448
+            }
+
+            def Shader "_2_pi"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = None
+                float inputs:in2 = 6.28319
+                float inputs:in2.connect = </Root/NodeGraphs/MiddleDuckMixFunction.inputs:mix>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (188, 85.5)
+                float2 ui:nodegraph:node:size = (60, 36)
+                int ui:nodegraph:node:stackingOrder = 7436
+            }
+
+            def Shader "Cos"
+            {
+                uniform token info:id = "ND_cos_float"
+                float inputs:in.connect = </Root/NodeGraphs/MiddleDuckMixFunction/_2_pi.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (336, 85.5)
+                float2 ui:nodegraph:node:size = (116, 30)
+                int ui:nodegraph:node:stackingOrder = 7436
+            }
+        }
+    }
+
+    def Shader "LineFuzzWidth"
+    {
+        uniform token info:id = "ND_constant_float"
+        float inputs:value = 0.001
+        float outputs:out
+        float2 ui:nodegraph:node:pos = (56.77864, 281.63794)
+        float2 ui:nodegraph:node:size = (177, 43)
+        int ui:nodegraph:node:stackingOrder = 7635
+    }
+
+    def Shader "Multiply"
+    {
+        uniform token info:id = "ND_multiply_color3"
+        color3f inputs:in1 = (0.999996, 1, 1) (
+            colorSpace = "Input - Texture - sRGB - sRGB"
+        )
+        color3f inputs:in1.connect = </Root/TopographyMaterialGeometryModifiers/MajorTopographyLines.outputs:Multiply_out>
+        color3f inputs:in2.connect = </Root/TopographyMaterialGeometryModifiers/MinorTypographyLines.outputs:Multiply_out>
+        color3f outputs:out
+        float2 ui:nodegraph:node:pos = (496.38904, 245.43413)
+        float2 ui:nodegraph:node:size = (60, 36)
+        int ui:nodegraph:node:stackingOrder = 7635
+    }
+
+    def Shader "NormalMap"
+    {
+        uniform token info:id = "ND_normalmap_vector2"
+        float3 inputs:in.connect = </Root/TopographyMaterialGeometryModifiers/MixNormals.outputs:out>
+        float2 inputs:scale
+        float3 inputs:tangent
+        float3 outputs:out
+        float2 ui:nodegraph:node:pos = (-163.94162, 322.2849)
+        float2 ui:nodegraph:node:size = (124, 171)
+        int ui:nodegraph:node:stackingOrder = 7635
+    }
+}
+

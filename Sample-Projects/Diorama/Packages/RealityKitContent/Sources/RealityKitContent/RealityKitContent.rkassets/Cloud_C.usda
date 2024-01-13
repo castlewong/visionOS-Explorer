@@ -1,0 +1,61 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Cloud_Chunk" (
+        active = true
+        prepend references = @Cloud_Chunk.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.07141513, 0, -0.1254705)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "ParticleEmitter"
+        {
+            over "VFXEmitter"
+            {
+                over "currentState"
+                {
+                    float3 shapeSize = (0.1, 0.02, 0.1)
+                }
+            }
+        }
+    }
+
+    def "Cloud_Chunk_1" (
+        active = true
+        prepend references = @Cloud_Chunk.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.049594916, 0.058353066, -0.054558188)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Cloud_Chunk_2" (
+        active = true
+        prepend references = @Cloud_Chunk.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-0.14251417, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Cloud_Chunk_3" (
+        active = true
+        prepend references = @Cloud_Chunk.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, 0, 0.16163114)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

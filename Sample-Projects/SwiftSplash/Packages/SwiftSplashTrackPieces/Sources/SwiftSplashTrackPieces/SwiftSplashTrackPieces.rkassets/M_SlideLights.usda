@@ -1,0 +1,319 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "M_SlideLights"]
+
+def Xform "Root"
+{
+    def Material "M_SlideLights" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["MaterialXPreviewSurface", "Contrast", "Separate3", "ORM", "Mix", "Constant", "Convert_1", "Convert_2", "Constant_1", "Mix_1", "Opacity", "GlassColor", "Emmissive_Intensity", "plastic_light_color", "Switch", "Convert_3", "Constant_2", "metal_light_color", "Mix_3", "Contrast_3", "wood_light_color", "plastic_emmissive_intensity", "Contrast_1"]
+        int inputs:material = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-956.7611, 502.14008)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 620
+                }
+            }
+        )
+        float inputs:powered = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-930.1444, 840.725)
+                    float2 sizeInSubgraph = (122, 53)
+                    int stackingOrderInSubgraph = 1007
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/M_SlideLights/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1164.9795, 123.32595)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 434
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_SlideLights/GlassColor.outputs:out>
+            color3f inputs:emissiveColor.connect = </Root/M_SlideLights/Switch.outputs:out>
+            float inputs:ior
+            float inputs:metallic.connect = </Root/M_SlideLights/Separate3.outputs:outb>
+            float3 inputs:normal
+            float inputs:occlusion.connect = </Root/M_SlideLights/Separate3.outputs:outr>
+            float inputs:opacity.connect = </Root/M_SlideLights/Opacity.outputs:out>
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_SlideLights/Separate3.outputs:outg>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (847.97424, 106.726364)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 433
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "Contrast"
+        {
+            uniform token info:id = "ND_contrast_color3FA"
+            float inputs:amount.connect = </Root/M_SlideLights/plastic_emmissive_intensity.outputs:out>
+            color3f inputs:in.connect = </Root/M_SlideLights/plastic_light_color.outputs:out>
+            float inputs:pivot = 0.01
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-171.52425, 610.30676)
+            float2 ui:nodegraph:node:size = (106, 145)
+            int ui:nodegraph:node:stackingOrder = 708
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:amount"]
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_SlideLights/ORM.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-52.15916, 79.13054)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 218
+        }
+
+        def Shader "ORM"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @Textures/Universal/mat_rainbowLights_OcclusionRoughnessMetallic.png@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-222.17078, 39.03965)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 220
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default", "inputs:default", "inputs:texcoord"]
+        }
+
+        def Shader "Mix"
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_SlideLights/Convert_1.outputs:out>
+            color3f inputs:fg.connect = </Root/M_SlideLights/Contrast.outputs:out>
+            float inputs:mix.connect = </Root/M_SlideLights.inputs:powered>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (88.18904, 646.5169)
+            float2 ui:nodegraph:node:size = (109, 145)
+            int ui:nodegraph:node:stackingOrder = 640
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+        }
+
+        def Shader "Constant"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-371.3664, 810.62634)
+            float2 ui:nodegraph:node:size = (141.5, 53)
+            int ui:nodegraph:node:stackingOrder = 707
+        }
+
+        def Shader "Convert_1"
+        {
+            uniform token info:id = "ND_convert_float_color3"
+            float inputs:in.connect = </Root/M_SlideLights/Constant.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-157.88951, 748.57886)
+            float2 ui:nodegraph:node:size = (148, 53)
+            int ui:nodegraph:node:stackingOrder = 707
+        }
+
+        def Shader "Opacity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (101.80336, 25.888662)
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        def Shader "GlassColor"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.4880799, 0.4880799, 0.4880799) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (98.075615, -89.99161)
+            float2 ui:nodegraph:node:size = (153.5, 53)
+            int ui:nodegraph:node:stackingOrder = 351
+        }
+
+        def Shader "Emmissive_Intensity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 10
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-775.4904, 708.5638)
+            float2 ui:nodegraph:node:size = (212, 53)
+            int ui:nodegraph:node:stackingOrder = 1006
+        }
+
+        def Shader "Contrast_1"
+        {
+            uniform token info:id = "ND_contrast_color3FA"
+            float inputs:amount.connect = </Root/M_SlideLights/Emmissive_Intensity.outputs:out>
+            color3f inputs:in.connect = </Root/M_SlideLights/wood_light_color.outputs:out>
+            float inputs:pivot = 0.01
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-121.078156, 997.2064)
+            float2 ui:nodegraph:node:size = (118.5, 145)
+            int ui:nodegraph:node:stackingOrder = 750
+        }
+
+        def Shader "Convert_2"
+        {
+            uniform token info:id = "ND_convert_float_color3"
+            float inputs:in.connect = </Root/M_SlideLights/Constant_1.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-119.73125, 1118.8851)
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 750
+        }
+
+        def Shader "Constant_1"
+        {
+            uniform token info:id = "ND_constant_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-349.49863, 1119.899)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 750
+        }
+
+        def Shader "Mix_1"
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_SlideLights/Convert_2.outputs:out>
+            color3f inputs:fg.connect = </Root/M_SlideLights/Contrast_1.outputs:out>
+            float inputs:mix.connect = </Root/M_SlideLights.inputs:powered>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (135.33713, 1018.24585)
+            float2 ui:nodegraph:node:size = (109, 145)
+            int ui:nodegraph:node:stackingOrder = 750
+        }
+
+        def Shader "Switch"
+        {
+            uniform token info:id = "ND_switch_color3I"
+            color3f inputs:in1.connect = </Root/M_SlideLights/Mix_3.outputs:out>
+            color3f inputs:in2.connect = </Root/M_SlideLights/Mix.outputs:out>
+            color3f inputs:in3.connect = </Root/M_SlideLights/Mix_1.outputs:out>
+            color3f inputs:in4
+            color3f inputs:in5
+            color3f inputs:in6
+            color3f inputs:in7
+            color3f inputs:in8
+            color3f inputs:in9
+            color3f inputs:in10
+            int inputs:which.connect = </Root/M_SlideLights.inputs:material>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (405.2435, 282.08502)
+            float2 ui:nodegraph:node:size = (94, 289)
+            int ui:nodegraph:node:stackingOrder = 353
+        }
+
+        def Shader "Convert_3"
+        {
+            uniform token info:id = "ND_convert_float_color3"
+            float inputs:in.connect = </Root/M_SlideLights/Constant_2.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-217.42604, 357.79428)
+            float2 ui:nodegraph:node:size = (150.5, 53)
+            int ui:nodegraph:node:stackingOrder = 998
+        }
+
+        def Shader "Constant_2"
+        {
+            uniform token info:id = "ND_constant_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-536.7618, 379.8712)
+            float2 ui:nodegraph:node:size = (157.5, 53)
+            int ui:nodegraph:node:stackingOrder = 896
+        }
+
+        def Shader "Mix_3"
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_SlideLights/Convert_3.outputs:out>
+            color3f inputs:fg.connect = </Root/M_SlideLights/Contrast_3.outputs:out>
+            float inputs:mix.connect = </Root/M_SlideLights.inputs:powered>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (35.83884, 301.49704)
+            float2 ui:nodegraph:node:size = (109, 145)
+            int ui:nodegraph:node:stackingOrder = 896
+        }
+
+        def Shader "Contrast_3"
+        {
+            uniform token info:id = "ND_contrast_color3FA"
+            float inputs:amount.connect = </Root/M_SlideLights/Emmissive_Intensity.outputs:out>
+            color3f inputs:in.connect = </Root/M_SlideLights/metal_light_color.outputs:out>
+            float inputs:pivot = 0.01
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-249.12251, 246.7112)
+            float2 ui:nodegraph:node:size = (121.5, 145)
+            int ui:nodegraph:node:stackingOrder = 998
+        }
+
+        def Shader "metal_light_color"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0, 0.9914394, 1) (
+                colorSpace = "Input - Texture - sRGB - sRGB"
+            )
+            color3f inputs:value.connect = None
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-508.15692, 242.04974)
+            float2 ui:nodegraph:node:size = (194.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1005
+        }
+
+        def Shader "plastic_light_color"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0, 1, 0.019321742) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-424.7001, 608.9446)
+            float2 ui:nodegraph:node:size = (201, 53)
+            int ui:nodegraph:node:stackingOrder = 1011
+        }
+
+        def Shader "wood_light_color"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0, 1, 0.019321742) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-338.71976, 973.5367)
+            float2 ui:nodegraph:node:size = (193.5, 53)
+            int ui:nodegraph:node:stackingOrder = 1004
+        }
+
+        def Shader "plastic_emmissive_intensity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 10
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-764.5271, 639.0161)
+            float2 ui:nodegraph:node:size = (250, 53)
+            int ui:nodegraph:node:stackingOrder = 1009
+        }
+    }
+}
+

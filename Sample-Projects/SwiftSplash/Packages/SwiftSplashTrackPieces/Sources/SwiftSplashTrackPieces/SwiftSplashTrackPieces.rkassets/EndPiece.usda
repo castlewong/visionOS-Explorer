@@ -1,0 +1,2303 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["end", "M_WaterFall", "M_Glow", "M_StagnantWater", "M_SlideLights", "M_LightsRim", "M_MovingWater", "M_RainbowLights", "M_SlideBottom", "M_SlideTop", "M_FishAccessories", "M_FishBody", "M_FishEyes", "M_FishGlass", "M_End"]
+    def "M_SlideBottom" (
+        active = true
+        references = @M_SlideBottom.usda@</Root/M_SlideBottom>
+    )
+    {
+        int inputs:material (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-663.98517, -47.227745)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 2039
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Dot_2"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "Switch"
+        {
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "Remap_1"
+        {
+            float2 ui:nodegraph:node:size = (105.5, 181)
+        }
+
+        over "Dot_3"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Separate3_2"
+        {
+            float2 ui:nodegraph:node:size = (130.5, 145)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Dot_1"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "Dot_4"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Dot_6"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "Dot_5"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "Image_3"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_4"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+
+        over "Dot"
+        {
+            float2 ui:nodegraph:node:size = (44, 18)
+        }
+
+        over "R_Switch"
+        {
+            float2 ui:nodegraph:node:size = (110.5, 289)
+        }
+
+        over "AO_Switch"
+        {
+            float2 ui:nodegraph:node:size = (120, 289)
+        }
+
+        over "M_Switch"
+        {
+            float2 ui:nodegraph:node:size = (113.5, 289)
+        }
+
+        over "Switch_1"
+        {
+            float2 ui:nodegraph:node:size = (106.5, 289)
+        }
+
+        over "R_Intensity_plastic"
+        {
+            float2 ui:nodegraph:node:size = (170.5, 217)
+        }
+
+        over "R_Intensity_Wood"
+        {
+            float2 ui:nodegraph:node:size = (163.5, 217)
+        }
+
+        over "Image_5"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_6"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_7"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "R_Intenstiy_metal"
+        {
+            float2 ui:nodegraph:node:size = (163.5, 217)
+        }
+
+        over "ORM_Metal"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ORM_Plastic"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "ORM_Wood"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image_2"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "M_SlideTop" (
+        active = true
+        references = @M_SlideTop.usda@</Root/M_SlideTop>
+    )
+    {
+        float inputs:Opacity (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-505.80334, 247.69266)
+                    float2 sizeInSubgraph = (116.5, 53)
+                    int stackingOrderInSubgraph = 314
+                }
+            }
+        )
+        bool inputs:visibility (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-927.4689, 604.95514)
+                    float2 sizeInSubgraph = (119.5, 53)
+                    int stackingOrderInSubgraph = 314
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Constant_1"
+        {
+            float2 ui:nodegraph:node:size = (155, 53)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Convert"
+        {
+            float2 ui:nodegraph:node:size = (135.5, 40)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Opacity"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Separate3_1"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Mix_2"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Emmissive"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+    }
+
+    def "M_FishAccessories" (
+        active = true
+        references = @FishMaterials.usda@</Root/Materials/M_FishAccessories>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "bc"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "n"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "M_FishBody" (
+        active = true
+        references = @FishMaterials.usda@</Root/Materials/M_FishBody>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "bc"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "n"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "orm"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "M_FishEyes" (
+        active = true
+        references = @FishMaterials.usda@</Root/Materials/M_FishEyes>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+    }
+
+    def "M_FishGlass" (
+        active = true
+        references = @FishMaterials.usda@</Root/Materials/M_FishGlass>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 199)
+        }
+    }
+
+    def Material "M_End" (
+        active = true
+    )
+    {
+        int inputs:material = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-622.08356, 26.279324)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 9373
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/M_End/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1096.8546, 82.91565)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 9373
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_End/Dot.outputs:out>
+            color3f inputs:emissiveColor
+            float inputs:ior
+            float inputs:metallic.connect = </Root/M_End/Separate3_3.outputs:outb>
+            float3 inputs:normal.connect = </Root/M_End/Remap.outputs:out>
+            float inputs:occlusion.connect = </Root/M_End/Separate3_3.outputs:outr>
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_End/r_switch.outputs:out>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (744.1514, 91.68926)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 9374
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "Separate3_3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_End/Switch.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (505.32993, 322.24197)
+            float2 ui:nodegraph:node:size = (130.5, 145)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def Shader "Switch"
+        {
+            uniform token info:id = "ND_switch_color3I"
+            color3f inputs:in1.connect = </Root/M_End/orm_metal.outputs:out>
+            color3f inputs:in2.connect = </Root/M_End/orm_plastic.outputs:out>
+            color3f inputs:in3.connect = </Root/M_End/orm_wood.outputs:out>
+            color3f inputs:in4
+            color3f inputs:in5
+            color3f inputs:in6
+            color3f inputs:in7
+            color3f inputs:in8
+            color3f inputs:in9
+            color3f inputs:in10
+            int inputs:which.connect = </Root/M_End.inputs:material>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (346.15683, 377.97577)
+            float2 ui:nodegraph:node:size = (94, 289)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def Shader "r_switch"
+        {
+            uniform token info:id = "ND_switch_floatI"
+            float inputs:in1.connect = </Root/M_End/Range.outputs:out>
+            float inputs:in2.connect = </Root/M_End/Range_1.outputs:out>
+            float inputs:in3.connect = </Root/M_End/Range_2.outputs:out>
+            float inputs:in4
+            float inputs:in5
+            float inputs:in6
+            float inputs:in7
+            float inputs:in8
+            float inputs:in9
+            float inputs:in10
+            int inputs:which.connect = </Root/M_End.inputs:material>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (355.62433, 5.5021744)
+            float2 ui:nodegraph:node:size = (104.5, 289)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def NodeGraph "n"
+        {
+            int inputs:material (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-145.78278, 641.37866)
+                        float2 sizeInSubgraph = (118.5, 53)
+                        int stackingOrderInSubgraph = 8861
+                    }
+                }
+            )
+            int inputs:material.connect = </Root/M_End.inputs:material>
+            float3 outputs:n_switch_out.connect = </Root/M_End/n/n_switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (-95.03056, 745.98456)
+            float2 ui:nodegraph:node:size = (105.5, 109)
+            int ui:nodegraph:node:stackingOrder = 9380
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (482.25, 388.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (172.1349, 81)
+
+            def Shader "n_switch"
+            {
+                uniform token info:id = "ND_switch_vector3I"
+                float3 inputs:in1.connect = </Root/M_End/n/n_metal.outputs:out>
+                float3 inputs:in2.connect = </Root/M_End/n/n_plastic.outputs:out>
+                float3 inputs:in3.connect = </Root/M_End/n/n_wood.outputs:out>
+                float3 inputs:in4
+                float3 inputs:in5
+                float3 inputs:in6
+                float3 inputs:in9
+                float3 inputs:in10
+                int inputs:which.connect = </Root/M_End/n.inputs:material>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (281, 388.5)
+                float2 ui:nodegraph:node:size = (108, 289)
+                int ui:nodegraph:node:stackingOrder = 8830
+            }
+
+            def Shader "n_wood"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Wood/mat_end_Normal_wood.png@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-86.63139, 476.54553)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8861
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:vaddressmode", "inputs:uaddressmode", "inputs:texcoord"]
+            }
+
+            def Shader "n_plastic"
+            {
+                uniform token info:id = "ND_image_vector3"
+                float3 inputs:default
+                asset inputs:file = @Textures/Plastic/mat_end_Normal_plastic.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-60.33144, 239.14833)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8860
+            }
+
+            def Shader "n_metal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Textures/Metal/mat_end_Normal_metal.png@
+                string inputs:filtertype
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (56.253857, 18.74701)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8859
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:uaddressmode", "inputs:texcoord"]
+            }
+        }
+
+        def Shader "Range"
+        {
+            uniform token info:id = "ND_range_float"
+            bool inputs:doclamp
+            float inputs:in.connect = </Root/M_End/Separate3.outputs:outg>
+            float inputs:outhigh = 0.9
+            float inputs:outlow = 0.2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (131.73955, -54.19793)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 9369
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:outlow", "inputs:inlow"]
+        }
+
+        def Shader "Range_2"
+        {
+            uniform token info:id = "ND_range_float"
+            bool inputs:doclamp
+            float inputs:gamma
+            float inputs:in.connect = </Root/M_End/Separate3_2.outputs:outg>
+            float inputs:inhigh = 0.85
+            float inputs:inlow
+            float inputs:outhigh = 0.9
+            float inputs:outlow = 0.25
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (123.408615, 454.19528)
+            float2 ui:nodegraph:node:size = (107, 217)
+            int ui:nodegraph:node:stackingOrder = 9369
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+        }
+
+        def Shader "Separate3_1"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_End/orm_plastic.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-42.252487, 204.49689)
+            float2 ui:nodegraph:node:size = (127.5, 145)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def Shader "Dot"
+        {
+            uniform token info:id = "ND_dot_color3"
+            color3f inputs:in.connect = </Root/M_End/bc.outputs:Switch_out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (194.96404, -228.20543)
+            float2 ui:nodegraph:node:size = (44, 18)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def Shader "orm_plastic"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Plastic/mat_end_OcclusionRoughnessMetallic_plastic.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-283.2221, 192.20847)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 9378
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:default", "inputs:default"]
+        }
+
+        def Shader "Remap"
+        {
+            uniform token info:id = "ND_remap_vector3FA"
+            float3 inputs:in.connect = </Root/M_End/n.outputs:n_switch_out>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outhigh
+            float inputs:outlow = -1
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (509.8036, 508.5226)
+            float2 ui:nodegraph:node:size = (94, 181)
+            int ui:nodegraph:node:stackingOrder = 9377
+        }
+
+        def Shader "Separate3_2"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_End/orm_wood.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-40.319626, 444.62057)
+            float2 ui:nodegraph:node:size = (130.5, 145)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def Shader "orm_wood"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Wood/mat_end_OcclusionRoughnessMetallic_wood.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            string inputs:uaddressmode
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-252.0653, 511.48343)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 9379
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:texcoord"]
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_End/orm_metal.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-66.03923, -43.824577)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 9369
+        }
+
+        def Shader "Range_1"
+        {
+            uniform token info:id = "ND_range_float"
+            bool inputs:doclamp
+            float inputs:gamma
+            float inputs:in.connect = </Root/M_End/Separate3_1.outputs:outg>
+            float inputs:inhigh
+            float inputs:inlow
+            float inputs:outhigh
+            float inputs:outlow = 0.3
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (134.03157, 201.9823)
+            float2 ui:nodegraph:node:size = (103.5, 217)
+            int ui:nodegraph:node:stackingOrder = 9369
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:inlow"]
+        }
+
+        def Shader "orm_metal"
+        {
+            uniform token info:id = "ND_image_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Metal/mat_end_OcclusionRoughnessMetallic_metal.png@
+            string inputs:filtertype
+            float2 inputs:texcoord
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-285.78214, -52.161034)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 9369
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+        }
+
+        def NodeGraph "bc"
+        {
+            int inputs:material (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-244.3153, 527.89575)
+                        float2 sizeInSubgraph = (118.5, 53)
+                        int stackingOrderInSubgraph = 8708
+                    }
+                }
+            )
+            int inputs:material.connect = </Root/M_End.inputs:material>
+            color3f outputs:Switch_out.connect = </Root/M_End/bc/Switch.outputs:out>
+            float2 ui:nodegraph:node:pos = (15.540602, -264.50815)
+            float2 ui:nodegraph:node:size = (105.5, 109)
+            int ui:nodegraph:node:stackingOrder = 9381
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (451, 388.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (199.22049, 81)
+
+            def Shader "bc_plastic"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Textures/Plastic/mat_end_BaseColor_plastic.png@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (35.14183, 299.17563)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8714
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:default"]
+            }
+
+            def Shader "bc_wood"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @Textures/Wood/mat_end_BaseColor_wood.png@
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (41.404408, 548.5796)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8715
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode", "inputs:uaddressmode", "inputs:default"]
+            }
+
+            def Shader "bc_metal"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Textures/Metal/mat_end_BaseColor_metal.png@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (63.614628, 78.91379)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8713
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:vaddressmode", "inputs:texcoord"]
+            }
+
+            def Shader "Switch"
+            {
+                uniform token info:id = "ND_switch_color3I"
+                color3f inputs:in1.connect = </Root/M_End/bc/bc_metal.outputs:out>
+                color3f inputs:in2.connect = </Root/M_End/bc/bc_plastic.outputs:out>
+                color3f inputs:in3.connect = </Root/M_End/bc/bc_wood.outputs:out>
+                color3f inputs:in4
+                color3f inputs:in5
+                color3f inputs:in6
+                color3f inputs:in7
+                color3f inputs:in8
+                color3f inputs:in9
+                color3f inputs:in10
+                int inputs:which.connect = </Root/M_End/bc.inputs:material>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (260.5, 388.5)
+                float2 ui:nodegraph:node:size = (94, 289)
+                int ui:nodegraph:node:stackingOrder = 8680
+            }
+        }
+    }
+
+    def Xform "end" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["adventureFish_end_glass_idle_animation", "adventureFish_end_noGlass_idle_animation", "adventureFish_end_glass_ride_animation", "adventureFish_end_noGlass_ride_animation", "flag_idle_animation", "slide_end_water", "end_glow", "end_flag_glow", "EndParticles", "end_water", "SwiftSplashTrackPieces_ConnectableComponent", "Collider", "InputTarget", "slideEnd_top_glow", "slideEnd_top", "slideEnd_bottom", "connect_in", "in_connection_vector", "ui_anchor", "end", "connect_out", "out_connection_vector", "Accessibility"]
+        def "slideEnd_top_glow" (
+            references = @Goal/slideEnd_top_glow.usd@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "slideEnd_top_glow" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/M_Glow> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+            }
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_GlowComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.GlowComponent"
+                bool isTopPiece = 1
+            }
+        }
+
+        def "slideEnd_top" (
+            references = @Goal/slideEnd_top.usd@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "slideEnd_top"
+            {
+                over "slideEnd_top" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_SlideTop> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "slideEnd_top_lightsRims" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_LightsRim> (
+                        bindMaterialAs = "strongerThanDescendants"
+                    )
+                }
+
+                over "slideEnd_top_lights" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_SlideLights> (
+                        bindMaterialAs = "strongerThanDescendants"
+                    )
+                }
+            }
+        }
+
+        def "slideEnd_bottom" (
+            active = true
+            references = @Goal/slideEnd_bottom.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "slideEnd_bottom"
+            {
+                over "slideEnd_bottom" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_SlideBottom> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "slideEnd_bottom_lightsRims" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_LightsRim> (
+                        bindMaterialAs = "strongerThanDescendants"
+                    )
+                }
+
+                over "slideEnd_bottom_lights" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_SlideLights> (
+                        bindMaterialAs = "strongerThanDescendants"
+                    )
+                }
+            }
+        }
+
+        def Xform "connect_in" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0.14689, -0.1783)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "in_connection_vector" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, -0.07676909)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "ui_anchor" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0.3943268, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_BillboardComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.BillboardComponent"
+            }
+        }
+
+        def "end" (
+            active = true
+            references = @Goal/end.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "end2"
+            {
+                over "end1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_End> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "end_lightsRim" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_LightsRim> (
+                        bindMaterialAs = "strongerThanDescendants"
+                    )
+
+                    over "lightsRim" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/M_LightsRim> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "end_rainbowLights" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/M_RainbowLights> (
+                        bindMaterialAs = "strongerThanDescendants"
+                    )
+
+                    over "rainbowLights" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </Root/M_RainbowLights> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+            }
+        }
+
+        def "end_water" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (0, 3.1415927, 0)
+            }
+            references = @Goal/end_water.usd@
+        )
+        {
+            rel material:binding = </Root/M_StagnantWater> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            quatf xformOp:orient = (-4.371139e-8, 0, 1, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def RealityKitCustomComponent "SwiftSplashTrackPieces_ConnectableComponent"
+        {
+            uniform token info:id = "SwiftSplashTrackPieces.ConnectableComponent"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0.22842667, 0.52394843, 0.3566041)
+                token shapeType = "Box"
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def Xform "connect_out" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Xform "out_connection_vector" (
+            active = true
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def "EndParticles" (
+            active = true
+            references = @EndParticles.usda@
+        )
+        {
+            float3 xformOp:scale = (1, 1, 1)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_RideWaterComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.RideWaterComponent"
+            }
+
+            over "endParticles"
+            {
+                over "Collider"
+                {
+                }
+
+                over "SwiftSplashTrackPieces_ConnectableComponent" (
+                    active = false
+                )
+                {
+                }
+
+                over "InputTarget" (
+                    active = false
+                )
+                {
+                }
+            }
+        }
+
+        def RealityKitComponent "Accessibility"
+        {
+            uniform token info:id = "RealityKit.Accessibility"
+            bool isEnabled = 1
+            string label = "Goal piece."
+            string value = "The final piece of track."
+        }
+
+        def "flag_idle_animation" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @Goal/flag_idle_animation.usdz@
+        )
+        {
+            reorder nameChildren = ["Materials", "flag_flag", "root_jnt", "SwiftSplashTrackPieces_IdleAnimationComponent"]
+            rel material:binding = </Root/M_End> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_RideAnimationComponent"
+            {
+                bool alwaysAnimates = 1
+                uniform token info:id = "SwiftSplashTrackPieces.RideAnimationComponent"
+                double timecodeWhenNotPlaying = 6
+            }
+        }
+
+        def "end_flag_glow" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @Goal/end_flag_glow.usd@
+        )
+        {
+            rel material:binding = </Root/M_Glow> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_GlowComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.GlowComponent"
+            }
+        }
+
+        def "end_glow" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @Goal/end_glow.usd@
+        )
+        {
+            rel material:binding = </Root/M_Glow> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_GlowComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.GlowComponent"
+            }
+        }
+
+        def "adventureFish_end_noGlass_ride_animation" (
+            references = @Goal/Fish/adventureFish_end_noGlass_ride_animation.usdz@
+        )
+        {
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "end"
+            {
+                over "skeleton"
+                {
+                    over "Root_M"
+                    {
+                        over "adventureFish_geo1_geometry"
+                        {
+                            over "mat_fishBody_subset" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/M_FishBody> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "mat_fishAccessories_subset" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/M_FishAccessories> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "mat_fishEyes_subset" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/M_FishEyes> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_RideAnimationComponent"
+            {
+                double duration = 4.1
+                uniform token info:id = "SwiftSplashTrackPieces.RideAnimationComponent"
+                bool isPersistent = 0
+            }
+        }
+
+        def "slide_end_water" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @Goal/slide_end_water.usdz@
+        )
+        {
+            rel material:binding = </Root/M_MovingWater> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_RideWaterComponent"
+            {
+                float duration = 0.6
+                float fillLevel = 0.442792
+                uniform token info:id = "SwiftSplashTrackPieces.RideWaterComponent"
+            }
+        }
+
+        def "adventureFish_end_glass_ride_animation" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @Goal/Fish/adventureFish_end_glass_ride_animation.usdz@
+        )
+        {
+            rel material:binding = </Root/M_FishGlass> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "end"
+            {
+                over "skeleton"
+                {
+                    over "Root_M"
+                    {
+                        over "Skeleton"
+                        {
+                        }
+
+                        over "adventureFish_glass_geo_geometry"
+                        {
+                        }
+                    }
+                }
+            }
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_RideAnimationComponent"
+            {
+                double duration = 4.1
+                uniform token info:id = "SwiftSplashTrackPieces.RideAnimationComponent"
+                bool isPersistent = 0
+            }
+        }
+
+        def "adventureFish_end_glass_idle_animation" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            prepend references = @Goal/Fish/adventureFish_end_glass_idle_animation.usdz@
+        )
+        {
+            rel material:binding = </Root/M_FishGlass> (
+                bindMaterialAs = "strongerThanDescendants"
+            )
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_IdleAnimationComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.IdleAnimationComponent"
+                bool playAtEndInsteadOfBeginning = 1
+            }
+        }
+
+        def "adventureFish_end_noGlass_idle_animation" (
+            prepend references = @Goal/Fish/adventureFish_end_noGlass_idle_animation.usdz@
+        )
+        {
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "end"
+            {
+                over "skeleton"
+                {
+                    over "Root_M"
+                    {
+                        over "adventureFish_geo1_geometry"
+                        {
+                            over "mat_fishAccessories_subset" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/M_FishAccessories> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "mat_fishBody_subset" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/M_FishBody> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "mat_fishEyes_subset" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </Root/M_FishEyes> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            def RealityKitCustomComponent "SwiftSplashTrackPieces_IdleAnimationComponent"
+            {
+                uniform token info:id = "SwiftSplashTrackPieces.IdleAnimationComponent"
+                bool playAtEndInsteadOfBeginning = 1
+            }
+        }
+    }
+
+    def "M_RainbowLights" (
+        active = true
+        references = @M_RainbowLights.usda@</Root/M_RainbowLights>
+    )
+    {
+        bool inputs:ride_running = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-342.5065, 552.6948)
+                    float2 sizeInSubgraph = (147, 53)
+                    int stackingOrderInSubgraph = 114
+                }
+            }
+        )
+        float inputs:speed_multiplier (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1250.3757, 281.20563)
+                    float2 sizeInSubgraph = (172.5, 53)
+                    int stackingOrderInSubgraph = 114
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (785.83923, 100.13861)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 121
+
+        over "Opacity"
+        {
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        over "GlassColor"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "Convert"
+        {
+            float2 ui:nodegraph:node:size = (135.5, 40)
+        }
+
+        over "Add"
+        {
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+        }
+
+        over "Separate2"
+        {
+            float2 ui:nodegraph:node:size = (115, 127)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Time"
+        {
+            float2 ui:nodegraph:node:size = (122.5, 53)
+        }
+
+        over "Texcoord"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (141.5, 53)
+        }
+
+        over "Convert_1"
+        {
+            float2 ui:nodegraph:node:size = (148, 53)
+        }
+
+        over "Convert_2"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "Emmissive_Intensity"
+        {
+            float2 ui:nodegraph:node:size = (212, 53)
+        }
+
+        over "ORM"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+    }
+
+    def "M_LightsRim" (
+        active = true
+        references = @M_LightsRim.usda@</Root/M_lightsRims>
+    )
+    {
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "ORM"
+        {
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        over "N"
+        {
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        over "Color_Brightness"
+        {
+            float2 ui:nodegraph:node:size = (192.5, 53)
+        }
+
+        over "Color"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Roughness"
+        {
+            float2 ui:nodegraph:node:size = (154, 53)
+        }
+
+        over "metallic"
+        {
+            float2 ui:nodegraph:node:size = (134, 53)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Image_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Remap_1"
+        {
+            float2 ui:nodegraph:node:size = (105.5, 181)
+        }
+
+        over "Image_2"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Luminance"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 127)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "BC"
+        {
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+    }
+
+    def "M_SlideLights" (
+        active = true
+        references = @M_SlideLights.usda@</Root/M_SlideLights>
+    )
+    {
+        int inputs:material = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-956.7611, 502.14008)
+                    float2 sizeInSubgraph = (118.5, 53)
+                    int stackingOrderInSubgraph = 620
+                }
+            }
+        )
+        float inputs:powered = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-171.8851, 552.185)
+                    float2 sizeInSubgraph = (122, 53)
+                    int stackingOrderInSubgraph = 220
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Opacity"
+        {
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        over "GlassColor"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "Emmissive_Intensity"
+        {
+            float2 ui:nodegraph:node:size = (212, 53)
+        }
+
+        over "Emmissive_Color"
+        {
+            color3f inputs:value = (0.8246005, 0.5852762, 1) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f inputs:value.connect = None
+            float2 ui:nodegraph:node:size = (192, 53)
+            int ui:nodegraph:node:stackingOrder = 221
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (141.5, 53)
+        }
+
+        over "Convert_1"
+        {
+            float2 ui:nodegraph:node:size = (148, 53)
+        }
+
+        over "ORM"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "Switch"
+        {
+            float2 ui:nodegraph:node:size = (94, 289)
+        }
+
+        over "Convert_2"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Constant_1"
+        {
+            float2 ui:nodegraph:node:size = (154, 53)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Contrast_1"
+        {
+            float2 ui:nodegraph:node:size = (118.5, 145)
+        }
+
+        over "Constant_2"
+        {
+            float2 ui:nodegraph:node:size = (157.5, 53)
+        }
+
+        over "Mix_3"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Convert_3"
+        {
+            float2 ui:nodegraph:node:size = (150.5, 53)
+        }
+
+        over "Contrast_3"
+        {
+            float2 ui:nodegraph:node:size = (121.5, 145)
+        }
+
+        over "wood_light_color"
+        {
+            float2 ui:nodegraph:node:size = (193.5, 53)
+        }
+
+        over "metal_light_color"
+        {
+            float2 ui:nodegraph:node:size = (194.5, 53)
+        }
+
+        over "plastic_emmissive_intensity"
+        {
+            float inputs:value = 15
+            float2 ui:nodegraph:node:size = (250, 53)
+            int ui:nodegraph:node:stackingOrder = 1014
+        }
+
+        over "plastic_light_color"
+        {
+            color3f inputs:value = (0.4084531, 0, 0.751513) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f inputs:value.connect = None
+            float2 ui:nodegraph:node:pos = (-419.89966, 529.09143)
+            float2 ui:nodegraph:node:size = (201, 53)
+            int ui:nodegraph:node:stackingOrder = 1015
+        }
+    }
+
+    def "M_StagnantWater" (
+        active = true
+        references = @M_StagnantWater.usda@</Root/M_StagnantWater>
+    )
+    {
+        float inputs:speed_multiplier (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-968.6541, -11.693059)
+                    float2 sizeInSubgraph = (172.5, 53)
+                    int stackingOrderInSubgraph = 810
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "R_Intensity"
+        {
+            float2 ui:nodegraph:node:size = (155.5, 53)
+        }
+
+        over "Water_Brightness"
+        {
+            float2 ui:nodegraph:node:size = (196, 53)
+        }
+
+        over "Water_Saturation"
+        {
+            float2 ui:nodegraph:node:size = (193.5, 53)
+        }
+
+        over "Water_Color"
+        {
+            float2 ui:nodegraph:node:size = (163, 53)
+        }
+
+        over "O_Intensity"
+        {
+            float2 ui:nodegraph:node:size = (156, 53)
+        }
+
+        over "Multiply_3"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Saturate"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "slower"
+        {
+            float2 ui:nodegraph:node:size = (130, 109)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "TiledImage_1"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 199)
+        }
+
+        over "UV_Tiling"
+        {
+            float2 inputs:value = (1, 2)
+            float2 ui:nodegraph:node:size = (154, 53)
+            int ui:nodegraph:node:stackingOrder = 809
+        }
+    }
+
+    def Material "M_Glow" (
+        references = @M_Glow.usda@</Root/M_Glow>
+    )
+    {
+        prepend token outputs:mtlx:surface.connect = </Root/M_Glow/PreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (299.25, 99.5)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        def Shader "PreviewSurface"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (74.25, 99.5)
+            float2 ui:nodegraph:node:size = (159.5, 307)
+        }
+
+        over "Swizzle"
+        {
+            float2 ui:nodegraph:node:size = (133.5, 40)
+        }
+
+        over "ViewDirection"
+        {
+            float2 ui:nodegraph:node:size = (210, 53)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "DotProduct"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+
+        over "Normal"
+        {
+            float2 ui:nodegraph:node:size = (128.5, 40)
+        }
+
+        over "TransformNormal"
+        {
+            float2 ui:nodegraph:node:size = (158, 145)
+        }
+
+        over "TransformVector"
+        {
+            float2 ui:nodegraph:node:size = (153.5, 145)
+        }
+
+        over "Normalize_1"
+        {
+            float2 ui:nodegraph:node:size = (161, 53)
+        }
+
+        over "Normalize"
+        {
+            float2 ui:nodegraph:node:size = (149, 40)
+        }
+
+        over "Power"
+        {
+            float2 ui:nodegraph:node:size = (123.5, 40)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Mix"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+    }
+
+    def "M_MovingWater" (
+        active = true
+        references = @M_MovingWater.usda@</Root/M_MovingWater>
+    )
+    {
+        float inputs:water_level (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (373.88373, 557.3411)
+                    float2 sizeInSubgraph = (139, 53)
+                    int stackingOrderInSubgraph = 1884
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Water_Color"
+        {
+            float2 ui:nodegraph:node:size = (163, 53)
+        }
+
+        over "UV_Tiling"
+        {
+            float2 ui:nodegraph:node:size = (154, 53)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Multiply_3"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "faster"
+        {
+            float2 ui:nodegraph:node:size = (106, 81)
+        }
+
+        over "TiledImage_1"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "Water_Brightness"
+        {
+            float2 ui:nodegraph:node:size = (196, 53)
+        }
+
+        over "Water_Saturation"
+        {
+            float2 ui:nodegraph:node:size = (193.5, 53)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "low"
+        {
+            float2 ui:nodegraph:node:size = (115, 53)
+        }
+
+        over "high"
+        {
+            float2 ui:nodegraph:node:size = (115, 53)
+        }
+
+        over "Ramptb"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 145)
+        }
+
+        over "UV1"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Multiply_2"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "R_Intensity"
+        {
+            float2 ui:nodegraph:node:size = (155.5, 53)
+        }
+
+        over "O_Intensity"
+        {
+            float2 ui:nodegraph:node:size = (156, 53)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+    }
+
+    def "M_WaterFall" (
+        active = true
+        references = @M_WaterFall.usda@</Root/M_WaterFall>
+    )
+    {
+        float inputs:water_level (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (565.81274, 533.4977)
+                    float2 sizeInSubgraph = (139, 53)
+                    int stackingOrderInSubgraph = 1770
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        over "Multiply"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Contrast"
+        {
+            float2 ui:nodegraph:node:size = (106, 145)
+        }
+
+        over "Convert_1"
+        {
+            float2 ui:nodegraph:node:size = (148, 53)
+        }
+
+        over "Ramptb"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 145)
+        }
+
+        over "SmoothStep"
+        {
+            float2 ui:nodegraph:node:size = (127.5, 145)
+        }
+
+        over "Range_1"
+        {
+            float2 ui:nodegraph:node:size = (103.5, 217)
+        }
+
+        over "O_Intensity_1"
+        {
+            float2 ui:nodegraph:node:size = (167.5, 53)
+        }
+
+        over "Separate3"
+        {
+            float2 ui:nodegraph:node:size = (115.5, 145)
+        }
+
+        over "Inside_1"
+        {
+            float2 ui:nodegraph:node:size = (100.5, 127)
+        }
+
+        over "Contrast_1"
+        {
+            float2 ui:nodegraph:node:size = (118.5, 145)
+        }
+
+        over "Ramptb_1"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 145)
+        }
+
+        over "Divide"
+        {
+            float2 ui:nodegraph:node:size = (61.5, 36)
+        }
+
+        over "Plus"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "Remap"
+        {
+            float2 ui:nodegraph:node:size = (94, 181)
+        }
+
+        over "Multiply_3"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Saturate"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Saturate_1"
+        {
+            float2 ui:nodegraph:node:size = (138.5, 145)
+        }
+
+        over "Range"
+        {
+            float2 ui:nodegraph:node:size = (98, 217)
+        }
+
+        over "Water_Brightness"
+        {
+            float2 ui:nodegraph:node:size = (196, 53)
+        }
+
+        over "Water_Saturation"
+        {
+            float2 ui:nodegraph:node:size = (193.5, 53)
+        }
+
+        over "water_speed"
+        {
+            float2 ui:nodegraph:node:size = (132, 109)
+        }
+
+        over "water_speed_1"
+        {
+            float2 ui:nodegraph:node:size = (177.5, 53)
+        }
+
+        over "Water_Color"
+        {
+            float2 ui:nodegraph:node:size = (163, 53)
+        }
+
+        over "Inside"
+        {
+            float2 ui:nodegraph:node:size = (88.5, 127)
+        }
+
+        over "Constant"
+        {
+            float2 ui:nodegraph:node:size = (151, 53)
+        }
+
+        over "foam"
+        {
+            float2 ui:nodegraph:node:size = (106, 109)
+        }
+
+        over "MaterialXPreviewSurface"
+        {
+            float2 ui:nodegraph:node:size = (207.5, 307)
+        }
+
+        over "Multiply_2"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Clamp"
+        {
+            float2 ui:nodegraph:node:size = (91, 145)
+        }
+
+        over "Constant_1"
+        {
+            float2 ui:nodegraph:node:size = (154, 53)
+        }
+
+        over "Time"
+        {
+            float2 ui:nodegraph:node:size = (122.5, 53)
+        }
+
+        over "Multiply_1"
+        {
+            float2 ui:nodegraph:node:size = (60, 36)
+        }
+
+        over "Sin"
+        {
+            float2 ui:nodegraph:node:size = (116, 40)
+        }
+
+        over "high"
+        {
+            float2 ui:nodegraph:node:size = (115, 53)
+        }
+
+        over "low"
+        {
+            float2 ui:nodegraph:node:size = (115, 53)
+        }
+
+        over "R_Intensity_1"
+        {
+            float2 ui:nodegraph:node:size = (167, 53)
+        }
+
+        over "Image"
+        {
+            float2 ui:nodegraph:node:size = (148.5, 199)
+        }
+
+        over "TiledImage_2"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 217)
+        }
+
+        over "UV1"
+        {
+            float2 ui:nodegraph:node:size = (180.5, 53)
+        }
+
+        over "Mix_1"
+        {
+            float2 ui:nodegraph:node:size = (109, 145)
+        }
+
+        over "TiledImage_1"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "TiledImage"
+        {
+            float2 ui:nodegraph:node:size = (158.5, 235)
+        }
+
+        over "UV_Tiling"
+        {
+            float2 ui:nodegraph:node:size = (154, 53)
+        }
+
+        over "foam_speed"
+        {
+            float2 ui:nodegraph:node:size = (162, 53)
+        }
+    }
+}
+

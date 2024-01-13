@@ -1,0 +1,245 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "M_RainbowLights"]
+
+def Xform "Root"
+{
+    def Material "M_RainbowLights" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["MaterialXPreviewSurface", "Contrast", "TiledImage", "Convert", "Add", "Separate2", "Texcoord", "Multiply", "Time", "Separate3", "ORM", "Mix", "Constant", "Convert_1", "Convert_2", "Opacity"]
+        bool inputs:ride_running = 0 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-342.5065, 552.6948)
+                    float2 sizeInSubgraph = (147, 53)
+                    int stackingOrderInSubgraph = 114
+                }
+            }
+        )
+        float inputs:speed_multiplier = 1 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1250.3757, 281.20563)
+                    float2 sizeInSubgraph = (172.5, 53)
+                    int stackingOrderInSubgraph = 114
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/M_RainbowLights/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (681.58984, 110.12271)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 89
+
+        def Shader "MaterialXPreviewSurface" (
+            active = true
+        )
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:diffuseColor.connect = </Root/M_RainbowLights/GlassColor.outputs:out>
+            color3f inputs:emissiveColor.connect = </Root/M_RainbowLights/Mix.outputs:out>
+            float inputs:ior
+            float inputs:metallic.connect = </Root/M_RainbowLights/Separate3.outputs:outb>
+            float3 inputs:normal
+            float inputs:occlusion.connect = </Root/M_RainbowLights/Separate3.outputs:outr>
+            float inputs:opacity.connect = </Root/M_RainbowLights/Opacity.outputs:out>
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/M_RainbowLights/Separate3.outputs:outg>
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (481.17905, 103.36669)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 89
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "Contrast"
+        {
+            uniform token info:id = "ND_contrast_color3FA"
+            float inputs:amount.connect = </Root/M_RainbowLights/Emmissive_Intensity.outputs:out>
+            color3f inputs:in.connect = </Root/M_RainbowLights/TiledImage.outputs:out>
+            float inputs:pivot = 0.01
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-203.89752, 243.11136)
+            float2 ui:nodegraph:node:size = (106, 145)
+            int ui:nodegraph:node:stackingOrder = 46
+        }
+
+        def Shader "TiledImage"
+        {
+            uniform token info:id = "ND_tiledimage_color3"
+            color3f inputs:default
+            asset inputs:file = @Textures/Universal/mat_rainbowLights_emmissive.png@
+            float2 inputs:texcoord.connect = </Root/M_RainbowLights/Convert.outputs:out>
+            float2 inputs:uvoffset
+            float2 inputs:uvtiling
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-511.3306, 156.24355)
+            float2 ui:nodegraph:node:size = (158.5, 235)
+            int ui:nodegraph:node:stackingOrder = 116
+        }
+
+        def Shader "Convert"
+        {
+            uniform token info:id = "ND_convert_float_vector2"
+            float inputs:in.connect = </Root/M_RainbowLights/Add.outputs:out>
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-718.9921, 276.2752)
+            float2 ui:nodegraph:node:size = (135.5, 40)
+            int ui:nodegraph:node:stackingOrder = 11
+        }
+
+        def Shader "Add"
+        {
+            uniform token info:id = "ND_add_float"
+            float inputs:in1.connect = </Root/M_RainbowLights/Multiply.outputs:out>
+            float inputs:in2.connect = </Root/M_RainbowLights/Separate2.outputs:outx>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-868.59064, 274.83914)
+            float2 ui:nodegraph:node:size = (61.5, 36.5)
+            int ui:nodegraph:node:stackingOrder = 14
+        }
+
+        def Shader "Separate2"
+        {
+            uniform token info:id = "ND_separate2_vector2"
+            float2 inputs:in.connect = </Root/M_RainbowLights/Texcoord.outputs:out>
+            float outputs:outx
+            float2 ui:nodegraph:node:pos = (-1019.37976, 408.4899)
+            float2 ui:nodegraph:node:size = (115, 127)
+            int ui:nodegraph:node:stackingOrder = 42
+        }
+
+        def Shader "Texcoord"
+        {
+            uniform token info:id = "ND_texcoord_vector2"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-1202.3855, 409.54752)
+            float2 ui:nodegraph:node:size = (180.5, 53)
+            int ui:nodegraph:node:stackingOrder = 45
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_float"
+            float inputs:in1.connect = </Root/M_RainbowLights/Time.outputs:out>
+            float inputs:in2.connect = </Root/M_RainbowLights.inputs:speed_multiplier>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1083.4211, 253.90503)
+            float2 ui:nodegraph:node:size = (60, 36)
+            int ui:nodegraph:node:stackingOrder = 43
+        }
+
+        def Shader "Time"
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-1178.2417, 131.14125)
+            float2 ui:nodegraph:node:size = (122.5, 53)
+            int ui:nodegraph:node:stackingOrder = 44
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_color3"
+            color3f inputs:in.connect = </Root/M_RainbowLights/ORM.outputs:out>
+            float outputs:outb
+            float outputs:outg
+            float outputs:outr
+            float2 ui:nodegraph:node:pos = (-52.15916, 79.13054)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 94
+        }
+
+        def Shader "ORM"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @Textures/Universal/mat_rainbowLights_OcclusionRoughnessMetallic.png@
+            string inputs:filtertype
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-256.09766, 55.933594)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 119
+        }
+
+        def Shader "Mix"
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg.connect = </Root/M_RainbowLights/Convert_1.outputs:out>
+            color3f inputs:fg.connect = </Root/M_RainbowLights/Contrast.outputs:out>
+            float inputs:mix.connect = </Root/M_RainbowLights/Convert_2.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (82.583824, 323.84863)
+            float2 ui:nodegraph:node:size = (109, 145)
+            int ui:nodegraph:node:stackingOrder = 96
+        }
+
+        def Shader "Constant"
+        {
+            uniform token info:id = "ND_constant_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-383.1624, 454.93213)
+            float2 ui:nodegraph:node:size = (141.5, 53)
+            int ui:nodegraph:node:stackingOrder = 102
+        }
+
+        def Shader "Convert_1"
+        {
+            uniform token info:id = "ND_convert_float_color3"
+            float inputs:in.connect = </Root/M_RainbowLights/Constant.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-174.79387, 457.3349)
+            float2 ui:nodegraph:node:size = (148, 53)
+            int ui:nodegraph:node:stackingOrder = 104
+        }
+
+        def Shader "Convert_2"
+        {
+            uniform token info:id = "ND_convert_boolean_float"
+            bool inputs:in.connect = </Root/M_RainbowLights.inputs:ride_running>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-154.78488, 550.0156)
+            float2 ui:nodegraph:node:size = (151, 53)
+            int ui:nodegraph:node:stackingOrder = 110
+        }
+
+        def Shader "Emmissive_Intensity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 10
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-486.02475, 312.6319)
+            float2 ui:nodegraph:node:size = (212, 53)
+            int ui:nodegraph:node:stackingOrder = 118
+        }
+
+        def Shader "Opacity"
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (101.80336, 25.888662)
+            float2 ui:nodegraph:node:size = (133.5, 53)
+        }
+
+        def Shader "GlassColor"
+        {
+            uniform token info:id = "ND_constant_color3"
+            color3f inputs:value = (0.4880799, 0.4880799, 0.4880799) (
+                colorSpace = "Input - Texture - sRGB - Display P3"
+            )
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (98.075615, -89.99161)
+            float2 ui:nodegraph:node:size = (153.5, 53)
+        }
+    }
+}
+

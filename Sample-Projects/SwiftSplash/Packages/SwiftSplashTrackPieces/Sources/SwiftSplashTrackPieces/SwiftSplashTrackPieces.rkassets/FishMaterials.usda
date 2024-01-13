@@ -1,0 +1,335 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Root", "Materials"]
+
+def Xform "Root"
+{
+    def Scope "Materials" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["M_FishAccessories", "M_FishBody", "M_FishEyelids", "M_FishEyes", "M_FishGlass"]
+        def Material "M_FishAccessories" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["UsdPreviewSurface", "MaterialXPreviewSurface", "bc", "Separate3", "orm", "n", "Remap"]
+            prepend token outputs:mtlx:surface.connect = </Root/Materials/M_FishAccessories/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (508.0625, 167.78906)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 7900
+
+            def Shader "UsdPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "MaterialXPreviewSurface"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/Materials/M_FishAccessories/bc.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/Materials/M_FishAccessories/Separate3.outputs:outb>
+                float3 inputs:normal.connect = </Root/Materials/M_FishAccessories/Remap.outputs:out>
+                float inputs:occlusion.connect = </Root/Materials/M_FishAccessories/Separate3.outputs:outr>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/Materials/M_FishAccessories/Image_1.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (47.5, 26.375)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 7903
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/Materials/M_FishAccessories/n.outputs:out>
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-418.84766, 240.73438)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 8003
+            }
+
+            def Shader "n"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Fish/Textures/mat_fishAccessories_Normal.png@
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-600.3086, 221.375)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8039
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+            }
+
+            def Shader "bc"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Fish/Textures/mat_fishAccessories_BaseColor.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-503.4055, -263.09225)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8037
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord"]
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/Materials/M_FishAccessories/Image.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-321.10684, 11.484857)
+                float2 ui:nodegraph:node:size = (115.5, 145)
+                int ui:nodegraph:node:stackingOrder = 8066
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Fish/Textures/mat_fishAccessories_OcclusionRoughnessMetallic.png@
+                string inputs:filtertype
+                string inputs:uaddressmode
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-486.90146, -12.497268)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8063
+            }
+
+            def Shader "Image_1"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Fish/Textures/mat_fishAccessories_Roughness.png@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-295.96875, -174.47884)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8071
+            }
+        }
+
+        def Material "M_FishBody" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["UsdPreviewSurface", "MaterialXPreviewSurface", "bc", "Separate3", "orm", "Remap", "n"]
+            prepend token outputs:mtlx:surface.connect = </Root/Materials/M_FishBody/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (508.0625, 167.78906)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 7900
+
+            def Shader "UsdPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "MaterialXPreviewSurface"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/Materials/M_FishBody/bc.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic.connect = </Root/Materials/M_FishBody/Separate3.outputs:outb>
+                float3 inputs:normal.connect = </Root/Materials/M_FishBody/Remap.outputs:out>
+                float inputs:occlusion.connect = </Root/Materials/M_FishBody/Separate3.outputs:outr>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness.connect = </Root/Materials/M_FishBody/Image.outputs:out>
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (47.5, 26.375)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 7903
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "bc"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Fish/Textures/mat_fishBody_BaseColor.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-359.88892, -142.69154)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 7911
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:texcoord", "inputs:vaddressmode"]
+            }
+
+            def Shader "Separate3"
+            {
+                uniform token info:id = "ND_separate3_color3"
+                color3f inputs:in.connect = </Root/Materials/M_FishBody/orm.outputs:out>
+                float outputs:outb
+                float outputs:outg
+                float outputs:outr
+                float2 ui:nodegraph:node:pos = (-262.5, 133.27344)
+                float2 ui:nodegraph:node:size = (115.5, 145)
+                int ui:nodegraph:node:stackingOrder = 8037
+            }
+
+            def Shader "orm"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Fish/Textures/mat_fishBody_OcclusionRoughnessMetallic.png@
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-499.5547, 140.57812)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8054
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:uaddressmode"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_vector3FA"
+                float3 inputs:in.connect = </Root/Materials/M_FishBody/n.outputs:out>
+                float inputs:inhigh
+                float inputs:inlow
+                float inputs:outlow = -1
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-235.20703, 383.01328)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 8046
+            }
+
+            def Shader "n"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Fish/Textures/mat_fishBody_Normal.png@
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-484.5703, 387.22266)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8053
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @Fish/Textures/mat_fishBody_Roughness.png@
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-714.0211, 1.7580366)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8074
+            }
+        }
+
+        def Material "M_FishEyes" (
+            active = true
+        )
+        {
+            reorder nameChildren = ["UsdPreviewSurface", "MaterialXPreviewSurface", "base_color", "roughness", "zero", "normals", "occlusion"]
+            prepend token outputs:mtlx:surface.connect = </Root/Materials/M_FishEyes/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            token outputs:surface
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (508.0625, 167.78906)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 7900
+
+            def Shader "UsdPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                token outputs:surface
+            }
+
+            def Shader "MaterialXPreviewSurface"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/Materials/M_FishEyes/Image.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior = 1.55
+                float inputs:metallic
+                float3 inputs:normal
+                float inputs:occlusion
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness = 0
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (47.5, 26.375)
+                float2 ui:nodegraph:node:size = (207.5, 307)
+                int ui:nodegraph:node:stackingOrder = 8056
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Fish/Textures/mat_fishEyes_BaseColor.png@
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-438.4262, -75.54858)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8054
+            }
+        }
+
+        def Material "M_FishGlass" (
+            active = true
+        )
+        {
+            prepend token outputs:mtlx:surface.connect = </Root/Materials/M_FishGlass/MaterialXPreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            def Shader "MaterialXPreviewSurface" (
+                active = true
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                color3f inputs:diffuseColor.connect = </Root/Materials/M_FishGlass/Constant.outputs:out>
+                color3f inputs:emissiveColor = (0.6875173, 0.6475559, 0.57446027) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:emissiveColor.connect = None
+                float inputs:metallic = 0.7
+                float inputs:opacity = 0.2
+                float inputs:roughness = 0
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (103.75, 99.5)
+                float2 ui:nodegraph:node:size = (207.5, 199)
+                int ui:nodegraph:node:stackingOrder = 8062
+            }
+
+            def Shader "Constant"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0.71596557, 0.61017644, 0.355098) (
+                    colorSpace = "Input - Texture - sRGB - Display P3"
+                )
+                color3f inputs:value.connect = None
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-146.34375, 4.3398438)
+                float2 ui:nodegraph:node:size = (151, 53)
+                int ui:nodegraph:node:stackingOrder = 8061
+            }
+        }
+    }
+}
+
