@@ -5,6 +5,8 @@
 //  Created by Wilbur Wong on 2023/8/22.
 //
 
+// this just show two globes in the space, nothing else
+
 import SwiftUI
 import RealityKit
 import RealityKitContent
